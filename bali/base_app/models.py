@@ -1,7 +1,3 @@
-from enum import (
-    IntEnum,
-    auto,
-)
 from django.db import models
 
 
@@ -13,7 +9,7 @@ class DataConsultation(models.Model):
         verbose_name = 'Данные для консультации'
         verbose_name_plural = 'Данные для консультации'
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'Заявка на консультацию#{self.pk}'
 
 
@@ -25,8 +21,8 @@ class FAQ(models.Model):
         verbose_name = 'Часто задаваемый вопрос'
         verbose_name_plural = 'Часто задаваемые вопросы'
 
-    def __str__(self):
-        return self.question
+    def __str__(self) -> str:
+        return str(self.question)
 
 
 class Project(models.Model):
@@ -51,8 +47,8 @@ class Project(models.Model):
         verbose_name = 'Проект'
         verbose_name_plural = 'Проекты'
 
-    def __str__(self):
-        return self.name
+    def __str__(self) -> str:
+        return str(self.name)
 
 
 class Category(models.Model):
@@ -62,8 +58,8 @@ class Category(models.Model):
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
 
-    def __str__(self):
-        return self.name
+    def __str__(self) -> str:
+        return str(self.name)
 
 
 class AdvantagesProject(models.Model):
@@ -76,8 +72,8 @@ class AdvantagesProject(models.Model):
         verbose_name = 'Преимущество проекта'
         verbose_name_plural = 'Преимущества проектов'
 
-    def __str__(self):
-        return self.name
+    def __str__(self) -> str:
+        return str(self.name)
 
 
 class Location(models.Model):
@@ -87,8 +83,8 @@ class Location(models.Model):
         verbose_name = 'Локация'
         verbose_name_plural = 'Локации'
 
-    def __str__(self):
-        return self.name
+    def __str__(self) -> str:
+        return str(self.name)
 
 
 class LocationFact(models.Model):
@@ -101,7 +97,7 @@ class LocationFact(models.Model):
         verbose_name = 'Факт о локации'
         verbose_name_plural = 'Факты о локациях'
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.location}#{self.pk}'
 
 
@@ -145,5 +141,5 @@ class Quiz(models.Model):
     assessment_distance_to_sea = models.CharField(max_length=4, verbose_name='Важность расстояния до моря',
                                                   choices=Assessments.choices, null=True, blank=True)
     rental_period = models.SmallIntegerField(verbose_name='Срок аренды', null=True, blank=True)  # TODO: Валидатор от 5 до 30.
-    budget = models.CharField(verbose_name='Планируемый бюджет',
+    budget = models.CharField(max_length=4, verbose_name='Планируемый бюджет',
                               choices=Budget.choices, null=True, blank=True)
