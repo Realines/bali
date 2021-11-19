@@ -5,7 +5,49 @@
     <title>Главная страница</title>
 </head>
 <body>
-Главная страница
-<a href="{% url 'base_app:projects' 3 %}">test</a>
+    Главная страница
+    <a href="{% url 'base_app:projects' 3 %}">test</a>
+    <form id="quiz_form" method="POST">
+        {% csrf_token %}
+        {{ quiz_form.as_p }}
+        <input id="send_quiz" type="submit" value="Отправить">
+    </form>
+    <hr>
+    <form id="consult_form" method="post">
+        {% csrf_token %}
+        {{ consult_form.as_p }}
+        <input id="send_consult" type="submit" value="Отправить">
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#quiz_form').submit(function() {
+                $.ajax({
+                    url: 'http://127.0.0.1:8000/quiz_handler/',
+                    method: 'post',
+                    dataType: 'html',
+                    data: $(this).serialize(),
+                    success: function(data) {
+                        alert(data);
+                    }
+                });
+                return false;
+            })
+
+            $('#consult_form').submit(function() {
+                $.ajax({
+                    url: '{% url 'base_app:consult_handler' %}',
+                    method: 'post',
+                    dataType: 'html',
+                    data: $(this).serialize(),
+                    success: function(data) {
+                        alert(data);
+                    }
+                });
+                return false;
+            })
+        })
+    </script>
 </body>
 </html>
