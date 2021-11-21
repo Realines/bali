@@ -37,8 +37,9 @@ def index(request: HttpRequest) -> HttpResponse:
 
     # Данные для контекста шаблона.
     faq = FAQ.objects.all()
-    invested_projects = Project.objects.filter(invested=True)
-    not_invested_projects = Project.objects.difference(invested_projects)
+    all_project = Project.objects.all()
+    invested_projects = all_project.filter(invested=True)
+    not_invested_projects = all_project.difference(invested_projects)
 
     # Формы консультации и квиза.
     consult_form = ConsultationForm()
@@ -105,6 +106,7 @@ def projects(request: HttpRequest, project_id: int) -> HttpResponse:
 
     # Текущий проект либо ошибка 404.
     current_project = get_object_or_404(Project, pk=project_id)
+    consult_form = ConsultationForm()
 
     # Проекты в ленту рекомендаций.
     # Проекты отсортированы по количествую совпавших категорий
@@ -115,6 +117,7 @@ def projects(request: HttpRequest, project_id: int) -> HttpResponse:
 
     context = {'current_project': current_project,
                'recommended_projects': recommended_projects}
+
     return render(request=request,
                   template_name='base_app/projects.html',
                   context=context)
