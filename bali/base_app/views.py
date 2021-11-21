@@ -116,7 +116,8 @@ def projects(request: HttpRequest, project_id: int) -> HttpResponse:
     ).order_by('-matching_cat')
 
     context = {'current_project': current_project,
-               'recommended_projects': recommended_projects}
+               'recommended_projects': recommended_projects,
+               'consult_form': consult_form}
 
     return render(request=request,
                   template_name='base_app/projects.html',

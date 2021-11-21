@@ -69,6 +69,11 @@ class Project(models.Model):
         verbose_name='Проект подлежит инвестированию',
         default=False,
     )
+    main_image = models.ImageField(
+        verbose_name='Главное изображение',
+        upload_to='sys/projects/',
+        null=True,
+    )
 
 
     class Meta:
@@ -77,6 +82,15 @@ class Project(models.Model):
 
     def __str__(self) -> str:
         return str(self.name)
+
+
+class ProjectGallery(models.Model):
+    image = models.ImageField(upload_to='sys/projects/')
+    project = models.ForeignKey(
+        Project,
+        on_delete=models.CASCADE,
+        related_name='images',
+    )
 
 
 class Category(models.Model):

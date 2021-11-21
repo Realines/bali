@@ -9,6 +9,7 @@ from base_app.models import (
     Location,
     LocationFact,
     Quiz,
+    ProjectGallery,
 )
 
 
@@ -19,17 +20,18 @@ class DataConsultationAdmin(admin.ModelAdmin):
     ordering = ('-date_submission', )
 
 
+@admin.register(Quiz)
+class QuizAdmin(admin.ModelAdmin):
+    list_display = ('client_name', 'client_phone',
+                    'order_type', 'budget')
+    list_display_links = ('client_name', 'client_phone',
+                          'order_type', 'budget')
+
+
 @admin.register(FAQ)
 class FAQAdmin(admin.ModelAdmin):
     list_display = ('question', 'answer')
     list_display_links = ('question', 'answer')
-
-
-@admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'description')
-    list_display_links = ('name', 'price')
-    ordering = ('-date_added', )
 
 
 @admin.register(Category)
@@ -44,21 +46,28 @@ class AdvantagesProjectAdmin(admin.ModelAdmin):
     list_display_links = ('name', )
 
 
-@admin.register(Location)
-class LocationAdmin(admin.ModelAdmin):
-    list_display = ('name', )
-    list_display_links = ('name', )
-
-
 @admin.register(LocationFact)
 class LocationFactAdmin(admin.ModelAdmin):
     list_display = ('title', 'location')
     list_display_links = ('title', )
 
 
-@admin.register(Quiz)
-class QuizAdmin(admin.ModelAdmin):
-    list_display = ('client_name', 'client_phone',
-                    'order_type', 'budget')
-    list_display_links = ('client_name', 'client_phone',
-                          'order_type', 'budget')
+@admin.register(Location)
+class LocationAdmin(admin.ModelAdmin):
+    list_display = ('name', )
+    list_display_links = ('name', )
+
+
+class GalleryInline(admin.TabularInline):
+    fk_name = 'project'
+    model = ProjectGallery
+
+
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'description')
+    list_display_links = ('name', 'price')
+    ordering = ('-date_added', )
+    inlines = [
+        GalleryInline,
+    ]
