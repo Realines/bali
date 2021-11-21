@@ -13,6 +13,8 @@ from django.db.models import (
     Count,
     OuterRef,
     Subquery,
+    F,
+    Q,
 )
 
 from base_app.models import (
@@ -103,13 +105,16 @@ def projects(request: HttpRequest, project_id: int) -> HttpResponse:
 
     # Текущий проект либо ошибка 404.
     current_project = get_object_or_404(Project, pk=project_id)
-    print(current_project)
-    # FIXME: Траблы с запросом.
-    subquery_1 = Subquery(Category.objects.filter(project=OuterRef('pk')).count())
-    recommended_projects = Project.objects.annotate(matching_cat=subquery_1).order_by('-matching_cat')
-    print(recommended_projects)
 
-    context = {'current_project': current_project}
+    # Проекты в ленту рекомендаций.
+    # Проекты отсортированы по количествую совпавших категорий
+    # с категориями исходного проекта (current_project).
+    recommended_projects = Project.objects.exclude(pk=project_id).annotate(matching_cat=Count(
+        'categories', filter=Q(categories__in=current_project.categories.all()), distinct=True)
+    ).order_by('-matching_cat')
+
+    context = {'current_project': current_project,
+               'recommended_projects': recommended_projects}
     return render(request=request,
                   template_name='base_app/projects.html',
                   context=context)

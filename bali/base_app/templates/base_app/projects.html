@@ -5,7 +5,27 @@
     <title>Какой-то проект {{ project_id }}</title>
 </head>
 <body>
-    Какой-то проект {{ project_id }}
     <a href="{% url 'base_app:index' %}">Главная</a>
+
+    <p>Project id {{ current_project.id }}</p>
+    <p>Project name {{ current_project.name }}</p>
+    <p>
+        <ul>
+        {% for categories in current_project.categories.all %}
+            <li>{{ categories }}</li>
+        {% endfor %}
+        </ul>
+    </p>
+
+    {% for project in recommended_projects %}
+    <p>Project name: {{ project.name }}</p>
+    <p>
+        <ul>
+        {% for categories in project.categories.all %}
+            <li>{{ categories }}</li>
+        {% endfor %}
+        </ul>
+    </p>
+    {% endfor %}
 </body>
 </html>
