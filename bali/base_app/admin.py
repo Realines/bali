@@ -3,13 +3,7 @@ from django.contrib import admin
 from base_app.models import (
     DataConsultation,
     FAQ,
-    Project,
-    Category,
-    AdvantagesProject,
-    Location,
-    LocationFact,
     Quiz,
-    ProjectGallery,
 )
 
 
@@ -32,42 +26,3 @@ class QuizAdmin(admin.ModelAdmin):
 class FAQAdmin(admin.ModelAdmin):
     list_display = ('question', 'answer')
     list_display_links = ('question', 'answer')
-
-
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', )
-    list_display_links = ('name', )
-
-
-@admin.register(AdvantagesProject)
-class AdvantagesProjectAdmin(admin.ModelAdmin):
-    list_display = ('name', 'project')
-    list_display_links = ('name', )
-
-
-@admin.register(LocationFact)
-class LocationFactAdmin(admin.ModelAdmin):
-    list_display = ('title', 'location')
-    list_display_links = ('title', )
-
-
-@admin.register(Location)
-class LocationAdmin(admin.ModelAdmin):
-    list_display = ('name', )
-    list_display_links = ('name', )
-
-
-class GalleryInline(admin.TabularInline):
-    fk_name = 'project'
-    model = ProjectGallery
-
-
-@admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'description')
-    list_display_links = ('name', 'price')
-    ordering = ('-date_added', )
-    inlines = [
-        GalleryInline,
-    ]
