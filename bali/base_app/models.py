@@ -64,6 +64,7 @@ class Project(models.Model):
         verbose_name='Категории',
         related_name='projects',
         related_query_name='project',
+        symmetrical=True,
     )
     invested = models.BooleanField(
         verbose_name='Проект подлежит инвестированию',
@@ -74,7 +75,6 @@ class Project(models.Model):
         upload_to='sys/projects/',
         null=True,
     )
-
 
     class Meta:
         verbose_name = 'Проект'
