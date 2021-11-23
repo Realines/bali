@@ -40,5 +40,5 @@ def projects(request: HttpRequest, project_id: int) -> HttpResponse:
                'consult_form': consult_form}
 
     return render(request=request,
-                  template_name='base_app/projects.html',
+                  template_name='projects/projects.html',
                   context=context)

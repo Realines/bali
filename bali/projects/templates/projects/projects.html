@@ -1,8 +1,10 @@
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Какой-то проект {{ project_id }}</title>
+    <title>{% trans 'SomeProject' %} {{ project_id }}</title>
 </head>
 <body>
     <a href="{% url 'base_app:index' %}">Главная</a>
