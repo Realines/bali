@@ -18,7 +18,7 @@
     {% endfor %}
     <hr>
 
-    Главная страница {{ faq.first }}
+    Главная страница {{ faq.1 }}
     <a href="{% url 'projects:projects' 3 %}">test</a>
     <form id="quiz_form" method="POST">
         {% csrf_token %}
@@ -47,7 +47,7 @@
         $(document).ready(function() {
             $('#quiz_form').submit(function() {
                 $.ajax({
-                    url: 'http://127.0.0.1:8000/quiz_handler/',
+                    url: 'http://127.0.0.1:8000/quiz-handler/',
                     method: 'post',
                     dataType: 'html',
                     data: $(this).serialize(),
@@ -60,7 +60,7 @@
 
             $('#consult_form').submit(function() {
                 $.ajax({
-                    url: '{% url 'base_app:consult_handler' %}',
+                    url: '{% url 'base_app:consult-handler' %}',
                     method: 'post',
                     dataType: 'html',
                     data: $(this).serialize(),

@@ -49,35 +49,31 @@ class QuizForm(forms.ModelForm):
         widget=forms.RadioSelect(),
         required=False,
     )
-    profit_assessment = forms.ChoiceField(
+    profit_assessment = forms.IntegerField(
         label='Доходность',
         label_suffix='',
-        choices=Quiz.Assessments.choices,
-        error_messages={'invalid_choice': 'Такого варианта нет'},
+        error_messages={'min_value': 'Минимальный срок: 5 лет',
+                        'max_value': 'Максимальный срок: 30 лет'},
         widget=forms.RadioSelect(),
         required=False,
     )
-    assessment_district = forms.ChoiceField(
+    assessment_district = forms.IntegerField(
         label='Район',
         label_suffix='',
-        choices=Quiz.Assessments.choices,
-        error_messages={'invalid_choice': 'Такого варианта нет'},
-        widget=forms.RadioSelect(),
+        error_messages={'min_value': 'Минимальный срок: 5 лет',
+                        'max_value': 'Максимальный срок: 30 лет'},
         required=False,
     )
-    assessment_distance_to_sea = forms.ChoiceField(
+    assessment_distance_to_sea = forms.IntegerField(
         label='Расстояние до моря',
         label_suffix='',
-        choices=Quiz.Assessments.choices,
-        error_messages={'invalid_choice': 'Такого варианта нет'},
-        widget=forms.RadioSelect(),
+        error_messages={'min_value': 'Минимальный срок: 5 лет',
+                        'max_value': 'Максимальный срок: 30 лет'},
         required=False,
     )
     rental_period = forms.IntegerField(
         label='Срок аренды виллы?',
         label_suffix='',
-        validators=[validators.MinValueValidator(5),
-                    validators.MaxValueValidator(30)],
         error_messages={'min_value': 'Минимальный срок: 5 лет',
                         'max_value': 'Максимальный срок: 30 лет'},
         widget=forms.NumberInput(attrs={'type': 'range'}),

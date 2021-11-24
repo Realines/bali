@@ -7,6 +7,6 @@ app_name = 'base_app'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('quiz_handler/', views.quiz_handler, name='quiz_handler'),
-    path('consult_handler/', views.consult_handler, name='consult_handler'),
+    path('quiz-handler/', views.quiz_handler, name='quiz_handler'),
+    path('consult-handler/', views.consult_handler, name='consult_handler'),
 ]

@@ -42,13 +42,6 @@ class Quiz(models.Model):
         TEN_MINUTES = 'M10', '10 минут'
         MORE_THEN_FIFTEEN_MINUTES = 'M15', 'от 15 минут'
 
-    class Assessments(models.TextChoices):
-        LEVEL_ONE = 'L1', 'Первый уровень'
-        LEVEL_TWO = 'L2', 'Второй уровень'
-        LEVEL_THREE = 'L3', 'Третий уровень'
-        LEVEL_FOUR = 'L4', 'Четвертый уровень'
-        LEVEL_FIVE = 'L5', 'Пятый уровень'
-
     class Budget(models.TextChoices):
         BUDGET_ONE = 'B1', 'от $300.000'
         BUDGET_TWO = 'B2', '$200.000 - $500.000'
@@ -82,24 +75,26 @@ class Quiz(models.Model):
         null=True,
         blank=True,
     )
-    profit_assessment = models.CharField(
-        max_length=8,
+    profit_assessment = models.SmallIntegerField(
         verbose_name='Важность доходности',
-        choices=Assessments.choices,
+        validators=[validators.MinValueValidator(1),
+                    validators.MaxValueValidator(5)],
+        error_messages={'min_value': 'Минимальный оценка: 1',
+                        'max_value': 'Максимальный оценка: 5'},
         null=True,
         blank=True,
     )
-    assessment_district = models.CharField(
-        max_length=8,
+    assessment_district = models.SmallIntegerField(
         verbose_name='Важность района',
-        choices=Assessments.choices,
+        validators=[validators.MinValueValidator(1),
+                    validators.MaxValueValidator(5)],
         null=True,
         blank=True,
     )
-    assessment_distance_to_sea = models.CharField(
-        max_length=8,
+    assessment_distance_to_sea = models.SmallIntegerField(
         verbose_name='Важность расстояния до моря',
-        choices=Assessments.choices,
+        validators=[validators.MinValueValidator(1),
+                    validators.MaxValueValidator(5)],
         null=True,
         blank=True,
     )
