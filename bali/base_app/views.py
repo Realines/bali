@@ -6,6 +6,7 @@ from django.http import (
     HttpResponse,
     JsonResponse,
 )
+from django.utils.translation import gettext as _
 
 from base_app.models import FAQ
 from base_app.forms import (
@@ -58,10 +59,11 @@ def quiz_handler(request: HttpRequest) -> JsonResponse:
     if quiz_form.is_valid():
         quiz_form.save()
     else:
-        return JsonResponse({'errors': quiz_form.errors},
-                            status=403)
+        return JsonResponse({'errors': quiz_form.errors}, status=403,
+                            json_dumps_params={'ensure_ascii': False})
 
-    return JsonResponse({'msg': 'OK'}, status=201)
+    return JsonResponse({'msg': _('OK')}, status=201,
+                        json_dumps_params={'ensure_ascii': False})
 
 
 def consult_handler(request: HttpRequest) -> JsonResponse:
@@ -78,7 +80,8 @@ def consult_handler(request: HttpRequest) -> JsonResponse:
     if consult_form.is_valid():
         consult_form.save()
     else:
-        return JsonResponse({'errors': consult_form.errors},
-                            status=403)
+        return JsonResponse({'errors': consult_form.errors}, status=403,
+                            json_dumps_params={'ensure_ascii': False})
 
-    return JsonResponse({'msg': 'OK'}, status=201)
+    return JsonResponse({'msg': _('OK')}, status=201,
+                        json_dumps_params={'ensure_ascii': False})

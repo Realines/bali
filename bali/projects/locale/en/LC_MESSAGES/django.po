@@ -20,4 +20,4 @@ msgstr ""
 
 #: .\templates\projects\projects.html:7
 msgid "SomeProject"
-msgstr ""
+msgstr "Some project"

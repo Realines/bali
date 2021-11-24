@@ -39,6 +39,10 @@ class Project(models.Model):
         verbose_name='Проект подлежит инвестированию',
         default=False,
     )
+    public = models.BooleanField(
+        verbose_name='Опубликовать',
+        default=False,
+    )
     main_image = models.ImageField(
         verbose_name='Главное изображение',
         upload_to='sys/projects/',

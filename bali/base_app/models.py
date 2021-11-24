@@ -2,6 +2,18 @@ from django.db import models
 from django.core import validators
 
 
+class FAQ(models.Model):
+    question = models.TextField(verbose_name='Вопрос')
+    answer = models.TextField(verbose_name='Ответ на вопрос')
+
+    class Meta:
+        verbose_name = 'Часто задаваемый вопрос'
+        verbose_name_plural = 'Часто задаваемые вопросы'
+
+    def __str__(self) -> str:
+        return str(self.question)
+
+
 class DataConsultation(models.Model):
     phone = models.CharField(
         max_length=32,
@@ -18,18 +30,6 @@ class DataConsultation(models.Model):
 
     def __str__(self) -> str:
         return f'Заявка на консультацию#{self.pk}'
-
-
-class FAQ(models.Model):
-    question = models.TextField(verbose_name='Вопрос')
-    answer = models.TextField(verbose_name='Ответ на вопрос')
-
-    class Meta:
-        verbose_name = 'Часто задаваемый вопрос'
-        verbose_name_plural = 'Часто задаваемые вопросы'
-
-    def __str__(self) -> str:
-        return str(self.question)
 
 
 class Quiz(models.Model):
@@ -103,7 +103,7 @@ class Quiz(models.Model):
         null=True,
         blank=True,
     )
-    rental_period = models.SmallIntegerField( # TODO: Валидатор от 5 до 30.
+    rental_period = models.SmallIntegerField(
         verbose_name='Срок аренды',
         validators=[validators.MinValueValidator(5),
                     validators.MaxValueValidator(30)],

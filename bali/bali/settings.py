@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'bali.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,10 +143,15 @@ LANGUAGES = [
     ('ar', _('Arabian')),
 ]
 
+# Для сохранения языка в куки и в сессии.
 LANGUAGE_SESSION_KEY = 'session_language_appname'
 LANGUAGE_COOKIE_NAME = 'cookie_language_appname'
 
+# Куда сохранять файлы переводов.
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'base_app/locale/'),
     os.path.join(BASE_DIR, 'projects/locale/'),
 ]
+
+# Для поддержки перевода данных, хранящихся в БД (в моделях).
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'

@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TabbedTranslationAdmin
 
 from projects.models import (
     Project,
@@ -11,7 +12,7 @@ from projects.models import (
 
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TabbedTranslationAdmin):
     list_display = ('name', )
     list_display_links = ('name', )
 
@@ -21,7 +22,7 @@ class LocationFactInline(admin.TabularInline):
 
 
 @admin.register(Location)
-class LocationAdmin(admin.ModelAdmin):
+class LocationAdmin(TabbedTranslationAdmin):
     list_display = ('name', )
     list_display_links = ('name', )
     inlines = [
@@ -39,7 +40,7 @@ class GalleryInline(admin.TabularInline):
 
 
 @admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(TabbedTranslationAdmin):
     list_display = ('name', 'price', 'description')
     list_display_links = ('name', 'price')
     ordering = ('-date_added', )

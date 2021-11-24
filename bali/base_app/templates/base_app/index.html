@@ -13,12 +13,12 @@
     {% if LANGUAGE_CODE == lang.0 %}
     {{lang.1}} ({{lang.0}})
     {% else %}
-    <a href="{% url 'set_language' %}?l={{lang.0}}">{{lang.1}} ({{lang.0}})</a>
+    <a href="{% url 'translator:set_language' %}?l={{lang.0}}">{{lang.1}} ({{lang.0}})</a>
     {% endif %} |
     {% endfor %}
     <hr>
 
-    Главная страница
+    Главная страница {{ faq.first }}
     <a href="{% url 'projects:projects' 3 %}">test</a>
     <form id="quiz_form" method="POST">
         {% csrf_token %}

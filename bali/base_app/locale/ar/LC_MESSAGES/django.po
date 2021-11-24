@@ -21,4 +21,7 @@ msgstr ""
 
 #: .\templates\base_app\index.html:7
 msgid "MainPage"
-msgstr ""
+msgstr "الصفحة الرئيسية"
+
+msgid "OK"
+msgstr "حسنا"

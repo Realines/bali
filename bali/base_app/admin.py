@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TabbedTranslationAdmin
 
 from base_app.models import (
     DataConsultation,
@@ -23,6 +24,6 @@ class QuizAdmin(admin.ModelAdmin):
 
 
 @admin.register(FAQ)
-class FAQAdmin(admin.ModelAdmin):
-    list_display = ('question', 'answer')
-    list_display_links = ('question', 'answer')
+class FAQAdmin(TabbedTranslationAdmin):  # Наследуем от TabbedTranslationAdmin для генерации доп. полей для перевода данных.
+    list_display = ('question', 'answer', )
+    list_display_links = ('question', )

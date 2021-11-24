@@ -24,12 +24,14 @@ class QuizForm(forms.ModelForm):
         label='Ваше имя',
         error_messages={'max_length': 'Слишком длинное имя'},
         widget=forms.TextInput(attrs={'placeholder': 'Ваше имя'}),
+        required=False,
     )
     client_phone = forms.CharField(
         max_length=32,
         label='Ваш номер телефона',
         error_messages={'max_length': 'Ограничение по символам: 32'},
         widget=forms.TextInput(attrs={'placeholder': 'Ваш номер телефона'}),
+        required=False,
     )
     order_type = forms.ChoiceField(
         label='Что вам больше подходит?',
@@ -37,6 +39,7 @@ class QuizForm(forms.ModelForm):
         choices=Quiz.OrderType.choices,
         error_messages={'invalid_choice': 'Такого варианта нет'},
         widget=forms.RadioSelect(),
+        required=False,
     )
     distance_to_sea = forms.ChoiceField(
         label='Расстояние виллы до моря?',
@@ -44,6 +47,7 @@ class QuizForm(forms.ModelForm):
         choices=Quiz.DistanceToSea.choices,
         error_messages={'invalid_choice': 'Такого варианта нет'},
         widget=forms.RadioSelect(),
+        required=False,
     )
     profit_assessment = forms.ChoiceField(
         label='Доходность',
@@ -51,6 +55,7 @@ class QuizForm(forms.ModelForm):
         choices=Quiz.Assessments.choices,
         error_messages={'invalid_choice': 'Такого варианта нет'},
         widget=forms.RadioSelect(),
+        required=False,
     )
     assessment_district = forms.ChoiceField(
         label='Район',
@@ -58,6 +63,7 @@ class QuizForm(forms.ModelForm):
         choices=Quiz.Assessments.choices,
         error_messages={'invalid_choice': 'Такого варианта нет'},
         widget=forms.RadioSelect(),
+        required=False,
     )
     assessment_distance_to_sea = forms.ChoiceField(
         label='Расстояние до моря',
@@ -65,6 +71,7 @@ class QuizForm(forms.ModelForm):
         choices=Quiz.Assessments.choices,
         error_messages={'invalid_choice': 'Такого варианта нет'},
         widget=forms.RadioSelect(),
+        required=False,
     )
     rental_period = forms.IntegerField(
         label='Срок аренды виллы?',
@@ -74,6 +81,7 @@ class QuizForm(forms.ModelForm):
         error_messages={'min_value': 'Минимальный срок: 5 лет',
                         'max_value': 'Максимальный срок: 30 лет'},
         widget=forms.NumberInput(attrs={'type': 'range'}),
+        required=False,
     )
     budget = forms.ChoiceField(
         label='Укажите Ваш планируемый бюджет инвестирования',
@@ -81,6 +89,7 @@ class QuizForm(forms.ModelForm):
         choices=Quiz.Budget.choices,
         error_messages={'invalid_choice': 'Такого варианта нет'},
         widget=forms.RadioSelect(),
+        required=False,
     )
 
     class Meta:
