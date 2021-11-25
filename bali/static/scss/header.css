@@ -1,0 +1,85 @@
+.header {
+  position: relative;
+  z-index: 2; }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0; }
+  .header__logo {
+    width: 150px;
+    display: block;
+    margin-right: 179px; }
+    .header__logo img {
+      width: 100%; }
+  .header__right {
+    flex-grow: 1; }
+    .header__right-inner {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+  .header__btn {
+    background: #86A876;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 174px;
+    height: 47px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    color: #FFFFFF; }
+  .header__language {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header__language-show {
+      display: flex;
+      align-items: center;
+      height: 20px;
+      cursor: pointer;
+      text-transform: uppercase; }
+      .header__language-show svg {
+        margin-left: 8px;
+        transition: all .3s; }
+    .header__language-show--active svg {
+      transform: rotate(180deg); }
+    .header__language-show--active ~ .header__language-hidden {
+      display: block; }
+    .header__language-hidden {
+      border-radius: 12px;
+      display: none;
+      position: absolute;
+      overflow: hidden;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      background: #FFFFFF;
+      box-shadow: 0px 10px 20px rgba(22, 40, 51, 0.15); }
+      .header__language-hidden a {
+        width: 100%;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        transition: all .3s;
+        text-transform: uppercase; }
+        .header__language-hidden a:hover {
+          background: #86A876;
+          color: #fff; }
+
+.nav {
+  display: flex;
+  align-items: center; }
+  .nav__item {
+    font-size: 13px;
+    line-height: 150%;
+    color: #252C25; }
+    .nav__item:not(:last-child) {
+      margin-right: 50px; }
+
+/*# sourceMappingURL=header.css.map */

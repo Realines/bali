@@ -1,0 +1,193 @@
+.project-detail {
+    padding-top: 20px;
+    &__link {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        color: #8E8E8E;
+        &:hover {
+            color: #86A876;
+            path {
+                fill: #86A876;
+            }
+        }
+        svg {
+            margin-right: 10px;
+        }
+    }
+    &__top {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        &-title {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 110%;
+        }
+        &-desc {
+            font-size: 20px;
+            line-height: 130%;
+            margin-top: 20px;
+        }
+    }
+    &__price {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 110%;
+        color: #86A876;
+    }
+    &__slider {
+        margin-top: 60px;
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+        &-next,
+        &-prev {
+            // position: absolute;
+            &:after {
+                display: none;
+            }
+        }
+        &-nav {
+            position: absolute;
+            width: 100%;
+            z-index: 3;
+            top: 50%;
+            transform: translateY(-50%);
+            .container {
+                position: relative;
+            }
+        }
+    }
+    .swiper-slide {
+        width: 770px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+            left: 0;
+            top: 0;
+            transition: all .3s;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .swiper-slide-active {
+        position: relative;
+        &::before {
+            opacity: 0;
+        }
+    }
+    &__btn {
+        background: #86A876;
+        margin-top: 45px;
+        width: 117px;
+        height: 55px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 150%;
+        color: #FFFFFF;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+        &-left {
+            width: 440px;
+        }
+        &-title {
+            font-size: 20px;
+            line-height: 150%;
+        }
+    }
+    &__items {
+        width: 530px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 38 0;
+    }
+    &__item {
+        padding-right: 10px;
+        span {
+            font-size: 16px;
+            line-height: 150%;
+            display: block;
+        }
+        strong {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 150%;
+            display: block;
+            color: #86A876;
+        }
+    }
+}
+
+.advantages {
+    margin-top: 90px;
+    &__inner {
+        background: #F4F4F4;
+        padding: 65px 60px 50px;
+    }
+    &__list {
+        margin-top: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 50%;
+            padding-right: 10px;
+            position: relative;
+            padding-left: 42px;
+            font-size: 18px;
+            line-height: 150%;
+            margin-bottom: 15px;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                background-image: url(../img/ci_check-all-big.svg);
+                width: 24px;
+                height: 24px;
+                background-size: contain;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+.location {
+    padding: 75px 0;
+    margin-top: 30px;
+    &__items {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: calc(33.333% - 20px);
+        &-time {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            color: #86A876;
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 20px;
+        }
+        &-desc {
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+}

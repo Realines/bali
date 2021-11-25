@@ -1,0 +1,197 @@
+.modal {
+    &-dialog {
+        width: 410px;
+        margin-top: 70px;
+    }
+    &__close {
+        z-index: 1000;
+        position: absolute;
+        float: unset;
+        top: 12px;
+        right: 22px;
+    }
+    &-content {
+        box-shadow: none;
+        border-radius: 0%;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 58px;
+            width: 100%;
+            background-size: 410px 100%;
+            background-repeat: repeat-x;
+        }
+        &:after {
+            background-image: url(../images/modal_wave2.png);
+            top: 100%;
+            transform: translateY(-2px);
+        }
+        &:before {
+            background-image: url(../images/modal_wave1.png);
+            bottom: 100%;
+            transform: translateY(2px);
+        }
+    }
+    &-body {
+        padding: 0;
+        padding-bottom: 20px;
+    }
+    &__title {
+        margin-bottom: 24px;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #663618;
+    }
+    &__error {
+        position: absolute;
+        top: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        color: #ffffff;
+        height: 44px;
+        background-color: #d43d3d;
+        width: 100%;
+        z-index: 1200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__nav {
+        margin-top: 20px;
+    }
+    .user__sms-title {
+        width: calc(100% + 120px);
+        margin-left: -60px;
+    }
+    &__forgot-title {
+        width: calc(100% + 100px);
+        margin-left: -50px;
+        margin-bottom: 20px;
+    }
+}
+
+.modal-backdrop.in {
+    background: #715e53;
+    opacity: 1;
+}
+
+.option {
+    width: 315px;
+    margin: 0 auto;
+    padding-top: 50px;
+    &__title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #663618;
+    }
+    &__badge {
+        margin: 10px auto 0;
+        height: 21px;
+        background-color: #c19d5f;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 0 11px;
+        display: flex;
+        align-items: center;
+        &-container {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__select {
+        margin-top: 33px;
+        select {
+            height: 56px;
+            width: 100%;
+            background-color: #ffffff;
+            border: 1px solid #e7dac4;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url(../images/svg/scroll-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 7px auto;
+            cursor: pointer;
+            outline: none;
+            font-size: 16px;
+            font-weight: 400;
+            color: #262626;
+            padding-right: 40px;
+            padding-left: 20px;
+        }
+    }
+    &__btn {
+        height: 56px;
+        margin-top: 15px;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        &-dialog {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .modal {
+        &-dialog {
+            width: calc(100% - 20px);
+        }
+        &-content {
+            &:before,
+            &:after {
+                height: 43px;
+            }
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 18px;
+        }
+        &__forgot-title {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    .option {
+        padding-top: 30px;
+        width: calc(100% - 60px);
+        &__title {
+            font-size: 18px;
+        }
+        &__badge {
+            font-size: 10px;
+            margin-top: 7px;
+        }
+        &__select {
+            margin-top: 20px;
+            select {
+                height: 43px;
+                font-size: 14px;
+                padding-left: 15px;
+            }
+        }
+        &__btn {
+            height: 43px;
+            margin-top: 12px;
+            font-size: 12px;
+        }
+    }
+}

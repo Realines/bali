@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Light.ttf);
+  font-weight: 300; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-LightItalic.ttf);
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: 400; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-RegularItalic.ttf);
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Medium.ttf);
+  font-weight: 500; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-MediumItalic.ttf);
+  font-weight: 500;
+  font-style: italic; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Semibold.ttf);
+  font-weight: 600; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-SemiboldItalic.ttf);
+  font-weight: 600;
+  font-style: italic; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-weight: 700; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-ExtraBold.ttf);
+  font-weight: 800; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-ExtraBoldItalic.ttf);
+  font-weight: 800;
+  font-style: italic; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Black.ttf);
+  font-weight: 900; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-BlackItalic.ttf);
+  font-weight: 900;
+  font-style: italic; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Heavy.ttf);
+  font-weight: 1000; }
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-HeavyItalic.ttf);
+  font-weight: 1000;
+  font-style: italic; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+a,
+form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  line-height: 1; }
+
+button,
+input,
+textarea {
+  outline: none !important;
+  transition: all .3s; }
+  button::placeholder,
+  input::placeholder,
+  textarea::placeholder {
+    color: #a8a8a8; }
+
+input[type=text]:focus,
+input[type=file]:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus,
+input:active {
+  outline: none !important; }
+
+::-webkit-input-placeholder {
+  color: #222; }
+
+::-moz-placeholder {
+  color: #222; }
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: #222; }
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: #222; }
+
+.transit {
+  /* Safari */
+  transition: all 0.4s; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+
+html {
+  height: 100%; }
+
+svg {
+  flex-shrink: 0; }
+
+svg,
+path {
+  transition: all .3s; }
+
+body {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  height: 100%;
+  color: #252C25; }
+  body.fixed-body {
+    overflow-y: hidden; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+label {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s; }
+  a:hover {
+    text-decoration: none !important;
+    color: inherit; }
+  a:focus {
+    text-decoration: none !important; }
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+i {
+  line-height: 100%; }
+
+/*# sourceMappingURL=reset.css.map */

@@ -1,0 +1,17 @@
+.title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 130%;
+    color: #252C25;
+    span {
+        color: #86A876;
+    }
+}
+
+input {
+    font-size: 16px;
+    line-height: 150%;
+    &::placeholder {
+        color: #8E8E8E;
+    }
+}

@@ -1,0 +1,89 @@
+.error-404 {
+  height: 100%;
+  padding: 120px 0 100px; }
+  .error-404__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .error-404__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #663618; }
+  .error-404__desc {
+    font-size: 16px;
+    margin-top: 12px;
+    font-weight: 500;
+    color: #141414; }
+  .error-404__content {
+    padding-left: 113px;
+    position: relative; }
+  .error-404__num {
+    position: absolute;
+    z-index: -1;
+    bottom: 50px;
+    left: 0; }
+  .error-404__search {
+    display: flex;
+    margin-top: 20px; }
+    .error-404__search-btn {
+      width: 115px;
+      height: 44px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-left: 6px; }
+    .error-404__search-input {
+      flex-grow: 1;
+      position: relative; }
+      .error-404__search-input input {
+        font-size: 14px;
+        width: 100%;
+        height: 44px;
+        background-color: #ffffff;
+        border: 1px solid #f0e7de;
+        border-radius: 2px;
+        padding: 0 15px 0 43px; }
+      .error-404__search-input svg {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%); }
+  .error-404__link {
+    margin-top: 34px; }
+
+@media screen and (max-width: 768px) {
+  .error-404 {
+    padding: 110px 0 45px; }
+    .error-404__content {
+      padding: 0 10px; }
+    .error-404__title {
+      font-size: 22px; }
+    .error-404__desc {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 14px; }
+    .error-404__search {
+      margin-top: 18px; }
+      .error-404__search-btn {
+        width: 37px;
+        height: 37px;
+        margin-left: 4px;
+        font-size: 0;
+        background-image: url(../images/arrow_right.png);
+        background-repeat: no-repeat;
+        background-position: center; }
+      .error-404__search input {
+        height: 37px;
+        padding-left: 35px; }
+      .error-404__search svg {
+        width: 12px; }
+    .error-404__num {
+      width: 270px;
+      top: -65px;
+      bottom: unset; }
+    .error-404__link {
+      margin-top: 30px; } }
+
+/*# sourceMappingURL=404.css.map */
