@@ -29,5 +29,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-# Для
+# Генерирует маршрут до директории с медиафайлами.
+# Работает только в режиме отладки.
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

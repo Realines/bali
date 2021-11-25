@@ -24,6 +24,6 @@ class QuizAdmin(admin.ModelAdmin):
 
 
 @admin.register(FAQ)
-class FAQAdmin(TabbedTranslationAdmin):  # Наследуем от TabbedTranslationAdmin для генерации доп. полей для перевода данных.
+class FAQAdmin(TabbedTranslationAdmin):
     list_display = ('question', 'answer', )
     list_display_links = ('question', )

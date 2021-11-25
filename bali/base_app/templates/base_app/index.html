@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% trans 'MainPage' %}</title>
+    <title></title>
 </head>
 <body>
     <hr>
@@ -18,8 +18,7 @@
     {% endfor %}
     <hr>
 
-    Главная страница {{ faq.1 }}
-    <a href="{% url 'projects:projects' 3 %}">test</a>
+    {{ faq.1 }}
     <form id="quiz_form" method="POST">
         {% csrf_token %}
         {{ quiz_form.as_p }}
@@ -47,7 +46,7 @@
         $(document).ready(function() {
             $('#quiz_form').submit(function() {
                 $.ajax({
-                    url: 'http://127.0.0.1:8000/quiz-handler/',
+                    url: '{% url 'base_app:quiz_handler' %}',
                     method: 'post',
                     dataType: 'html',
                     data: $(this).serialize(),
@@ -60,7 +59,7 @@
 
             $('#consult_form').submit(function() {
                 $.ajax({
-                    url: '{% url 'base_app:consult-handler' %}',
+                    url: '{% url 'base_app:consult_handler' %}',
                     method: 'post',
                     dataType: 'html',
                     data: $(this).serialize(),

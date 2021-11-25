@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-23 11:51+0700\n"
+"POT-Creation-Date: 2021-11-25 10:39+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,122 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\projects\projects.html:7
-msgid "SomeProject"
-msgstr "Some project"
+#: .\projects\apps.py:8 .\projects\models.py:55
+msgid "Проекты"
+msgstr "Projects"
+
+#: .\projects\models.py:6
+msgid "Название проекта"
+msgstr "Project name"
+
+#: .\projects\models.py:7
+msgid "Адрес"
+msgstr "Address"
+
+#: .\projects\models.py:8
+msgid "Стоимость проекта"
+msgstr "Project cost"
+
+#: .\projects\models.py:9
+msgid "Описание проекта"
+msgstr "Project description"
+
+#: .\projects\models.py:10
+msgid "Площадь"
+msgstr "Area"
+
+#: .\projects\models.py:11
+msgid "Количество спален"
+msgstr "Number of bedrooms"
+
+#: .\projects\models.py:13
+msgid "Вид"
+msgstr "View"
+
+#: .\projects\models.py:14
+msgid "Открывающийся из виллы вид"
+msgstr "The view from the villa"
+
+#: .\projects\models.py:18 .\projects\models.py:114 .\projects\models.py:126
+msgid "Локация"
+msgstr "Location"
+
+#: .\projects\models.py:25
+msgid "Дата добавления"
+msgstr "Date added"
+
+#: .\projects\models.py:34 .\projects\models.py:85
+msgid "Категории"
+msgstr "Categories"
+
+#: .\projects\models.py:40
+msgid "Проект подлежит инвестированию"
+msgstr "The project is subject to investment"
+
+#: .\projects\models.py:44
+msgid "Опубликовать"
+msgstr "To publish"
+
+#: .\projects\models.py:48
+msgid "Главное изображение"
+msgstr "Main image"
+
+#: .\projects\models.py:54 .\projects\models.py:95
+msgid "Проект"
+msgstr "Project"
+
+#: .\projects\models.py:63
+msgid "Изображение для проекта"
+msgstr "Image for the project"
+
+#: .\projects\models.py:73
+msgid "Галерея проекта"
+msgstr "Project gallery"
+
+#: .\projects\models.py:74
+msgid "Галереи проектов"
+msgstr "Project galleries"
+
+#: .\projects\models.py:81
+msgid "Название категории"
+msgstr "Category name"
+
+#: .\projects\models.py:84
+msgid "Категория"
+msgstr "Category"
+
+#: .\projects\models.py:92
+msgid "Название преимущества"
+msgstr "Name of the advantage"
+
+#: .\projects\models.py:103
+msgid "Преимущество проекта"
+msgstr "The advantage of the project"
+
+#: .\projects\models.py:104
+msgid "Преимущества проектов"
+msgstr "Advantages of projects"
+
+#: .\projects\models.py:111
+msgid "Название локации"
+msgstr "Location name"
+
+#: .\projects\models.py:115
+msgid "Локации"
+msgstr "Locations"
+
+#: .\projects\models.py:122
+msgid "Заголовок факта"
+msgstr "Fact title"
+
+#: .\projects\models.py:123
+msgid "Описание факта"
+msgstr "Description of the fact"
+
+#: .\projects\models.py:133
+msgid "Факт о локации"
+msgstr "Fact about the location"
+
+#: .\projects\models.py:134
+msgid "Факты о локациях"
+msgstr "Facts about locations"

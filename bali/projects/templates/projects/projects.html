@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% trans 'SomeProject' %} {{ project_id }}</title>
+    <title>{{ project_id }}</title>
 </head>
 <body>
     <hr>
@@ -17,8 +17,6 @@
     {% endif %} |
     {% endfor %}
     <hr>
-
-    <a href="{% url 'base_app:index' %}">Главная</a>
 
     <p>Project id {{ current_project.id }}</p>
     <p>Project name {{ current_project.name }}</p>

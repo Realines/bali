@@ -1,57 +1,54 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Project(models.Model):
-    name = models.TextField(verbose_name='Название проекта')
-    address = models.TextField(verbose_name='Адрес')
-    price = models.BigIntegerField(verbose_name='Стоимость проекта')
-    description = models.TextField(verbose_name='Описание проекта')
-    area = models.SmallIntegerField(verbose_name='Площадь')
-    count_bedrooms = models.SmallIntegerField(verbose_name='Количество спален')
+    name = models.TextField(verbose_name=_('Название проекта'))
+    address = models.TextField(verbose_name=_('Адрес'))
+    price = models.BigIntegerField(verbose_name=_('Стоимость проекта'))
+    description = models.TextField(verbose_name=_('Описание проекта'))
+    area = models.SmallIntegerField(verbose_name=_('Площадь'))
+    count_bedrooms = models.SmallIntegerField(verbose_name=_('Количество спален'))
     view = models.TextField(
-        verbose_name='Вид',
-        help_text='Открывающийся из виллы вид',
+        verbose_name=_('Вид'),
+        help_text=_('Открывающийся из виллы вид'),
     )
     location = models.ForeignKey(
         'Location',
-        verbose_name='Локация',
+        verbose_name=_('Локация'),
         on_delete=models.SET_NULL,
         related_name='projects',
         related_query_name='project',
         null=True,
     )
     date_added = models.DateField(
-        verbose_name='Дата добавления',
+        verbose_name=_('Дата добавления'),
         auto_now_add=True,
-    )
-    priority = models.SmallIntegerField(
-        verbose_name='Приоритет проекта',
-        help_text='От этого значения будет зависит выборка рекомендаций',
     )
     categories = models.ManyToManyField(
         'Category',
-        verbose_name='Категории',
+        verbose_name=_('Категории'),
         related_name='projects',
         related_query_name='project',
         symmetrical=True,
     )
     invested = models.BooleanField(
-        verbose_name='Проект подлежит инвестированию',
+        verbose_name=_('Проект подлежит инвестированию'),
         default=False,
     )
     public = models.BooleanField(
-        verbose_name='Опубликовать',
+        verbose_name=_('Опубликовать'),
         default=False,
     )
     main_image = models.ImageField(
-        verbose_name='Главное изображение',
+        verbose_name=_('Главное изображение'),
         upload_to='sys/projects/',
         null=True,
     )
 
     class Meta:
-        verbose_name = 'Проект'
-        verbose_name_plural = 'Проекты'
+        verbose_name = _('Проект')
+        verbose_name_plural = _('Проекты')
 
     def __str__(self) -> str:
         return str(self.name)
@@ -59,7 +56,7 @@ class Project(models.Model):
 
 class ProjectGallery(models.Model):
     image = models.ImageField(
-        verbose_name='Изображение для проекта',
+        verbose_name=_('Изображение для проекта'),
         upload_to='sys/projects/'
     )
     project = models.ForeignKey(
@@ -69,29 +66,29 @@ class ProjectGallery(models.Model):
     )
 
     class Meta:
-        verbose_name = 'Галерея проекта'
-        verbose_name_plural = 'Галереи проектов'
+        verbose_name = _('Галерея проекта')
+        verbose_name_plural = _('Галереи проектов')
 
     def __str__(self) -> str:
         return str(self.project)
 
 
 class Category(models.Model):
-    name = models.TextField(verbose_name='Название категории')
+    name = models.TextField(verbose_name=_('Название категории'))
 
     class Meta:
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
+        verbose_name = _('Категория')
+        verbose_name_plural = _('Категории')
 
     def __str__(self) -> str:
         return str(self.name)
 
 
 class AdvantagesProject(models.Model):
-    name = models.TextField(verbose_name='Название преимущества')
+    name = models.TextField(verbose_name=_('Название преимущества'))
     project = models.ForeignKey(
         Project,
-        verbose_name='Проект',
+        verbose_name=_('Проект'),
         on_delete=models.CASCADE,
         related_name='advantages',
         related_query_name='advantage',
@@ -99,38 +96,38 @@ class AdvantagesProject(models.Model):
     )
 
     class Meta:
-        verbose_name = 'Преимущество проекта'
-        verbose_name_plural = 'Преимущества проектов'
+        verbose_name = _('Преимущество проекта')
+        verbose_name_plural = _('Преимущества проектов')
 
     def __str__(self) -> str:
         return str(self.name)
 
 
 class Location(models.Model):
-    name = models.TextField(verbose_name='Название локации')
+    name = models.TextField(verbose_name=_('Название локации'))
 
     class Meta:
-        verbose_name = 'Локация'
-        verbose_name_plural = 'Локации'
+        verbose_name = _('Локация')
+        verbose_name_plural = _('Локации')
 
     def __str__(self) -> str:
         return str(self.name)
 
 
 class LocationFact(models.Model):
-    title = models.TextField(verbose_name='Заголовок факта')
-    description = models.TextField(verbose_name='Описание факта')
+    title = models.TextField(verbose_name=_('Заголовок факта'))
+    description = models.TextField(verbose_name=_('Описание факта'))
     location = models.ForeignKey(
         Location,
-        verbose_name='Локация',
+        verbose_name=_('Локация'),
         on_delete=models.CASCADE,
         related_name='facts',
         related_query_name='fact',
     )
 
     class Meta:
-        verbose_name = 'Факт о локации'
-        verbose_name_plural = 'Факты о локациях'
+        verbose_name = _('Факт о локации')
+        verbose_name_plural = _('Факты о локациях')
 
     def __str__(self) -> str:
         return f'{self.location}#{self.pk}'

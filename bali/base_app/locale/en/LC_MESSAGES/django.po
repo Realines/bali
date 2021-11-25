@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-23 11:51+0700\n"
+"POT-Creation-Date: 2021-11-25 10:39+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,214 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\base_app\index.html:7
-msgid "MainPage"
-msgstr "Main page"
+#: .\bali\settings.py:141
+msgid "Russian"
+msgstr "Russian"
 
-msgid "OK"
-msgstr "OK"
+#: .\bali\settings.py:142
+msgid "English"
+msgstr "English"
+
+#: .\bali\settings.py:143
+msgid "Arabian"
+msgstr "Arabian"
+
+#: .\base_app\apps.py:8
+msgid "Базовое приложение"
+msgstr "Basic Application"
+
+#: .\base_app\forms.py:12 .\base_app\forms.py:14 .\base_app\forms.py:31
+#: .\base_app\forms.py:33
+msgid "Ваш номер телефона"
+msgstr "Your phone number"
+
+#: .\base_app\forms.py:13 .\base_app\forms.py:32
+msgid "Ограничение по символам: 32"
+msgstr "Character limit: 32"
+
+#: .\base_app\forms.py:24 .\base_app\forms.py:26
+msgid "Ваше имя"
+msgstr "Your name"
+
+#: .\base_app\forms.py:25
+msgid "Слишком длинное имя"
+msgstr "The name is too long"
+
+#: .\base_app\forms.py:37
+msgid "Что вам больше подходит?"
+msgstr "What suits you best?"
+
+#: .\base_app\forms.py:40 .\base_app\forms.py:48 .\base_app\forms.py:85
+msgid "Такого варианта нет"
+msgstr "There is no such option"
+
+#: .\base_app\forms.py:45
+msgid "Расстояние виллы до моря?"
+msgstr "The distance of the villa to the sea?"
+
+#: .\base_app\forms.py:53
+msgid "Доходность"
+msgstr "Profitability"
+
+#: .\base_app\forms.py:55 .\base_app\forms.py:62 .\base_app\forms.py:69
+#: .\base_app\forms.py:76
+msgid "Минимальный срок: 5 лет"
+msgstr "Minimum term: 5 years"
+
+#: .\base_app\forms.py:56 .\base_app\forms.py:63 .\base_app\forms.py:70
+#: .\base_app\forms.py:77
+msgid "Максимальный срок: 30 лет"
+msgstr "Maximum term: 30 years"
+
+#: .\base_app\forms.py:60
+msgid "Район"
+msgstr "District"
+
+#: .\base_app\forms.py:67 .\base_app\models.py:74
+msgid "Расстояние до моря"
+msgstr "Distance to the sea"
+
+#: .\base_app\forms.py:74
+msgid "Срок аренды виллы?"
+msgstr "The rental period of the villa?"
+
+#: .\base_app\forms.py:82
+msgid "Укажите Ваш планируемый бюджет инвестирования"
+msgstr "Specify your planned investment budget"
+
+#: .\base_app\models.py:7
+msgid "Вопрос"
+msgstr "Question"
+
+#: .\base_app\models.py:8
+msgid "Ответ на вопрос"
+msgstr "The answer to the question"
+
+#: .\base_app\models.py:11
+msgid "Часто задаваемый вопрос"
+msgstr "Frequently Asked Question"
+
+#: .\base_app\models.py:12
+msgid "Часто задаваемые вопросы"
+msgstr "Frequently Asked Questions"
+
+#: .\base_app\models.py:21
+msgid "Номер телефона телефона"
+msgstr "Phone number of the phone"
+
+#: .\base_app\models.py:24
+msgid "Дата подачи заявки"
+msgstr "Date of application submission"
+
+#: .\base_app\models.py:29 .\base_app\models.py:30
+msgid "Данные для консультации"
+msgstr "Data for consultation"
+
+#: .\base_app\models.py:33
+msgid "Заявка на консультацию"
+msgstr "Request for consultation"
+
+#: .\base_app\models.py:38
+msgid "Аренда вилл"
+msgstr "Villa rentals"
+
+#: .\base_app\models.py:39
+msgid "Строительство"
+msgstr "Construction"
+
+#: .\base_app\models.py:42
+msgid "5 минут"
+msgstr "5 minutes"
+
+#: .\base_app\models.py:43
+msgid "10 минут"
+msgstr "10 minutes"
+
+#: .\base_app\models.py:44
+msgid "от 15 минут"
+msgstr "from 15 minutes"
+
+#: .\base_app\models.py:47
+msgid "от $300.000"
+msgstr "from $300,000"
+
+#: .\base_app\models.py:48
+msgid "$200.000 - $500.000"
+msgstr "$200.000 - $500.000"
+
+#: .\base_app\models.py:49
+msgid "$500.000 - $1.000.000"
+msgstr "$500.000 - $1.000.000"
+
+#: .\base_app\models.py:50
+msgid "$1.000.000 - $3.000.000"
+msgstr "$1.000.000 - $3.000.000"
+
+#: .\base_app\models.py:51
+msgid "Более $3.000.000"
+msgstr "More than $3,000,000"
+
+#: .\base_app\models.py:54
+msgid "1 спальня"
+msgstr "1 bedroom"
+
+#: .\base_app\models.py:55
+msgid "2 спальни"
+msgstr "2 bedrooms"
+
+#: .\base_app\models.py:56
+msgid "3 спальни"
+msgstr "3 bedrooms"
+
+#: .\base_app\models.py:57
+msgid "4 спальни и больше"
+msgstr "4 bedrooms and more"
+
+#: .\base_app\models.py:61
+msgid "Имя клиента"
+msgstr "Client's name"
+
+#: .\base_app\models.py:65
+msgid "Номер телефона клиента"
+msgstr "Customer's phone number"
+
+#: .\base_app\models.py:69
+msgid "Тип заказа"
+msgstr "Order type"
+
+#: .\base_app\models.py:80
+msgid "Важность доходности"
+msgstr "The importance of profitability"
+
+#: .\base_app\models.py:83
+msgid "Минимальный оценка: 1"
+msgstr "Minimum rating: 1"
+
+#: .\base_app\models.py:84
+msgid "Максимальный оценка: 5"
+msgstr "Maximum rating: 5"
+
+#: .\base_app\models.py:89
+msgid "Важность района"
+msgstr "Importance of the district"
+
+#: .\base_app\models.py:96
+msgid "Важность расстояния до моря"
+msgstr "The importance of distance to the sea"
+
+#: .\base_app\models.py:103
+msgid "Срок аренды"
+msgstr "Rental period"
+
+#: .\base_app\models.py:111
+msgid "Планируемый бюджет"
+msgstr "Planned budget"
+
+#: .\base_app\models.py:118 .\base_app\models.py:122
+msgid "Квиз"
+msgstr "Quiz"
+
+#: .\base_app\models.py:119
+msgid "Квизы"
+msgstr "Quizzes"
+

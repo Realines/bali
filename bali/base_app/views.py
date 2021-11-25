@@ -1,5 +1,3 @@
-import json
-
 from django.shortcuts import render
 from django.http import (
     HttpRequest,
@@ -59,7 +57,7 @@ def quiz_handler(request: HttpRequest) -> JsonResponse:
     if quiz_form.is_valid():
         quiz_form.save()
     else:
-        return JsonResponse({'errors': quiz_form.errors}, status=201,
+        return JsonResponse({'errors': quiz_form.errors}, status=403,
                             json_dumps_params={'ensure_ascii': False})
 
     return JsonResponse({'msg': _('OK')}, status=201,

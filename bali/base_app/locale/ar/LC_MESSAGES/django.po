@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-23 11:51+0700\n"
+"POT-Creation-Date: 2021-11-25 10:39+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,9 +19,213 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\templates\base_app\index.html:7
-msgid "MainPage"
-msgstr "الصفحة الرئيسية"
+#: .\bali\settings.py:141
+msgid "Russian"
+msgstr "الروسية"
 
-msgid "OK"
-msgstr "حسنا"
+#: .\bali\settings.py:142
+msgid "English"
+msgstr "الإنجليزيّة"
+
+#: .\bali\settings.py:143
+msgid "Arabian"
+msgstr "العربية"
+
+#: .\base_app\apps.py:8
+msgid "Базовое приложение"
+msgstr "التطبيق الأساسي"
+
+#: .\base_app\forms.py:12 .\base_app\forms.py:14 .\base_app\forms.py:31
+#: .\base_app\forms.py:33
+msgid "Ваш номер телефона"
+msgstr "رقم هاتفك"
+
+#: .\base_app\forms.py:13 .\base_app\forms.py:32
+msgid "Ограничение по символам: 32"
+msgstr "الحد الأقصى للحرف: 32"
+
+#: .\base_app\forms.py:24 .\base_app\forms.py:26
+msgid "Ваше имя"
+msgstr "اسمك"
+
+#: .\base_app\forms.py:25
+msgid "Слишком длинное имя"
+msgstr "اسم طويل جدا"
+
+#: .\base_app\forms.py:37
+msgid "Что вам больше подходит?"
+msgstr "ما الذي يناسبك ؟"
+
+#: .\base_app\forms.py:40 .\base_app\forms.py:48 .\base_app\forms.py:85
+msgid "Такого варианта нет"
+msgstr "لا يوجد مثل هذا الخيار"
+
+#: .\base_app\forms.py:45
+msgid "Расстояние виллы до моря?"
+msgstr "المسافة من الفيلا إلى البحر ؟"
+
+#: .\base_app\forms.py:53
+msgid "Доходность"
+msgstr "الربحية"
+
+#: .\base_app\forms.py:55 .\base_app\forms.py:62 .\base_app\forms.py:69
+#: .\base_app\forms.py:76
+msgid "Минимальный срок: 5 лет"
+msgstr "مدة الحد الأدنى: 5 سنوات"
+
+#: .\base_app\forms.py:56 .\base_app\forms.py:63 .\base_app\forms.py:70
+#: .\base_app\forms.py:77
+msgid "Максимальный срок: 30 лет"
+msgstr "المدة القصوى: 30 سنة"
+
+#: .\base_app\forms.py:60
+msgid "Район"
+msgstr "المنطقة"
+
+#: .\base_app\forms.py:67 .\base_app\models.py:74
+msgid "Расстояние до моря"
+msgstr "المسافة إلى البحر"
+
+#: .\base_app\forms.py:74
+msgid "Срок аренды виллы?"
+msgstr "فترة تأجير الفيلا؟"
+
+#: .\base_app\forms.py:82
+msgid "Укажите Ваш планируемый бюджет инвестирования"
+msgstr "حدد ميزانية الاستثمار المخطط لها"
+
+#: .\base_app\models.py:7
+msgid "Вопрос"
+msgstr "السؤال"
+
+#: .\base_app\models.py:8
+msgid "Ответ на вопрос"
+msgstr "الجواب على السؤال"
+
+#: .\base_app\models.py:11
+msgid "Часто задаваемый вопрос"
+msgstr "سؤال متكرر"
+
+#: .\base_app\models.py:12
+msgid "Часто задаваемые вопросы"
+msgstr "الأسئلة المتداولة"
+
+#: .\base_app\models.py:21
+msgid "Номер телефона телефона"
+msgstr "رقم هاتف الهاتف"
+
+#: .\base_app\models.py:24
+msgid "Дата подачи заявки"
+msgstr "تاريخ تقديم الطلب"
+
+#: .\base_app\models.py:29 .\base_app\models.py:30
+msgid "Данные для консультации"
+msgstr "البيانات للتشاور"
+
+#: .\base_app\models.py:33
+msgid "Заявка на консультацию"
+msgstr "طلب استشارة"
+
+#: .\base_app\models.py:38
+msgid "Аренда вилл"
+msgstr "استئجار فيلا"
+
+#: .\base_app\models.py:39
+msgid "Строительство"
+msgstr "التشييد"
+
+#: .\base_app\models.py:42
+msgid "5 минут"
+msgstr "5 دقائق"
+
+#: .\base_app\models.py:43
+msgid "10 минут"
+msgstr "10 دقائق"
+
+#: .\base_app\models.py:44
+msgid "от 15 минут"
+msgstr "من 15 دقيقة"
+
+#: .\base_app\models.py:47
+msgid "от $300.000"
+msgstr "من 300,000 دولار"
+
+#: .\base_app\models.py:48
+msgid "$200.000 - $500.000"
+msgstr "$200.000 - $500.000"
+
+#: .\base_app\models.py:49
+msgid "$500.000 - $1.000.000"
+msgstr "$500.000 - $1.000.000"
+
+#: .\base_app\models.py:50
+msgid "$1.000.000 - $3.000.000"
+msgstr "$1.000.000 - $3.000.000"
+
+#: .\base_app\models.py:51
+msgid "Более $3.000.000"
+msgstr "أكثر من $3,000,000"
+
+#: .\base_app\models.py:54
+msgid "1 спальня"
+msgstr "1 غرفة نوم"
+
+#: .\base_app\models.py:55
+msgid "2 спальни"
+msgstr "2 غرف نوم"
+
+#: .\base_app\models.py:56
+msgid "3 спальни"
+msgstr "3 غرف نوم"
+
+#: .\base_app\models.py:57
+msgid "4 спальни и больше"
+msgstr "4 غرف نوم وأكثر"
+
+#: .\base_app\models.py:61
+msgid "Имя клиента"
+msgstr "اسم العميل"
+
+#: .\base_app\models.py:65
+msgid "Номер телефона клиента"
+msgstr "رقم هاتف العميل"
+
+#: .\base_app\models.py:69
+msgid "Тип заказа"
+msgstr "نوع الأمر"
+
+#: .\base_app\models.py:80
+msgid "Важность доходности"
+msgstr "أهمية الربحية"
+
+#: .\base_app\models.py:83
+msgid "Минимальный оценка: 1"
+msgstr "الحد الأدنى للتصنيف: 1"
+
+#: .\base_app\models.py:84
+msgid "Максимальный оценка: 5"
+msgstr "أقصى تصنيف: 5"
+
+#: .\base_app\models.py:89
+msgid "Важность района"
+msgstr "أهمية منطقة"
+
+#: .\base_app\models.py:96
+msgid "Важность расстояния до моря"
+msgstr "أهمية المسافة إلى البحر"
+
+#: .\base_app\models.py:103
+msgid "Срок аренды"
+msgstr "فترة الإيجار"
+
+#: .\base_app\models.py:111
+msgid "Планируемый бюджет"
+msgstr "الميزانية المقررة"
+
+#: .\base_app\models.py:118 .\base_app\models.py:122
+msgid "Квиз"
+msgstr "مسابقة"
+
+#: .\base_app\models.py:119
+msgid "Квизы"
+msgstr "مسابقات"
