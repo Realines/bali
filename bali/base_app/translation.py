@@ -8,6 +8,7 @@ from base_app.models import FAQ
 
 
 class FAQTranslationOptions(TranslationOptions):
+    """Класс указания настроек перевода полей"""
     fields = ('question', 'answer', )
 
 

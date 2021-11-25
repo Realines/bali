@@ -8,17 +8,22 @@ from base_app.models import (
 
 
 class ConsultationForm(forms.ModelForm):
+    """Форма консультации"""
+
     # TODO: Придумать валидацию телфона. Уточнить у Витали.
     phone = forms.CharField(max_length=32, label=_('Ваш номер телефона'),
                             error_messages={'max_length': _('Ограничение по символам: 32')},
                             widget=forms.TextInput(attrs={'placeholder': _('Ваш номер телефона')}))
 
     class Meta:
+        """Класс настроек поведения модели"""
         model = DataConsultation
         fields = ('phone', )
 
 
 class QuizForm(forms.ModelForm):
+    """Форма квиза"""
+
     client_name = forms.CharField(
         max_length=64,
         label=_('Ваше имя'),
@@ -88,5 +93,6 @@ class QuizForm(forms.ModelForm):
     )
 
     class Meta:
+        """Класс настроек поведения модели"""
         model = Quiz
         fields = '__all__'

@@ -57,10 +57,12 @@ def quiz_handler(request: HttpRequest) -> JsonResponse:
     if quiz_form.is_valid():
         quiz_form.save()
     else:
-        return JsonResponse({'errors': quiz_form.errors}, status=403,
+        return JsonResponse({'errors': quiz_form.errors,
+                             'msg': _('Ошибка отправки формы')},
+                            status=403,
                             json_dumps_params={'ensure_ascii': False})
 
-    return JsonResponse({'msg': _('OK')}, status=201,
+    return JsonResponse({'msg': _('Форма успешно отправлена')}, status=201,
                         json_dumps_params={'ensure_ascii': False})
 
 
@@ -78,8 +80,10 @@ def consult_handler(request: HttpRequest) -> JsonResponse:
     if consult_form.is_valid():
         consult_form.save()
     else:
-        return JsonResponse({'errors': consult_form.errors}, status=403,
+        return JsonResponse({'errors': consult_form.errors,
+                             'msg': _('Ошибка отправки формы')},
+                            status=403,
                             json_dumps_params={'ensure_ascii': False})
 
-    return JsonResponse({'msg': _('OK')}, status=201,
+    return JsonResponse({'msg': _('Вы успешно записались на консультацию')}, status=201,
                         json_dumps_params={'ensure_ascii': False})

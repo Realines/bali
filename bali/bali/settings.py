@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# Модуль modeltranslation должен быть зарегистрирован в проекте
+# раньше модуля django.contrib.admin для успешной модификации
+# моделей перед их регистрацией в админке. Этот модуль наследует
+# функционал django.contrib.admin.
 INSTALLED_APPS = [
     'modeltranslation',
     'django.contrib.admin',
@@ -45,6 +49,10 @@ INSTALLED_APPS = [
     'translator.apps.TranslatorConfig',
 ]
 
+# Для поддержки перевода языков добавлен модуль
+# django.middleware.locale.LocaleMiddleware.
+# (перед django.contrib.sessions.middleware.SessionMiddleware
+# и после django.middleware.common.CommonMiddleware).
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

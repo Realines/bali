@@ -3,6 +3,8 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Project(models.Model):
+    """Модель проекта"""
+
     name = models.TextField(verbose_name=_('Название проекта'))
     address = models.TextField(verbose_name=_('Адрес'))
     price = models.BigIntegerField(verbose_name=_('Стоимость проекта'))
@@ -47,14 +49,18 @@ class Project(models.Model):
     )
 
     class Meta:
+        """Класс настроек поведения модели"""
         verbose_name = _('Проект')
         verbose_name_plural = _('Проекты')
 
     def __str__(self) -> str:
+        """Метод для строкового представления объекта"""
         return str(self.name)
 
 
 class ProjectGallery(models.Model):
+    """Модель галереии для проекта"""
+
     image = models.ImageField(
         verbose_name=_('Изображение для проекта'),
         upload_to='sys/projects/'
@@ -66,25 +72,33 @@ class ProjectGallery(models.Model):
     )
 
     class Meta:
+        """Класс настроек поведения модели"""
         verbose_name = _('Галерея проекта')
         verbose_name_plural = _('Галереи проектов')
 
     def __str__(self) -> str:
+        """Метод для строкового представления объекта"""
         return str(self.project)
 
 
 class Category(models.Model):
+    """Модель категории проекта"""
+
     name = models.TextField(verbose_name=_('Название категории'))
 
     class Meta:
+        """Класс настроек поведения модели"""
         verbose_name = _('Категория')
         verbose_name_plural = _('Категории')
 
     def __str__(self) -> str:
+        """Метод для строкового представления объекта"""
         return str(self.name)
 
 
 class AdvantagesProject(models.Model):
+    """Модель преимущества проекта"""
+
     name = models.TextField(verbose_name=_('Название преимущества'))
     project = models.ForeignKey(
         Project,
@@ -96,25 +110,33 @@ class AdvantagesProject(models.Model):
     )
 
     class Meta:
+        """Класс настроек поведения модели"""
         verbose_name = _('Преимущество проекта')
         verbose_name_plural = _('Преимущества проектов')
 
     def __str__(self) -> str:
+        """Метод для строкового представления объекта"""
         return str(self.name)
 
 
 class Location(models.Model):
+    """Модель локации проекта"""
+
     name = models.TextField(verbose_name=_('Название локации'))
 
     class Meta:
+        """Класс настроек поведения модели"""
         verbose_name = _('Локация')
         verbose_name_plural = _('Локации')
 
     def __str__(self) -> str:
+        """Метод для строкового представления объекта"""
         return str(self.name)
 
 
 class LocationFact(models.Model):
+    """Модель факта о локации проекта"""
+
     title = models.TextField(verbose_name=_('Заголовок факта'))
     description = models.TextField(verbose_name=_('Описание факта'))
     location = models.ForeignKey(
@@ -126,8 +148,10 @@ class LocationFact(models.Model):
     )
 
     class Meta:
+        """Класс настроек поведения модели"""
         verbose_name = _('Факт о локации')
         verbose_name_plural = _('Факты о локациях')
 
     def __str__(self) -> str:
+        """Метод для строкового представления объекта"""
         return f'{self.location}#{self.pk}'
