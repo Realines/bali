@@ -10,14 +10,12 @@ function sliderProject() {
             prevEl: '.project-detail .swiper-button-prev',
         },
         breakpoints: {
-            // 320: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 0
-            // },
-            // 480: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 0
-            // },
+            320: {
+                spaceBetween: 10
+            },
+            992: {
+                spaceBetween: 30
+            },
 
         }
     })
@@ -98,6 +96,11 @@ $(document).ready(function() {
         quizFormData.name = $("#quizName").val()
         quizFormData.phone = $("#quizPhone").val()
         console.log(quizFormData)
+    })
+
+    $(".quiz__step-consult").click(function() {
+        $(`.quiz__step`).removeClass("quiz__step--active")
+        $(`.quiz__step-last`).addClass("quiz__step--active")
     })
 
 })

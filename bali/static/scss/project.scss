@@ -111,7 +111,7 @@
         width: 530px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 38 0;
+        gap: 38px 0;
     }
     &__item {
         padding-right: 10px;
@@ -164,15 +164,17 @@
 }
 
 .location {
-    padding: 75px 0;
+    padding: 75px 0 45px;
     margin-top: 30px;
     &__items {
         margin-top: 60px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__item {
         width: calc(33.333% - 20px);
+        margin-bottom: 30px;
         &-time {
             font-weight: 600;
             font-size: 20px;
@@ -188,6 +190,142 @@
         &-desc {
             font-size: 16px;
             line-height: 150%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .project-detail {
+        .swiper-slide {
+            width: 600px;
+        }
+    }
+    .advantages {
+        &__inner {
+            padding: 36px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .project-detail {
+        padding: 0;
+        margin-top: -10px;
+        .swiper-slide {
+            width: 400px;
+        }
+        &__link {
+            font-size: 10px;
+            svg {
+                width: 16px;
+            }
+        }
+        &__price {
+            font-size: 20px;
+        }
+        &__top {
+            margin-top: 30px;
+            &-title {
+                font-size: 20px;
+            }
+            &-desc {
+                margin-top: 10px;
+                font-size: 12px;
+            }
+        }
+        &__slider {
+            margin-top: 40px;
+            &-next,
+            &-prev {
+                display: none;
+                svg {
+                    width: 35px;
+                    height: auto;
+                }
+            }
+        }
+        &__bottom {
+            margin-top: 35px;
+            flex-wrap: wrap;
+            &-title {
+                font-size: 12px;
+            }
+        }
+        &__items {
+            order: -1;
+            width: 100%;
+            margin-bottom: 30px;
+            gap: 30px 0;
+        }
+        &__item {
+            span {
+                font-size: 12px;
+            }
+            strong {
+                font-size: 20px;
+                margin-top: 6px;
+            }
+        }
+        &__btn {
+            width: 130px;
+            height: 45px;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    }
+    .advantages {
+        &__list {
+            display: block;
+            margin-top: 30px;
+            & li {
+                padding-left: 40px;
+                font-size: 12px;
+                width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+                &:before {
+                    width: 20px;
+                    height: 20px;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+    .location {
+        padding: 30px 0 0;
+        &__items {
+            margin-top: 30px;
+            display: block;
+        }
+        &__item {
+            width: 100%;
+            &-time {
+                font-size: 14px;
+            }
+            &-title {
+                font-size: 12px;
+                margin-top: 15px;
+            }
+            &-desc {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-detail {
+        .swiper-slide {
+            width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .project-detail {
+        .swiper-slide {
+            width: 260px;
         }
     }
 }

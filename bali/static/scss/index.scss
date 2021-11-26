@@ -1,7 +1,7 @@
 .main {
     padding: 290px 0 265px;
     background-image: url(../img/main.jpg);
-    background-size: cover;
+    background-size: contain;
     margin-top: -137px;
     &__left {
         width: 490px;
@@ -58,6 +58,10 @@
         &-icon {
             width: 80px;
             height: 80px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
         }
         &-title {
             font-weight: 600;
@@ -135,10 +139,10 @@
         }
         &-next {
             background: #86A876;
-            margin-left: 30px;
         }
         &-prev {
             background: #313931;
+            margin-right: 30px;
         }
     }
     &__step--active {
@@ -753,10 +757,10 @@
     &__desc {
         font-size: 20px;
         line-height: 150%;
-        width: calc(50% - 15px);
+        margin-bottom: 55px;
     }
     &__bottom {
-        margin-top: 55px;
+        margin-top: 25px;
         display: flex;
         justify-content: space-between;
     }
@@ -948,6 +952,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-shrink: 0;
             }
         }
         &-show--active {
@@ -970,9 +975,7 @@
 }
 
 .map {
-    img {
-        width: 100%;
-    }
+    height: 590px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1115,6 +1118,9 @@
                 margin-bottom: 15px;
             }
         }
+        &__year-hint {
+            margin-top: 30px;
+        }
     }
     .fact {
         padding: 30px 0;
@@ -1135,14 +1141,444 @@
             margin-bottom: 20px;
         }
     }
-    .projects,
-    .object,
-    .how,
-    .consult,
-    .agency,
-    .qa,
-    .map,
-    .footer {
+    .projects {
+        padding: 30px 0;
+        &__items {
+            display: flex;
+            gap: unset;
+            width: 100%;
+            overflow: auto;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            &::-webkit-scrollbar {
+                height: 10px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #252C25;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #86A876;
+                border-radius: 10px;
+            }
+        }
+        &__item {
+            width: 295px;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        &__item--hide {
+            display: block;
+        }
+        &__all {
+            display: none;
+        }
+    }
+    .object {
+        margin: 30px 0;
+        padding: 50px 0;
+        &__bg {
+            position: static;
+            font-size: 48px;
+            margin-top: 100px;
+            display: block;
+        }
+        &__desc {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 150%;
+        }
+        &__list {
+            margin-top: 30px;
+            min-height: 20px;
+            & li {
+                padding-left: 40px;
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+                &:before {
+                    width: 20px;
+                    height: 20px;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+    .how {
+        padding: 30px 0;
+        &__items {
+            margin-top: 30px;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    }
+    // good
+    .consult {
+        padding: 30px 0;
+        &__bottom {
+            margin-top: 30px;
+            display: block;
+        }
+        &__form {
+            width: 100%;
+            &-group {
+                input {
+                    height: 45px;
+                    padding: 0 20px;
+                    font-size: 12px;
+                }
+                img {
+                    width: 13px;
+                    height: auto;
+                }
+            }
+            &-btn {
+                height: 45px;
+                margin-top: 30px;
+            }
+        }
+        &__desc {
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+        &__social {
+            width: 100%;
+            margin-top: 30px;
+            &-btn {
+                height: 45px;
+                font-size: 12px;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &__img {
+            margin-top: 30px;
+        }
+    }
+    .agency {
+        background-size: 970px auto;
+        padding-top: 30px;
+        &__inner {
+            // display: block;
+        }
+        &__left {
+            width: 100%;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__contacts {
+            margin-top: 30px;
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+                &-right {
+                    font-size: 10px;
+                }
+                &-left {
+                    margin-right: 30px;
+                    width: 110px;
+                    font-size: 10px;
+                    svg {
+                        width: 16px;
+                        height: auto;
+                        margin-right: 9px;
+                    }
+                }
+            }
+        }
+        &__ceo {
+            margin-top: 30px;
+            &-tree {
+                width: 500px !important;
+            }
+            strong {
+                font-size: 14px;
+            }
+            span {
+                font-size: 12px;
+                margin-top: 0;
+            }
+        }
+        &__right {
+            width: 406px;
+        }
+        &__desc {
+            font-size: 12px;
+            margin-top: 30px;
+        }
+    }
+    .qa {
+        padding: 60px 0 65px;
+        &__item {
+            &-show {
+                span {
+                    font-size: 12px;
+                }
+                i {
+                    width: 20px;
+                    height: 20px;
+                    svg {
+                        width: 11px;
+                        height: auto;
+                    }
+                }
+            }
+            &-hidden {
+                font-size: 12px;
+            }
+        }
+    }
+    .map {
+        height: 570px;
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        background-position: right -130px top;
+        padding: 230px 0;
+        &__title {
+            font-size: 20px;
+        }
+        &__desc {
+            font-size: 12px;
+        }
+        &__bg {
+            left: 175px;
+            top: 0;
+            margin-left: 0;
+        }
+        &__left {
+            width: 100%;
+        }
+    }
+    .why {
+        &__top {
+            position: relative;
+        }
+        &__bg {
+            position: absolute;
+            top: -7px;
+            right: 0;
+        }
+        &__item {
+            &-icon {
+                width: 60px;
+                height: 60px;
+            }
+            &-title {
+                margin-top: 32px;
+                font-size: 15px;
+            }
+            &-desc {
+                font-size: 12px;
+                margin-top: 15px;
+            }
+        }
+    }
+    .quiz {
+        &__step {
+            &-title {
+                font-size: 15px;
+            }
+            &-bottom {
+                flex-wrap: wrap;
+            }
+            &-nav {
+                order: -1;
+                width: 100%;
+                justify-content: flex-end;
+                button {
+                    width: 74px;
+                    height: 38px;
+                    font-size: 10px;
+                }
+            }
+            &-consult {
+                width: 100%;
+                justify-content: flex-end;
+                margin-top: 30px;
+                font-size: 12px;
+            }
+            &-prev {
+                margin-right: 15px;
+            }
+        }
+        &__type {
+            &-item {
+                &-top {
+                    font-size: 15px;
+                    img {
+                        width: 50px;
+                        margin-right: 20px;
+                    }
+                }
+                &-desc {
+                    margin-top: 15px;
+                    font-size: 12px;
+                }
+            }
+        }
+        &__important {
+            &-item {
+                height: 38px;
+                padding: 0 20px;
+                font-size: 10px;
+            }
+            &-hint {
+                padding: 17px 20px;
+                &-item {
+                    font-size: 9px;
+                    svg {
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 11px;
+                    }
+                }
+            }
+        }
+        &__budget {
+            &-item {
+                height: 38px;
+                font-size: 10px;
+            }
+        }
+        &__distance,
+        &__year {
+            &-hint {
+                padding: 17px 20px;
+                &-item {
+                    font-size: 9px;
+                    svg {
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 11px;
+                    }
+                }
+            }
+        }
+        &__year {
+            &-range-value {
+                font-size: 14px;
+                margin-top: 30px;
+            }
+        }
+        &__rating {
+            &-item {
+                svg {
+                    width: 10px;
+                    height: auto;
+                }
+            }
+        }
+        &__finish {
+            &-desc {
+                font-size: 12px;
+            }
+            &-form {
+                &-group {
+                    input {
+                        height: 38px;
+                        font-size: 10px;
+                        padding-left: 20px;
+                        padding-right: 40px;
+                    }
+                    svg {
+                        width: 16px;
+                        height: auto;
+                        right: 11px;
+                    }
+                }
+                &-btn {
+                    height: 38px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .fact {
+        background-size: auto 210px;
+        background-position: right bottom 30px;
+        &__item {
+            strong {
+                font-size: 30px;
+            }
+            span {
+                font-size: 12px;
+                margin-top: 2px;
+            }
+        }
+        &__desc {
+            font-size: 14px;
+        }
+        &__info {
+            &-desc {
+                font-size: 12px;
+            }
+        }
+    }
+    .projects {
+        &__item {
+            width: 280px;
+            margin-right: 10px;
+            &-img {
+                height: 350px;
+            }
+            &-link {
+                font-size: 12px;
+                width: 133px;
+                height: 45px;
+            }
+            &-title {
+                font-size: 14px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .object {
+        &__left {
+            width: 100%;
+        }
+        &__list {
+            li {
+                font-size: 12px;
+            }
+        }
+    }
+    .how {
+        &__items {
+            display: block;
+        }
+        &__item {
+            padding-left: 35px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .agency {
+        &__inner {
+            display: block;
+        }
+        &__right {
+            width: 206px;
+            margin-left: auto;
+            margin-top: 35px;
+        }
+        &__ceo {
+            &-tree {
+                width: 372px !important;
+            }
+        }
+        &__ceo2 {
+            width: 270px !important;
+        }
+    }
+    .agency--bali .agency__right {
+        width: 270px;
     }
 }

@@ -166,5 +166,10 @@
     bottom: 10px; }
   .header__btn {
     margin-top: 40px; } }
+@media screen and (max-width: 768px) {
+  .header__right-inner {
+    width: 100%; }
+  .header__logo {
+    width: 91px; } }
 
 /*# sourceMappingURL=header.css.map */

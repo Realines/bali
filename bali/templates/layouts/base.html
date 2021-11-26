@@ -121,7 +121,9 @@
     </section>
 
     <section class='map'>
-        <img src="{% static 'img/map.jpg' %}" alt="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.126947873717!2d115.16171891478407!3d-8.679475993763775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd247653c70ea0f%3A0x74f56212c789f5f7!2sSwoi%20International%20Group!5e0!3m2!1sru!2sru!4v1637948091940!5m2!1sru!2sru"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- <img src="{% static 'img/map.jpg' %}" alt=""> -->
     </section>
 
     <footer class='footer'>
@@ -214,7 +216,7 @@
                 });
                 return false;
             })
-    
+
             $('#consult_form').submit(function() {
                 $.ajax({
                     url: "{% url 'base_app:consult_handler' %}",

@@ -54,5 +54,45 @@
 @media screen and (max-width: 1200px) {
   .footer__col:nth-child(1), .footer__col:nth-child(2) {
     margin-right: 40px; } }
+@media screen and (max-width: 992px) {
+  .footer {
+    padding: 60px 0 70px; }
+    .footer__inner {
+      flex-wrap: wrap; }
+    .footer__col:nth-child(1) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px; }
+    .footer__save {
+      margin-top: 20px; }
+    .footer__btn {
+      width: 280px;
+      height: 45px;
+      font-size: 10px; } }
+@media screen and (max-width: 768px) {
+  .footer__nav-item {
+    font-size: 12px; }
+  .footer__col:nth-child(2) {
+    width: 75px;
+    margin-right: 0; }
+  .footer__col:nth-child(3) {
+    width: calc(100% - 85px);
+    margin-left: auto; }
+  .footer__col:nth-child(4) {
+    width: 100%; }
+  .footer__privacy {
+    font-size: 12px;
+    line-height: 200%;
+    margin-top: -13px; }
+  .footer__socials a {
+    width: 20px; }
+    .footer__socials a svg {
+      height: 20px;
+      width: auto; }
+    .footer__socials a:not(:last-child) {
+      margin-right: 20px; }
+  .footer__btn {
+    width: 100%;
+    margin-top: 40px; } }
 
 /*# sourceMappingURL=footer.css.map */
