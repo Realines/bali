@@ -31,9 +31,13 @@ def projects(request: HttpRequest, project_id: int) -> HttpResponse:
     # Проекты в ленту рекомендаций.
     # Проекты отсортированы по количествую совпавших категорий
     # с категориями исходного проекта (current_project).
-    recommended_projects = Project.objects.exclude(pk=project_id).annotate(matching_cat=Count(
-        'categories', filter=Q(categories__in=current_project.categories.all()), distinct=True)
-    ).order_by('-matching_cat')
+    recommended_projects = Project.objects\
+        .exclude(pk=project_id)\
+        .filter(public=True)\
+        .annotate(matching_cat=Count('categories',
+                                     filter=Q(categories__in=current_project.categories.all()),
+                                     distinct=True))\
+        .order_by('-matching_cat')
 
     context = {'current_project': current_project,
                'recommended_projects': recommended_projects,

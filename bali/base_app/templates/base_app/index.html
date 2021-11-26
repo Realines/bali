@@ -55,8 +55,8 @@
             <strong>Получи лучшее предложение</strong>
             <span>за 30 секунд</span>
         </h2>
-        <form class='quiz__steps'>
-            <div class="quiz__step quiz__step-start" data-step-path="1">
+        <form id="quiz_form" class='quiz__steps'>
+            <div class="quiz__step quiz__step-start quiz__step--active" data-step-path="1">
                 <div class="quiz__step-title">Что вам больше подходит?</div>
                 <div class="quiz__type">
                     <div class="quiz__type-item">
@@ -66,7 +66,7 @@
                         </div>
                         <div class="quiz__type-item-desc">Долгосрочная аренда вилл и сдача в аренду посуточно. Инвестиции: от $60 000 </div>
                         <div class="quiz__radio">
-                            <input checked type='radio' value="rent" class='radio' id='type1' name='type' />
+                            <input checked type='radio' value="R" class='radio' id='type1' name='order_type' />
                             <label for='type1'></label>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="quiz__type-item-desc">Инвестиции: от $200 000. Срок строит-ва: от 9 месяцев. Рентабельность инвестиций - от 30% </div>
                         <div class="quiz__radio">
-                            <input type='radio' class='radio' value="construct" id='type2' name='type' />
+                            <input type='radio' class='radio' value="C" id='type2' name='order_type' />
                             <label for='type2'></label>
                         </div>
                     </div>
@@ -265,21 +265,21 @@
                     <div class="quiz__budget-item">
                         <span>5 минут</span>
                         <div class="quiz__radio">
-                            <input checked type='radio' class='radio' id='budget10' name='distance' />
+                            <input checked type='radio' class='radio' id='budget10' name='distance_to_sea' />
                             <label for='budget10'></label>
                         </div>
                     </div>
                     <div class="quiz__budget-item">
                         <span>10 минут</span>
                         <div class="quiz__radio">
-                            <input type='radio' class='radio' id='budget11' name='distance' />
+                            <input type='radio' class='radio' id='budget11' name='distance_to_sea' />
                             <label for='budget11'></label>
                         </div>
                     </div>
                     <div class="quiz__budget-item">
                         <span>от 15 минут</span>
                         <div class="quiz__radio">
-                            <input type='radio' class='radio' id='budget12' name='distance' />
+                            <input type='radio' class='radio' id='budget12' name='distance_to_sea' />
                             <label for='budget12'></label>
                         </div>
                     </div>
@@ -463,105 +463,32 @@
     <div class='container'>
         <h2 class="projects__title title">Инвестиции <span>OF PLAN</span></h2>
         <div class='projects__items'>
-            <a href="" class="projects__item">
+            {% for project in invested_projects %}
+            <a href="{% url 'projects:projects' project.pk %}" class="projects__item">
                 <div class="projects__item-img">
-                    <img src="{% static 'img/project1.jpg' %}" alt="">
+                    <img src="{{ project.main_image.url }}" alt="">
                     <div class="projects__item-link">Подробнее</div>
                 </div>
-                <div class="projects__item-title">Villa Anahit</div>
+                <div class="projects__item-title">{{ project.name }}</div>
             </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project2.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Gita Ungasan</div>
-            </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project3.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Villa Adasa</div>
-            </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project4.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Villa de Suma</div>
-            </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project5.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Villa Anahit</div>
-            </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project6.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Gita Ungasan</div>
-            </a>
+            {% endfor %}
         </div>
     </div>
 </section>
 
 <section class='projects'>
     <div class='container'>
-        <h2 class="projects__title title"><span>Проекты</span> для инвестирования</h2>
+        <h2 class="projects__title title"><span>Реализованные</span> проекты</h2>
         <div class='projects__items'>
-            <a href="" class="projects__item">
+            {% for project in not_invested_projects %}
+            <a href="{% url 'projects:projects' project.pk %}" class="projects__item">
                 <div class="projects__item-img">
-                    <img src="{% static 'img/project1.jpg' %}" alt="">
+                    <img src="{{ project.main_image.url }}" alt="">
                     <div class="projects__item-link">Подробнее</div>
                 </div>
-                <div class="projects__item-title">Villa Anahit</div>
+                <div class="projects__item-title">{{ project.name }}</div>
             </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project2.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Gita Ungasan</div>
-            </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project3.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Villa Adasa</div>
-            </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project4.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Villa de Suma</div>
-            </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project5.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Villa Anahit</div>
-            </a>
-            <a href="" class="projects__item">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project6.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Gita Ungasan</div>
-            </a>
-            <a href="" class="projects__item projects__item--hide">
-                <div class="projects__item-img">
-                    <img src="{% static 'img/project6.jpg' %}" alt="">
-                    <div class="projects__item-link">Подробнее</div>
-                </div>
-                <div class="projects__item-title">Gita Ungasan</div>
-            </a>
+            {% endfor %}
         </div>
         <button class="projects__all">Показать больше</button>
     </div>
@@ -653,12 +580,13 @@
             <div class="consult__desc">Если у вас остались вопросы - напишите нам. <br> Мы всегда открыты к диалогу.</div>
         </div>
         <div class="consult__bottom">
-            <form action="" class="consult__form">
+            <form id="consult_form" action="" class="consult__form">
+                {% csrf_token %}
                 <div class="consult__form-group">
-                    <input type="tel" placeholder="Ваш номер телефона">
+                    <input type="tel" name="phone" placeholder="Ваш номер телефона">
                     <img src="{% static 'img/carbon_phone-voice-filled.svg' %}" alt="">
                 </div>
-                <button class="consult__form-btn">Отправить</button>
+                <button type="submit" class="consult__form-btn">Отправить</button>
             </form>
             <div class="consult__social">
                 <a href="" class="consult__social-btn consult__social-whatsapp">
@@ -754,9 +682,10 @@
     <div class='container'>
         <h2 class="qa__title">Частые <span>вопросы</span></h2>
         <div class='qa__items'>
+            {% for f in faq %}
             <div class="qa__item">
                 <div class="qa__item-show">
-                    <span>Я планирую жить в своей вилле 3−6 месяцев в году. Что будет с ней в остальное время?</span>
+                    <span>f.question</span>
                     <i>
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.5 18.75L13.75 12.5L7.5 6.25L8.75 3.75L17.5 12.5L8.75 21.25L7.5 18.75Z" fill="white"/>
@@ -764,61 +693,10 @@
                         </i>
                 </div>
                 <div class="qa__item-hidden">
-                    222
+                    f.answer
                 </div>
             </div>
-            <div class="qa__item">
-                <div class="qa__item-show">
-                    <span>Есть ли гарантия на те виллы, которые вы строите?</span>
-                    <i>
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.5 18.75L13.75 12.5L7.5 6.25L8.75 3.75L17.5 12.5L8.75 21.25L7.5 18.75Z" fill="white"/>
-                            </svg>
-                        </i>
-                </div>
-                <div class="qa__item-hidden">
-                    222
-                </div>
-            </div>
-            <div class="qa__item">
-                <div class="qa__item-show">
-                    <span>Что будет с землей после аренды 30 лет?</span>
-                    <i>
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.5 18.75L13.75 12.5L7.5 6.25L8.75 3.75L17.5 12.5L8.75 21.25L7.5 18.75Z" fill="white"/>
-                            </svg>
-                        </i>
-                </div>
-                <div class="qa__item-hidden">
-                    222
-                </div>
-            </div>
-            <div class="qa__item">
-                <div class="qa__item-show">
-                    <span>Я могу купить землю и построить виллу без вашей помощи. Зачем мне работать с вами?</span>
-                    <i>
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.5 18.75L13.75 12.5L7.5 6.25L8.75 3.75L17.5 12.5L8.75 21.25L7.5 18.75Z" fill="white"/>
-                            </svg>
-                        </i>
-                </div>
-                <div class="qa__item-hidden">
-                    222
-                </div>
-            </div>
-            <div class="qa__item">
-                <div class="qa__item-show">
-                    <span>Если ситуация с пандемией растянется на много лет, как это отразится на моей инвестиции?</span>
-                    <i>
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.5 18.75L13.75 12.5L7.5 6.25L8.75 3.75L17.5 12.5L8.75 21.25L7.5 18.75Z" fill="white"/>
-                            </svg>
-                        </i>
-                </div>
-                <div class="qa__item-hidden">
-                    222
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -834,38 +712,4 @@
 <!--{% for project in not_invested_projects %}-->
 <!--<p>{{project.name}} {{project.invested}}</p>-->
 <!--{% endfor %}-->
-
-
-
-<script>
-    $(document).ready(function() {
-        $('#quiz_form').submit(function() {
-            $.ajax({
-                url: '{% url ',
-                // base_app: quiz_handler '%}',
-                method: 'post',
-                dataType: 'html',
-                data: $(this).serialize(),
-                success: function(data) {
-                    alert(data);
-                }
-            });
-            return false;
-        })
-
-        $('#consult_form').submit(function() {
-            $.ajax({
-                url: '{% url ',
-                // base_app: consult_handler ' %}',
-                method: 'post',
-                dataType: 'html',
-                data: $(this).serialize(),
-                success: function(data) {
-                    alert(data);
-                }
-            });
-            return false;
-        })
-    })
-</script>
 {% endblock %}
