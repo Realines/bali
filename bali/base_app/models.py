@@ -139,6 +139,13 @@ class Quiz(models.Model):
         null=True,
         blank=True,
     )
+    villa_area = models.CharField(
+        max_length=8,
+        verbose_name=_('Площадь виллы'),
+        choices=CountBedrooms.choices,
+        null=True,
+        blank=True,
+    )
 
     class Meta:
         """Класс настроек поведения модели"""

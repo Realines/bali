@@ -24,7 +24,7 @@ function sliderProject() {
 }
 
 
-let orderType = $("input[name='order_type']:checked").val()
+let orderType = $("input[name='order_type_m']:checked").val()
 
 let quizFormData = {
     orderType: orderType,
@@ -40,7 +40,9 @@ let quizFormData = {
 }
 
 
+
 $(document).ready(function() {
+
     sliderProject()
         // $('input[type="tel"]').mask('+7 (999) 999-9999', { placeholder: '+7 (       )         -' });
 
@@ -108,7 +110,7 @@ $(document).ready(function() {
 
 function nextStep(num, line) {
     if (num == 1) {
-        let typeInput = $("input[name='order_type']:checked").val()
+        let typeInput = $("input[name='order_type_m']:checked").val()
         console.log(typeInput)
         if (typeInput === 'R') {
             $(`.quiz__step`).removeClass("quiz__step--active")
@@ -144,7 +146,7 @@ function nextStep(num, line) {
         $(`.quiz__step`).removeClass("quiz__step--active")
         $(`.quiz__step[data-step-line='2'][data-step-path='3']`).addClass("quiz__step--active")
 
-        quizFormData.distanceToSea = $("input[name='distance_to_sea']:checked").val()
+        quizFormData.distanceToSea = $("input[name='distance']:checked").val()
 
     }
     if (line == 2 && num == 3) {
@@ -159,7 +161,7 @@ function nextStep(num, line) {
         $(`.quiz__step-last`).addClass("quiz__step--active")
 
         if (line == 1) {
-            quizFormData.budget = $("input[name='budget']:checked").val()
+            quizFormData.budget = $("input[name='budget_m']:checked").val()
         }
         if (line == 2) {
             quizFormData.countBedrooms = $("input[name='area']:checked").val()
