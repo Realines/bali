@@ -24,6 +24,20 @@ function sliderProject() {
 }
 
 
+let orderType = $("input[name='order_type']:checked").val()
+
+let quizFormData = {
+    orderType: orderType,
+    distanceToSea: '',
+    budget: '',
+    countBedrooms: '',
+    profitAssessment: '',
+    assessmentDistrict: '',
+    assessmentDistanceToSea: '',
+    rentalPeriod: '',
+    name: '',
+    phone: ''
+}
 
 
 $(document).ready(function() {
@@ -80,19 +94,31 @@ $(document).ready(function() {
         $(".header__right").slideToggle()
     })
 
+    $(".quiz__finish-form-btn").click(function() {
+        quizFormData.name = $("#quizName").val()
+        quizFormData.phone = $("#quizPhone").val()
+        console.log(quizFormData)
+    })
+
 })
+
+
+
+
 
 function nextStep(num, line) {
     if (num == 1) {
-        let typeInput = $("input[name='type']:checked").val()
+        let typeInput = $("input[name='order_type']:checked").val()
         console.log(typeInput)
-        if (typeInput === 'rent') {
+        if (typeInput === 'R') {
             $(`.quiz__step`).removeClass("quiz__step--active")
             $(`.quiz__step[data-step-line='1'][data-step-path='2']`).addClass("quiz__step--active")
-        } else if (typeInput === 'construct') {
+        } else if (typeInput === 'C') {
             $(`.quiz__step`).removeClass("quiz__step--active")
             $(`.quiz__step[data-step-line='2'][data-step-path='2']`).addClass("quiz__step--active")
         }
+        quizFormData.orderType = typeInput
+        console.log(quizFormData)
     }
     if (line == 1 && num == 2) {
         let ratingField = []
@@ -107,19 +133,37 @@ function nextStep(num, line) {
         if (!ratingField.includes(false)) {
             $(`.quiz__step`).removeClass("quiz__step--active")
             $(`.quiz__step[data-step-line='1'][data-step-path='3']`).addClass("quiz__step--active")
+
+            quizFormData.profitAssessment = +$("#profitAssessment").attr("data-total-rating")
+            quizFormData.assessmentDistrict = +$("#assessmentDistrict").attr("data-total-rating")
+            quizFormData.assessmentDistanceToSea = +$("#assessmentDistanceToSea").attr("data-total-rating")
+
         }
     }
     if (line == 2 && num == 2) {
         $(`.quiz__step`).removeClass("quiz__step--active")
         $(`.quiz__step[data-step-line='2'][data-step-path='3']`).addClass("quiz__step--active")
+
+        quizFormData.distanceToSea = $("input[name='distance_to_sea']:checked").val()
+
     }
     if (line == 2 && num == 3) {
         $(`.quiz__step`).removeClass("quiz__step--active")
         $(`.quiz__step[data-step-line='2'][data-step-path='4']`).addClass("quiz__step--active")
+
+        quizFormData.rentalPeriod = $("#yearRange").val()
+
     }
-    if (line == 100) {
+    if (num == 100) {
         $(`.quiz__step`).removeClass("quiz__step--active")
         $(`.quiz__step-last`).addClass("quiz__step--active")
+
+        if (line == 1) {
+            quizFormData.budget = $("input[name='budget']:checked").val()
+        }
+        if (line == 2) {
+            quizFormData.countBedrooms = $("input[name='area']:checked").val()
+        }
     }
 }
 
