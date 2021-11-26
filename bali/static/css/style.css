@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
+body {
+  overflow-x: hidden;
+}
+
 .title {
   font-weight: 600;
   font-size: 40px;
@@ -2069,6 +2073,13 @@ input::placeholder {
   }
 }
 @media screen and (max-width: 768px) {
+  .footer__save {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  .footer__logo {
+    width: 91px;
+  }
   .footer__nav-item {
     font-size: 12px;
   }
@@ -2410,6 +2421,12 @@ input::placeholder {
 @media screen and (max-width: 768px) {
   .project-detail .swiper-slide {
     width: 300px;
+  }
+  .project-detail__top {
+    display: block;
+  }
+  .project-detail__price {
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 576px) {

@@ -236,7 +236,11 @@
         font-size: 12px; } }
 @media screen and (max-width: 768px) {
   .project-detail .swiper-slide {
-    width: 300px; } }
+    width: 300px; }
+  .project-detail__top {
+    display: block; }
+  .project-detail__price {
+    margin-top: 10px; } }
 @media screen and (max-width: 576px) {
   .project-detail .swiper-slide {
     width: 260px; } }

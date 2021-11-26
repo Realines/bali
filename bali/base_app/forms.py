@@ -92,6 +92,7 @@ class QuizForm(forms.ModelForm):
         required=False,
     )
 
+
     class Meta:
         """Класс настроек поведения модели"""
         model = Quiz

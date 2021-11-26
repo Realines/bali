@@ -70,6 +70,11 @@
       height: 45px;
       font-size: 10px; } }
 @media screen and (max-width: 768px) {
+  .footer__save {
+    margin-top: 12px;
+    font-size: 12px; }
+  .footer__logo {
+    width: 91px; }
   .footer__nav-item {
     font-size: 12px; }
   .footer__col:nth-child(2) {

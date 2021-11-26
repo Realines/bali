@@ -110,6 +110,13 @@
 
 @media screen and (max-width: 768px) {
     .footer {
+        &__save {
+            margin-top: 12px;
+            font-size: 12px;
+        }
+        &__logo {
+            width: 91px;
+        }
         &__nav {
             &-item {
                 font-size: 12px;

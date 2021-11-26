@@ -319,6 +319,12 @@
         .swiper-slide {
             width: 300px;
         }
+        &__top {
+            display: block;
+        }
+        &__price {
+            margin-top: 10px;
+        }
     }
 }
 
