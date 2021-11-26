@@ -303,7 +303,8 @@ input::placeholder {
   line-height: 150%;
   color: #FFFFFF;
 }
-.header__language {
+
+.language {
   position: relative;
   width: 100px;
   height: 35px;
@@ -311,45 +312,67 @@ input::placeholder {
   align-items: center;
   justify-content: center;
 }
-.header__language-show {
+.language-show {
   display: flex;
   align-items: center;
-  height: 20px;
+  height: 50px;
   cursor: pointer;
   text-transform: uppercase;
+  width: 100%;
+  justify-content: center;
 }
-.header__language-show svg {
+.language-show svg {
   margin-left: 8px;
   transition: all .3s;
+  z-index: 2;
+  position: relative;
 }
-.header__language-show--active svg {
+.language-show span {
+  z-index: 2;
+  position: relative;
+}
+.language-show--active {
+  position: relative;
+  pointer-events: none;
+}
+.language-show--active svg {
   transform: rotate(180deg);
 }
-.header__language-show--active ~ .header__language-hidden {
+.language-show--active ~ .language-hidden {
   display: block;
 }
-.header__language-hidden {
-  border-radius: 12px;
+.language-show--active:before {
+  content: '';
+  position: absolute;
+  background: #FFFFFF;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0px 10px 20px rgba(22, 40, 51, 0.15);
+  width: 100%;
+  height: 150px;
+  top: 5px;
+  left: 0;
+}
+.language-hidden {
   display: none;
   position: absolute;
   overflow: hidden;
   top: 100%;
   left: 0;
   width: 100%;
-  z-index: 3;
-  background: #FFFFFF;
-  box-shadow: 0px 10px 20px rgba(22, 40, 51, 0.15);
 }
-.header__language-hidden a {
+.language-hidden a {
   width: 100%;
   height: 35px;
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 31px;
   transition: all .3s;
   text-transform: uppercase;
+  position: relative;
+  z-index: 4;
 }
-.header__language-hidden a:hover {
+.language-hidden a:hover {
   background: #86A876;
   color: #fff;
 }
@@ -529,11 +552,11 @@ input::placeholder {
   font-weight: 600;
   font-size: 20px;
   line-height: 110%;
-  position: relative;
-  z-index: 2;
 }
 .quiz__type-item-top img {
   margin-right: 30px;
+  position: relative;
+  z-index: 4;
 }
 .quiz__type-item-desc {
   font-size: 15px;
@@ -548,15 +571,13 @@ input::placeholder {
   height: 100%;
   left: 0;
   top: 0;
-  opacity: 0;
-  z-index: 3;
+  z-index: 1;
   cursor: pointer;
 }
-.quiz__radio input:checked + label {
-  border-color: #86A876;
-}
-.quiz__radio label {
+.quiz__radio input:before {
+  content: '';
   position: absolute;
+  z-index: 2;
   width: 100%;
   height: 100%;
   left: 0;
@@ -564,6 +585,12 @@ input::placeholder {
   background: #313931;
   transition: all .3s;
   border: 1px solid transparent;
+}
+.quiz__radio input:checked:before {
+  border-color: #86A876;
+}
+.quiz__radio label {
+  z-index: 4;
 }
 .quiz__rating {
   display: flex;
@@ -1321,8 +1348,11 @@ input::placeholder {
 .footer__logo img {
   width: 100%;
 }
-.footer__language {
-  color: #252C25;
+.footer .language {
+  margin-left: -30px;
+}
+.footer .language-show--active:before {
+  background: #313931;
 }
 .footer__save {
   font-size: 15px;

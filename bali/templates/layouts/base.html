@@ -29,14 +29,14 @@
                             <a href="" class="nav__item">О компании</a>
                             <a href="" class="nav__item">Отзывы</a>
                         </nav>
-                        <div class="header__language">
-                            <div class="header__language-show">
+                        <div class="language">
+                            <div class="language-show">
                                 <span>{{ request.LANGUAGE_CODE }}</span>
                                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L5.5 5L10 1" stroke="#86A876" stroke-width="1.5"/>
                                 </svg>
                             </div>
-                            <div class="header__language-hidden">
+                            <div class="language-hidden">
                                 {% get_available_languages as LANGUAGES %} {% for lang in LANGUAGES %} {% if LANGUAGE_CODE == lang.0 %} {{lang.1}} ({{lang.0}}) {% else %}
                                 <a href="{% url 'translator:set_language' %}?l={{lang.0}}">
                                     {{lang.0}}
@@ -137,14 +137,20 @@
                     </nav>
                 </div>
                 <div class="footer__col">
-                    <div class="footer__language">
-                        <select name="" id="">
-                            <option value="">RUS</option>
-                            <option value="">ENG</option>
-                            <option value="">AR</option>
-                            <option value="">CHI</option>
-                        </select>
-                    </div>
+                    <div class="language">
+                            <div class="language-show">
+                                <span>{{ request.LANGUAGE_CODE }}</span>
+                                <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5.5 5L10 1" stroke="#86A876" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <div class="language-hidden">
+                                {% get_available_languages as LANGUAGES %} {% for lang in LANGUAGES %} {% if LANGUAGE_CODE == lang.0 %} {{lang.1}} ({{lang.0}}) {% else %}
+                                <a href="{% url 'translator:set_language' %}?l={{lang.0}}">
+                                    {{lang.0}}
+                                </a> {% endif %} {% endfor %}
+                            </div>
+                        </div>
                     <a href="" class="footer__privacy">Политика конфиденциальности</a>
                     <div class="footer__socials">
                         <a href="">

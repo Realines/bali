@@ -1,44 +1,5 @@
-{% load i18n %}
+{% extends 'layouts/base.html' %} {% load i18n %} {% load static %} {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ project_id }}</title>
-</head>
-<body>
-    <hr>
-    {% get_available_languages as LANGUAGES %}
-    {% for lang in LANGUAGES %}
-    {% if LANGUAGE_CODE == lang.0 %}
-    {{lang.1}} ({{lang.0}})
-    {% else %}
-    <a href="{% url 'translator:set_language' %}?l={{lang.0}}">{{lang.1}} ({{lang.0}})</a>
-    {% endif %} |
-    {% endfor %}
-    <hr>
-
-    <p>Project id {{ current_project.id }}</p>
-    <p>Project name {{ current_project.name }}</p>
-    <p>
-        <ul>
-        {% for categories in current_project.categories.all %}
-            <li>{{ categories }}</li>
-        {% endfor %}
-        </ul>
-    </p>
-
-    {% for project in recommended_projects %}
-    <p>Project name: {{ project.name }}</p>
-    <p>
-        <ul>
-        {% for categories in project.categories.all %}
-            <li>{{ categories }}</li>
-        {% endfor %}
-        </ul>
-    </p>
-    {% endfor %}
-    <img src="{{ MEDIA_URL }}{{ current_project.images.all.first.image.url }}">
 
     <section class='project-detail'>
         <div class='container'>
@@ -226,5 +187,5 @@
             <button class="projects__all">Показать больше</button>
         </div>
     </section>
-</body>
-</html>
+
+{% endblock %}

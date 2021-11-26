@@ -59,17 +59,17 @@ $(document).ready(function() {
     $(".quiz__year-range-end span").text(rangeEnd)
     $(".quiz__year-range-value span").text(rangeValue)
 
-    $(".header__language-show").click(function() {
-        $(this).addClass("header__language-show--active")
+    $(".language-show").click(function() {
+        $(this).addClass("language-show--active")
     })
 
     $(document).mouseup(function(e) { // событие клика по веб-документу
-        var div = $(".header__language-hidden"); // тут указываем ID элемента
+        var div = $(".language-hidden"); // тут указываем ID элемента
         if (!div.is(e.target) // если клик был не по нашему блоку
             &&
-            div.has(e.target).length === 0) { // и не по его дочерним элементам
-            if ($(".header__language-hidden").siblings(".header__language-show").hasClass("header__language-show--active")) {
-                $(".header__language-hidden").siblings(".header__language-show").removeClass("header__language-show--active")
+            div.has(e.target).length === 0)  { // и не по его дочерним элементам
+            if ($(".language-hidden").siblings(".language-show").hasClass("language-show--active")) {
+                $(".language-hidden").siblings(".language-show").removeClass("language-show--active")
             }
 
         }

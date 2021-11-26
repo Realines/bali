@@ -35,55 +35,75 @@
         line-height: 150%;
         color: #FFFFFF;
     }
-    &__language {
-        position: relative;
-        width: 100px;
-        height: 35px;
+}
+.language {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-show {
         display: flex;
         align-items: center;
+        height:50px;
+        cursor: pointer;
+        text-transform: uppercase;
+        width: 100%;
         justify-content: center;
-        &-show {
+        svg {
+            margin-left: 8px;
+            transition: all .3s;
+            z-index: 2;
+            position: relative;
+        }
+        span{
+            z-index: 2;
+            position: relative;
+        }
+    }
+    &-show--active {
+        position: relative;
+        pointer-events: none;
+        svg {
+            transform: rotate(180deg);
+        }
+        &~.language-hidden {
+            display: block;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            background: #FFFFFF;
+            z-index: 1;
+            pointer-events: none;
+            box-shadow: 0px 10px 20px rgba(22, 40, 51, 0.15);
+            width: 100%;
+            height: 150px;
+            top: 5px;
+            left: 0;
+        }
+    }
+    &-hidden {
+        display: none;
+        position: absolute;
+        overflow: hidden;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        a {
+            width: 100%;
+            height: 35px;
             display: flex;
             align-items: center;
-            height: 20px;
-            cursor: pointer;
+            padding: 0 31px;
+            transition: all .3s;
             text-transform: uppercase;
-            svg {
-                margin-left: 8px;
-                transition: all .3s;
-            }
-        }
-        &-show--active {
-            svg {
-                transform: rotate(180deg);
-            }
-            &~.header__language-hidden {
-                display: block;
-            }
-        }
-        &-hidden {
-            border-radius: 12px;
-            display: none;
-            position: absolute;
-            overflow: hidden;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            z-index: 3;
-            background: #FFFFFF;
-            box-shadow: 0px 10px 20px rgba(22, 40, 51, 0.15);
-            a {
-                width: 100%;
-                height: 35px;
-                display: flex;
-                align-items: center;
-                padding: 0 15px;
-                transition: all .3s;
-                text-transform: uppercase;
-                &:hover {
-                    background: #86A876;
-                    color: #fff;
-                }
+            position: relative;
+            z-index: 4;
+            &:hover {
+                background: #86A876;
+                color: #fff;
             }
         }
     }

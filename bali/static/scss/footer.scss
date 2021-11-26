@@ -12,8 +12,13 @@
             width: 100%;
         }
     }
-    &__language {
-        color: #252C25;
+    .language {
+        margin-left: -30px;
+        &-show--active{
+            &:before{
+                background: #313931;
+            }
+        }
     }
     &__save {
         font-size: 15px;

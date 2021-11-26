@@ -821,26 +821,16 @@
 </section>
 
 
-{{ faq.1 }}
-<form id="quiz_form" method="POST">
-    {% csrf_token %} {{ quiz_form.as_p }}
-    <input id="send_quiz" type="submit" value="Отправить">
-</form>
-<hr>
-<form id="consult_form" method="post">
-    {% csrf_token %} {{ consult_form.as_p }}
-    <input id="send_consult" type="submit" value="Отправить">
-</form>
-<hr>
-<p>Проекты для инвестиций:</p>
-{% for project in invested_projects %}
-<p>{{project.name}} {{project.invested}}</p>
-{% endfor %}
-<br>
-<p>Проекты не подлежащие инвестициям:</p>
-{% for project in not_invested_projects %}
-<p>{{project.name}} {{project.invested}}</p>
-{% endfor %}
+
+<!--<p>Проекты для инвестиций:</p>-->
+<!--{% for project in invested_projects %}-->
+<!--<p>{{project.name}} {{project.invested}}</p>-->
+<!--{% endfor %}-->
+<!--<br>-->
+<!--<p>Проекты не подлежащие инвестициям:</p>-->
+<!--{% for project in not_invested_projects %}-->
+<!--<p>{{project.name}} {{project.invested}}</p>-->
+<!--{% endfor %}-->
 
 
 

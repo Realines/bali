@@ -29,48 +29,68 @@
     font-size: 13px;
     line-height: 150%;
     color: #FFFFFF; }
-  .header__language {
-    position: relative;
-    width: 100px;
-    height: 35px;
+
+.language {
+  position: relative;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .language-show {
     display: flex;
     align-items: center;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%;
     justify-content: center; }
-    .header__language-show {
+    .language-show svg {
+      margin-left: 8px;
+      transition: all .3s;
+      z-index: 2;
+      position: relative; }
+    .language-show span {
+      z-index: 2;
+      position: relative; }
+  .language-show--active {
+    position: relative;
+    pointer-events: none; }
+    .language-show--active svg {
+      transform: rotate(180deg); }
+    .language-show--active ~ .language-hidden {
+      display: block; }
+    .language-show--active:before {
+      content: '';
+      position: absolute;
+      background: #FFFFFF;
+      z-index: 1;
+      pointer-events: none;
+      box-shadow: 0px 10px 20px rgba(22, 40, 51, 0.15);
+      width: 100%;
+      height: 150px;
+      top: 5px;
+      left: 0; }
+  .language-hidden {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    width: 100%; }
+    .language-hidden a {
+      width: 100%;
+      height: 35px;
       display: flex;
       align-items: center;
-      height: 20px;
-      cursor: pointer;
-      text-transform: uppercase; }
-      .header__language-show svg {
-        margin-left: 8px;
-        transition: all .3s; }
-    .header__language-show--active svg {
-      transform: rotate(180deg); }
-    .header__language-show--active ~ .header__language-hidden {
-      display: block; }
-    .header__language-hidden {
-      border-radius: 12px;
-      display: none;
-      position: absolute;
-      overflow: hidden;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      z-index: 3;
-      background: #FFFFFF;
-      box-shadow: 0px 10px 20px rgba(22, 40, 51, 0.15); }
-      .header__language-hidden a {
-        width: 100%;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        padding: 0 15px;
-        transition: all .3s;
-        text-transform: uppercase; }
-        .header__language-hidden a:hover {
-          background: #86A876;
-          color: #fff; }
+      padding: 0 31px;
+      transition: all .3s;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 4; }
+      .language-hidden a:hover {
+        background: #86A876;
+        color: #fff; }
 
 .nav {
   display: flex;

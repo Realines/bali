@@ -9,8 +9,10 @@
     width: 150px; }
     .footer__logo img {
       width: 100%; }
-  .footer__language {
-    color: #252C25; }
+  .footer .language {
+    margin-left: -30px; }
+    .footer .language-show--active:before {
+      background: #313931; }
   .footer__save {
     font-size: 15px;
     line-height: 150%;
