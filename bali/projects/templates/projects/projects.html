@@ -11,24 +11,20 @@
             </a>
             <div class='project-detail__top'>
                 <div class="project-detail__top-left">
-                    <h1 class="project-detail__top-title">Вилла Canggu Berrawa</h1>
-                    <div class="project-detail__top-desc">Индонезия, Бали, Семиньяк, Jl Batu Belig Gang Daksina 22</div>
+                    <h1 class="project-detail__top-title">{{ current_project.name }}</h1>
+                    <div class="project-detail__top-desc">{{ current_project.address }}</div>
                 </div>
-                <div class="project-detail__price">520 000 $</div>
+                <div class="project-detail__price">{{ current_project.price }} $</div>
             </div>
         </div>
         <div class="project-detail__slider">
             <div class='swiper-container'>
                 <div class='swiper-wrapper'>
+                    {% for image in current_project.images.all %}
                     <div class='swiper-slide'>
-                        <img src="{% static 'img/project7.jpg' %}" alt="">
+                        <img src="{{ image.image.url }}" alt="">
                     </div>
-                    <div class='swiper-slide'>
-                        <img src="{% static 'img/project7.jpg' %}" alt="">
-                    </div>
-                    <div class='swiper-slide'>
-                        <img src="{% static 'img/project7.jpg' %}" alt="">
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="project-detail__slider-nav">
@@ -51,25 +47,25 @@
         <div class="container">
             <div class="project-detail__bottom">
                 <div class="project-detail__bottom-left">
-                    <div class="project-detail__bottom-title">Вилла находится в районе улицы Берава округа Чангу, в 5 минутах ходьбы от пляжа Berawa Beach.</div>
+                    <div class="project-detail__bottom-title">{{ current_project.description }}</div>
                     <button class="project-detail__btn">Купить</button>
                 </div>
                 <div class="project-detail__items">
                     <div class="project-detail__item">
                         <span>Стоимость</span>
-                        <strong>520 000 $</strong>
+                        <strong>{{ current_project.price }} $</strong>
                     </div>
                     <div class="project-detail__item">
                         <span>Площадь</span>
-                        <strong>260 м2</strong>
+                        <strong>{{ current_project.area }} м2</strong>
                     </div>
                     <div class="project-detail__item">
                         <span>Кол-во спален</span>
-                        <strong>7 шт.</strong>
+                        <strong>{{ current_project.count_bedrooms }} шт.</strong>
                     </div>
                     <div class="project-detail__item">
                         <span>Вид</span>
-                        <strong>На море</strong>
+                        <strong>{{ current_project.view }}</strong>
                     </div>
                 </div>
             </div>
@@ -81,12 +77,9 @@
             <div class='advantages__inner'>
                 <h2 class="advantages__title title">Преимущества</h2>
                 <ul class="advantages__list">
-                    <li>Частный Бассейн</li>
-                    <li>7 спален с ванными комнатами</li>
-                    <li>Выделенная терраса на крыше</li>
-                    <li>Дополнительный люкс-номер на террасе</li>
-                    <li>Прямой доступ к подземной парковке</li>
-                    <li>Незабываемые впечатления от жизни на набережной</li>
+                    {% for advantage in current_project.advantages.all %}
+                    <li>{{ advantage.name }}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -94,14 +87,15 @@
 
     <section class='location'>
         <div class='container'>
-            <h2 class="location__title title"><span>Локация</span> Berrawa Beach</h2>
+            <h2 class="location__title title"><span>Локация</span> {{ current_project.location }}</h2>
             <div class='location__items'>
+                {% for fact in current_project.location.facts.all %}
                 <div class="location__item">
-                    <div class="location__item-time">2 мин.</div>
-                    <div class="location__item-title">До пляжа Berrawa Beach</div>
-                    <div class="location__item-desc">самый длинный на Бали, со знаменитыми рвбными ресторонами</div>
+                    <div class="location__item-time">{{ fact.title }}</div>
+                    <div class="location__item-desc">{{ fact.description | safe }}</div>
                 </div>
-                <div class="location__item">
+                {% endfor %}
+                <!--<div class="location__item">
                     <div class="location__item-time">4 мин.</div>
                     <div class="location__item-title">До торгового центра</div>
                     <div class="location__item-desc">самый длинный на Бали, со знаменитыми рвбными ресторонами</div>
@@ -110,7 +104,7 @@
                     <div class="location__item-time">15 мин.</div>
                     <div class="location__item-title">До New Kuta Golf</div>
                     <div class="location__item-desc">85 гектаров полей уровня международных чемпионатов</div>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
@@ -123,12 +117,13 @@
                 <div class="consult__desc">Если у вас остались вопросы - напишите нам. <br> Мы всегда открыты к диалогу.</div>
             </div>
             <div class="consult__bottom">
-                <form action="" class="consult__form">
+                <form id="consult_form" action="" class="consult__form">
+                    {% csrf_token %}
                     <div class="consult__form-group">
-                        <input type="tel" placeholder="Ваш номер телефона">
+                        <input type="tel" name="phone" placeholder="Ваш номер телефона">
                         <img src="{% static 'img/carbon_phone-voice-filled.svg' %}" alt="">
                     </div>
-                    <button class="consult__form-btn">Отправить</button>
+                    <button type="submit" class="consult__form-btn">Отправить</button>
                 </form>
                 <div class="consult__social">
                     <a href="" class="consult__social-btn consult__social-whatsapp">
@@ -155,34 +150,15 @@
         <div class='container'>
             <h2 class="projects__title title"><span>Рекомендуем</span> к просмотру:</h2>
             <div class='projects__items'>
-                <a href="" class="projects__item">
+                {% for project in recommended_projects %}
+                <a href="{% url 'projects:projects' project.pk %}" class="projects__item">
                     <div class="projects__item-img">
-                        <img src="{% static 'img/project1.jpg' %}" alt="">
+                        <img src="{{ project.main_image.url }}" alt="">
                         <div class="projects__item-link">Подробнее</div>
                     </div>
-                    <div class="projects__item-title">Villa Anahit</div>
+                    <div class="projects__item-title">{{ project.name }}</div>
                 </a>
-                <a href="" class="projects__item">
-                    <div class="projects__item-img">
-                        <img src="{% static 'img/project2.jpg' %}" alt="">
-                        <div class="projects__item-link">Подробнее</div>
-                    </div>
-                    <div class="projects__item-title">Gita Ungasan</div>
-                </a>
-                <a href="" class="projects__item">
-                    <div class="projects__item-img">
-                        <img src="{% static 'img/project3.jpg' %}" alt="">
-                        <div class="projects__item-link">Подробнее</div>
-                    </div>
-                    <div class="projects__item-title">Villa Adasa</div>
-                </a>
-                <a href="" class="projects__item projects__item--hide">
-                    <div class="projects__item-img">
-                        <img src="{% static 'img/project6.jpg' %}" alt="">
-                        <div class="projects__item-link">Подробнее</div>
-                    </div>
-                    <div class="projects__item-title">Gita Ungasan</div>
-                </a>
+                {% endfor %}
             </div>
             <button class="projects__all">Показать больше</button>
         </div>

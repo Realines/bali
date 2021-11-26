@@ -24,19 +24,17 @@ def index(request: HttpRequest) -> HttpResponse:
 
     # Данные для контекста шаблона.
     faq = FAQ.objects.all()
-    all_project = Project.objects.all()
+    all_project = Project.objects.filter(public=True)
     invested_projects = all_project.filter(invested=True)
     not_invested_projects = all_project.difference(invested_projects)
 
     # Формы консультации и квиза.
-    consult_form = ConsultationForm()
-    quiz_form = QuizForm()
+    # consult_form = ConsultationForm()
+    # quiz_form = QuizForm()
 
     context = {'faq': faq,
                'invested_projects': invested_projects,
-               'not_invested_projects': not_invested_projects,
-               'consult_form': consult_form,
-               'quiz_form': quiz_form}
+               'not_invested_projects': not_invested_projects}
 
     return render(request=request,
                   template_name='base_app/index.html',
