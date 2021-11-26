@@ -14,8 +14,8 @@
     }
     .language {
         margin-left: -30px;
-        &-show--active{
-            &:before{
+        &-show--active {
+            &:before {
                 background: #313931;
             }
         }
@@ -39,6 +39,7 @@
             font-size: 15px;
             line-height: 200%;
             display: block;
+            white-space: nowrap;
             &:hover {
                 color: #86A876;
             }
@@ -71,5 +72,14 @@
         font-size: 13px;
         line-height: 150%;
         color: #FFFFFF;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        &__col:nth-child(1),
+        &__col:nth-child(2) {
+            margin-right: 40px;
+        }
     }
 }

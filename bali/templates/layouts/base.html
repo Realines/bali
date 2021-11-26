@@ -47,6 +47,11 @@
                         <button class="header__btn">Связаться с нами</button>
                     </div>
                 </div>
+                <button class="header__burger ">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
@@ -138,19 +143,19 @@
                 </div>
                 <div class="footer__col">
                     <div class="language">
-                            <div class="language-show">
-                                <span>{{ request.LANGUAGE_CODE }}</span>
-                                <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="language-show">
+                            <span>{{ request.LANGUAGE_CODE }}</span>
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L5.5 5L10 1" stroke="#86A876" stroke-width="1.5"/>
                                 </svg>
-                            </div>
-                            <div class="language-hidden">
-                                {% get_available_languages as LANGUAGES %} {% for lang in LANGUAGES %} {% if LANGUAGE_CODE == lang.0 %} {{lang.1}} ({{lang.0}}) {% else %}
-                                <a href="{% url 'translator:set_language' %}?l={{lang.0}}">
+                        </div>
+                        <div class="language-hidden">
+                            {% get_available_languages as LANGUAGES %} {% for lang in LANGUAGES %} {% if LANGUAGE_CODE == lang.0 %} {{lang.1}} ({{lang.0}}) {% else %}
+                            <a href="{% url 'translator:set_language' %}?l={{lang.0}}">
                                     {{lang.0}}
                                 </a> {% endif %} {% endfor %}
-                            </div>
                         </div>
+                    </div>
                     <a href="" class="footer__privacy">Политика конфиденциальности</a>
                     <div class="footer__socials">
                         <a href="">

@@ -56,7 +56,7 @@
             <span>за 30 секунд</span>
         </h2>
         <form class='quiz__steps'>
-            <div class="quiz__step quiz__step-start quiz__step--active" data-step-path="1">
+            <div class="quiz__step quiz__step-start" data-step-path="1">
                 <div class="quiz__step-title">Что вам больше подходит?</div>
                 <div class="quiz__type">
                     <div class="quiz__type-item">
@@ -389,7 +389,7 @@
                     </div>
                 </div>
             </div>
-            <div class="quiz__step quiz__step-last">
+            <div class="quiz__step quiz__step--active quiz__step-last">
                 <div class="quiz__finish">
                     <div class="quiz__finish-left">
                         <div class="quiz__step-title">
@@ -422,14 +422,17 @@
 <section class='fact'>
     <div class='container'>
         <div class='fact__top'>
-            <h2 class="fact__title title">Факты <span>о компании</span></h2>
-            <div class="fact__desc">Masterpiece Realty – это современная компания, которая уже 5 лет на рынке! </div>
+
+
         </div>
         <div class="fact__bottom">
+
             <div class="fact__img">
+                <h2 class="fact__title title">Факты <span>о компании</span></h2>
                 <img src="{% static 'img/fact.jpg' %}" alt="">
             </div>
             <div class="fact__info">
+                <div class="fact__desc">Masterpiece Realty – это современная компания, которая уже 5 лет на рынке! </div>
                 <div class="fact__info-desc">Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами, которые приносят инвесторам от 15% прибыли в год. Топ-менеджеры нашей команды — специалисты экстра класса, имеющие опыт работы в лучших местных и международных
                     компаниях.
                 </div>
@@ -737,7 +740,7 @@
                 </div>
                 <div class="agency__ceo">
                     <strong>Алексей Алексеевич Алексеев</strong>
-                    <span>CEO SWOI Group</span>
+                    <span>CEO Masterpiece</span>
                 </div>
             </div>
             <div class="agency__right">

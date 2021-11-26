@@ -24,7 +24,8 @@
   .footer__nav-item {
     font-size: 15px;
     line-height: 200%;
-    display: block; }
+    display: block;
+    white-space: nowrap; }
     .footer__nav-item:hover {
       color: #86A876; }
   .footer__privacy {
@@ -49,5 +50,9 @@
     font-size: 13px;
     line-height: 150%;
     color: #FFFFFF; }
+
+@media screen and (max-width: 1200px) {
+  .footer__col:nth-child(1), .footer__col:nth-child(2) {
+    margin-right: 40px; } }
 
 /*# sourceMappingURL=footer.css.map */

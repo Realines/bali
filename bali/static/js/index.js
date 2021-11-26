@@ -67,13 +67,18 @@ $(document).ready(function() {
         var div = $(".language-hidden"); // тут указываем ID элемента
         if (!div.is(e.target) // если клик был не по нашему блоку
             &&
-            div.has(e.target).length === 0)  { // и не по его дочерним элементам
+            div.has(e.target).length === 0) { // и не по его дочерним элементам
             if ($(".language-hidden").siblings(".language-show").hasClass("language-show--active")) {
                 $(".language-hidden").siblings(".language-show").removeClass("language-show--active")
             }
 
         }
     });
+
+    $(".header__burger").click(function() {
+        $(this).toggleClass("header__burger--active")
+        $(".header__right").slideToggle()
+    })
 
 })
 

@@ -11,6 +11,7 @@
         width: 150px;
         display: block;
         margin-right: 179px;
+        flex-shrink: 0;
         img {
             width: 100%;
         }
@@ -35,7 +36,11 @@
         line-height: 150%;
         color: #FFFFFF;
     }
+    &__burger {
+        display: none;
+    }
 }
+
 .language {
     position: relative;
     width: 100px;
@@ -46,7 +51,7 @@
     &-show {
         display: flex;
         align-items: center;
-        height:50px;
+        height: 50px;
         cursor: pointer;
         text-transform: uppercase;
         width: 100%;
@@ -57,7 +62,7 @@
             z-index: 2;
             position: relative;
         }
-        span{
+        span {
             z-index: 2;
             position: relative;
         }
@@ -71,7 +76,7 @@
         &~.language-hidden {
             display: block;
         }
-        &:before{
+        &:before {
             content: '';
             position: absolute;
             background: #FFFFFF;
@@ -118,6 +123,88 @@
         color: #252C25;
         &:not(:last-child) {
             margin-right: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav {
+        display: block;
+        margin-bottom: 20px;
+        &__item {
+            margin-right: 0 !important;
+            margin-bottom: 10px;
+            display: block;
+        }
+    }
+    .header {
+        &__logo {
+            margin-right: 0;
+            position: relative;
+            z-index: 11;
+        }
+        &__right {
+            display: none;
+            position: absolute;
+            height: 100vh;
+            padding-top: 130px;
+            top: 0;
+            width: 100%;
+            left: 0;
+            background-color: #fff;
+            z-index: 10;
+            &-inner {
+                width: 750px;
+                padding: 0 15px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &__burger {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 32px;
+            height: 23px;
+            position: relative;
+            z-index: 11;
+            span {
+                transition: all .3s;
+                width: 100%;
+                height: 2px;
+                background: #86A876;
+                &:nth-child(1) {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                &:nth-child(2) {
+                    width: 16px;
+                }
+                &:nth-child(3) {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+        &__burger--active {
+            span {
+                &:nth-child(1) {
+                    transform: rotate(-45deg);
+                    top: 10px;
+                }
+                &:nth-child(2) {
+                    transform: scale(0.000001);
+                }
+                &:nth-child(3) {
+                    transform: rotate(45deg);
+                    bottom: 10px;
+                }
+            }
+        }
+        &__btn {
+            margin-top: 40px;
         }
     }
 }
