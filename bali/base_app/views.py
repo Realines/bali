@@ -47,7 +47,7 @@ def quiz_handler(request: HttpRequest) -> JsonResponse:
     :param request: Объект запроса.
     :return: JSON-объект с кодом успеха либо словарем ошибок.
     """
-    print(request.POST)
+
     # Получение данных из формы.
     quiz_form = QuizForm(request.POST)
 
