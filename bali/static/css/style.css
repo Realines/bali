@@ -3,6 +3,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .title {
   font-weight: 600;
   font-size: 40px;
@@ -306,6 +310,9 @@ input::placeholder {
   font-weight: 600;
   font-size: 13px;
   line-height: 150%;
+  color: #FFFFFF;
+}
+.header__btn:hover {
   color: #FFFFFF;
 }
 .header__burger {
@@ -2044,6 +2051,12 @@ input::placeholder {
   font-size: 13px;
   line-height: 150%;
   color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__btn:hover {
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2206,6 +2219,12 @@ input::placeholder {
   font-weight: 600;
   font-size: 15px;
   line-height: 150%;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-detail__btn:hover {
   color: #FFFFFF;
 }
 .project-detail__bottom {

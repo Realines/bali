@@ -48,7 +48,7 @@
         <div class="project-detail__bottom">
             <div class="project-detail__bottom-left">
                 <div class="project-detail__bottom-title">{{ current_project.description }}</div>
-                <button class="project-detail__btn">{% trans 'Купить' %}</button>
+                <a href="#consult" class="project-detail__btn">{% trans 'Купить' %}</a>
             </div>
             <div class="project-detail__items">
                 <div class="project-detail__item">
@@ -110,7 +110,7 @@
     </div>
 </section>
 
-<section class='consult'>
+<section class='consult' id="consult">
     <div class='container'>
         <h2 class="consult__title title">{% trans 'Консультация' %}</h2>
         <div class="consult__bottom">

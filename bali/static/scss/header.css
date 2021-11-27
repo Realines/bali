@@ -30,6 +30,8 @@
     font-size: 13px;
     line-height: 150%;
     color: #FFFFFF; }
+    .header__btn:hover {
+      color: #FFFFFF; }
   .header__burger {
     display: none; }
 

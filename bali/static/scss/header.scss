@@ -35,6 +35,9 @@
         font-size: 13px;
         line-height: 150%;
         color: #FFFFFF;
+        &:hover {
+            color: #FFFFFF;
+        }
     }
     &__burger {
         display: none;

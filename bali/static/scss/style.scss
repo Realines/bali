@@ -2,6 +2,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .title {
     font-weight: 600;
     font-size: 40px;

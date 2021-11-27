@@ -94,6 +94,12 @@
         font-size: 15px;
         line-height: 150%;
         color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            color: #FFFFFF;
+        }
     }
     &__bottom {
         display: flex;
