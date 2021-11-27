@@ -148,38 +148,28 @@ msgid "Купить"
 msgstr ""
 
 #: .\templates\projects\projects.html:55
-#, fuzzy
-#| msgid "Стоимость проекта"
 msgid "Стоимость"
-msgstr "Project cost"
+msgstr ""
 
 #: .\templates\projects\projects.html:63
-#, fuzzy
-#| msgid "Количество спален"
 msgid "Кол-во спален"
-msgstr "Number of bedrooms"
+msgstr ""
 
 #: .\templates\projects\projects.html:78
-#, fuzzy
-#| msgid "Преимущество проекта"
 msgid "Преимущества"
-msgstr "The advantage of the project"
+msgstr ""
 
 #: .\templates\projects\projects.html:114
-#, fuzzy
-#| msgid "Локация"
 msgid "Консультация"
-msgstr "Location"
+msgstr ""
 
 #: .\templates\projects\projects.html:116
 msgid "Оставтье номер телефона и мы свяжемся с Вами"
 msgstr ""
 
 #: .\templates\projects\projects.html:116
-#, fuzzy
-#| msgid "Описание факта"
 msgid "в течение часа"
-msgstr "Description of the fact"
+msgstr ""
 
 #: .\templates\projects\projects.html:117
 msgid "Если у вас остались вопросы - напишите нам."

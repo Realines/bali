@@ -206,12 +206,6 @@ msgstr "Rental period"
 msgid "Планируемый бюджет"
 msgstr "Planned budget"
 
-#: .\models.py:144 .\templates\base_app\index.html:345
-#, fuzzy
-#| msgid "Срок аренды виллы?"
-msgid "Площадь виллы"
-msgstr "The rental period of the villa?"
-
 #: .\models.py:152 .\models.py:157
 msgid "Квиз"
 msgstr "Quiz"
@@ -220,15 +214,17 @@ msgstr "Quiz"
 msgid "Квизы"
 msgstr "Quizzes"
 
+#: .\models.py:144 .\templates\base_app\index.html:345
+msgid "Площадь виллы"
+msgstr ""
+
 #: .\templates\base_app\index.html:10
 msgid "Cтроим"
 msgstr ""
 
 #: .\templates\base_app\index.html:10
-#, fuzzy
-#| msgid "Срок аренды виллы?"
 msgid "и продаем виллы"
-msgstr "The rental period of the villa?"
+msgstr ""
 
 #: .\templates\base_app\index.html:11
 msgid "Станьте владельцем роскошной виллы,"
@@ -281,10 +277,8 @@ msgid ""
 msgstr ""
 
 #: .\templates\base_app\index.html:45
-#, fuzzy
-#| msgid "Минимальный срок: 5 лет"
 msgid "Идеальный климат"
-msgstr "Minimum term: 5 years"
+msgstr ""
 
 #: .\templates\base_app\index.html:46
 msgid ""
@@ -293,10 +287,8 @@ msgid ""
 msgstr ""
 
 #: .\templates\base_app\index.html:55
-#, fuzzy
-#| msgid "Базовое приложение"
 msgid "Получи лучшее предложение"
-msgstr "Basic Application"
+msgstr ""
 
 #: .\templates\base_app\index.html:56
 msgid "за 30 секунд"
@@ -325,10 +317,8 @@ msgid "Что для Вас важно?"
 msgstr ""
 
 #: .\templates\base_app\index.html:127
-#, fuzzy
-#| msgid "Важность района"
 msgid "Благоприятность района"
-msgstr "Importance of the district"
+msgstr ""
 
 #: .\templates\base_app\index.html:193 .\templates\base_app\index.html:294
 msgid ""
@@ -355,32 +345,22 @@ msgid "Далее"
 msgstr ""
 
 #: .\templates\base_app\index.html:220
-#, fuzzy
-#| msgid "$200.000 - $500.000"
 msgid "$100,000 - $250,000"
 msgstr "$200.000 - $500.000"
 
 #: .\templates\base_app\index.html:227
-#, fuzzy
-#| msgid "$200.000 - $500.000"
 msgid "$250,000 - $500,000"
 msgstr "$200.000 - $500.000"
 
 #: .\templates\base_app\index.html:234
-#, fuzzy
-#| msgid "$500.000 - $1.000.000"
 msgid "$500,000 - $1.000.000"
 msgstr "$500.000 - $1.000.000"
 
 #: .\templates\base_app\index.html:241
-#, fuzzy
-#| msgid "$1.000.000 - $3.000.000"
 msgid "$1,000,000 - $3,000,000"
 msgstr "$1.000.000 - $3.000.000"
 
 #: .\templates\base_app\index.html:248
-#, fuzzy
-#| msgid "Более $3.000.000"
 msgid "Более $3,000,000"
 msgstr "More than $3,000,000"
 
@@ -449,10 +429,8 @@ msgid "успешной работы на рынке"
 msgstr ""
 
 #: .\templates\base_app\index.html:465
-#, fuzzy
-#| msgid "Доходность"
 msgid "доходность в год"
-msgstr "Profitability"
+msgstr ""
 
 #: .\templates\base_app\index.html:469
 msgid "срок окупаемости"
@@ -471,10 +449,8 @@ msgid "проекты"
 msgstr ""
 
 #: .\templates\base_app\index.html:508
-#, fuzzy
-#| msgid "4 спальни и больше"
 msgid "Показать больше"
-msgstr "4 bedrooms and more"
+msgstr ""
 
 #: .\templates\base_app\index.html:516
 msgid "Объект"
@@ -485,10 +461,8 @@ msgid "под ключ"
 msgstr ""
 
 #: .\templates\base_app\index.html:517
-#, fuzzy
-#| msgid "Важность доходности"
 msgid "В стоимость входит:"
-msgstr "The importance of profitability"
+msgstr ""
 
 #: .\templates\base_app\index.html:519
 msgid "Готовая вилла с отделкой, техникой и мебелью"
@@ -553,10 +527,8 @@ msgid "Прибыль от сдачи в аренду"
 msgstr ""
 
 #: .\templates\base_app\index.html:592
-#, fuzzy
-#| msgid "Заявка на консультацию"
 msgid "Консультация"
-msgstr "Request for consultation"
+msgstr ""
 
 #: .\templates\base_app\index.html:594
 msgid "Оставтье номер телефона и мы свяжемся с Вами"
@@ -583,10 +555,8 @@ msgid "Наша компания"
 msgstr ""
 
 #: .\templates\base_app\index.html:632
-#, fuzzy
-#| msgid "Строительство"
 msgid "имеет представительство"
-msgstr "Construction"
+msgstr ""
 
 #: .\templates\base_app\index.html:632
 msgid "в Дубае"
@@ -621,10 +591,8 @@ msgid "Частые"
 msgstr ""
 
 #: .\templates\base_app\index.html:698
-#, fuzzy
-#| msgid "Вопрос"
 msgid "вопросы"
-msgstr "Question"
+msgstr ""
 
 #: .\views.py:59 .\views.py:82
 msgid "Ошибка отправки формы"
