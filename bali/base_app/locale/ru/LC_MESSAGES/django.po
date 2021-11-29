@@ -601,7 +601,7 @@ msgstr "Сайт:"
 
 #: .\templates\base_app\index.html:685
 msgid "Алексей Алексеевич Алексеев"
-msgstr "Алексей Алексеевич Алексеев"
+msgstr "Мирошниченко Алексей Александрович"
 
 #: .\templates\base_app\index.html:698
 msgid "Частые"

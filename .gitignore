@@ -131,3 +131,4 @@ dmypy.json
 # Added by the user
 .idea/
 bali/media/
+/.vs
