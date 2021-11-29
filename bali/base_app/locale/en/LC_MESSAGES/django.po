@@ -364,13 +364,16 @@ msgstr "Why?"
 msgid "Инвестиции"
 msgstr "Investments"
 
-#: .\base_app\templates\base_app\index.html:32
-#, fuzzy, python-format
-#| msgid ""
-#| "Инвестируя в виллы под ключ вы получите доходность от 15%% А также будете "
-#| "иметь собственное жилье на Бали"
-msgid ""
-"Инвестируя в виллы под ключ вы получите доходность от 15%% А также будете "
+#: .\templates\base_app\index.html:31 .\templates\base_app\index.html:479
+msgid "Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами, которые приносят инвесторам от 15% прибыли в год. Топ-менеджеры нашей команды — специалисты экстра класса, имеющие опыт работы в лучших местных и международных компаниях."
+msgstr "Now we have 22 employees who manage 20 properties that bring investors 15% or more profit per year. Top managers of our team are top-class specialists with experience in the best local and international companies."
+
+#: .\templates\base_app\index.html:31 .\templates\base_app\index.html:479
+msgid "Фактический адрес на Бали"
+msgstr "Actual address in Bali"
+
+#: .\templates\base_app\index.html:32
+msgid "Инвестируя в виллы под ключ вы получите доходность от 15%% А также будете "
 "иметь собственное жилье на Бали"
 msgstr ""
 "By investing in turnkey villas, you will receive a yield of 15% and you will "
@@ -380,13 +383,9 @@ msgstr ""
 msgid "Выбор туристов"
 msgstr "Tourists' choice"
 
-#: .\base_app\templates\base_app\index.html:39
-#, fuzzy, python-format
-#| msgid ""
-#| "Рост туристов с каждым годом растет на 10%. Следовательно, виллы здесь "
-#| "очень актуальны"
-msgid ""
-"Рост туристов с каждым годом растет на 10%%. Следовательно, виллы здесь "
+#: .\templates\base_app\index.html:39
+#, python-format
+msgid "Рост туристов с каждым годом растет на 10%%. Следовательно, виллы здесь "
 "очень актуальны"
 msgstr ""
 "The number of tourists is growing by 10% every year. Consequently, the "
@@ -519,7 +518,7 @@ msgstr "We keep financial records, pay taxes, and you receive passive income."
 #, fuzzy, python-format
 #| msgid "Рентабельность инвестиций - от 20%% годовых"
 msgid "Рентабельность инвестиций - от 20%% годовых"
-msgstr "Return on investment - from 20% per annum"
+msgstr "Return on investment - from 20%% per annum"
 
 #: .\base_app\templates\base_app\index.html:396
 msgid "Оставьте контакты"
@@ -662,7 +661,7 @@ msgstr "Conclusion of an investment agreement"
 #, fuzzy, python-format
 #| msgid "Предоплата 10%% от суммы контракта"
 msgid "Предоплата 10%% от суммы контракта"
-msgstr "Prepayment 10% of the contract amount"
+msgstr "Prepayment 10%% of the contract amount"
 
 #: .\base_app\templates\base_app\index.html:554
 msgid "Поиск земли и определение срока проекта"

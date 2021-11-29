@@ -326,6 +326,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 8px;
 }
 .language-show {
   display: flex;
