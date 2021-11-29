@@ -1,7 +1,7 @@
 .main {
   padding: 290px 0 265px;
   background-image: url(../img/main.jpg);
-  background-size: contain;
+  background-size: 100% 100%;
   margin-top: -137px; }
   .main__left {
     width: 490px;
@@ -768,7 +768,8 @@
 
 @media screen and (max-width: 1200px) {
   .main {
-    padding: 190px 0 200px; }
+    padding: 190px 0 200px;
+    background-size: contain; }
 
   .quiz__step {
     padding: 50px 70px 54px; }
