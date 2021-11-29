@@ -267,7 +267,6 @@ msgid "Фактический адрес на Бали"
 msgstr "Actual address in Bali"
 
 #: .\templates\base_app\index.html:32
-#, python-format
 msgid "Инвестируя в виллы под ключ вы получите доходность от 15%% А также будете "
 "иметь собственное жилье на Бали"
 msgstr "By investing in turnkey villas, you will receive a yield of 15%"
@@ -278,7 +277,6 @@ msgid "Выбор туристов"
 msgstr "Tourists' choice"
 
 #: .\templates\base_app\index.html:39
-#, python-format
 msgid "Рост туристов с каждым годом растет на 10%%. Следовательно, виллы здесь "
 "очень актуальны"
 msgstr "The number of tourists is growing by 10% every year. Consequently,"
@@ -390,7 +388,7 @@ msgstr "We keep financial records, pay taxes, and you receive""passive income."
 #: .\templates\base_app\index.html:374
 #, python-format
 msgid "Рентабельность инвестиций - от 20%% годовых"
-msgstr "Return on investment - from 20% per annum"
+msgstr "Return on investment - from 20%% per annum"
 
 #: .\templates\base_app\index.html:396
 msgid "Оставьте контакты"
@@ -515,7 +513,7 @@ msgstr "Conclusion of an investment agreement"
 #: .\templates\base_app\index.html:547
 #, python-format
 msgid "Предоплата 10%% от суммы контракта"
-msgstr "Prepayment 10% of the contract amount"
+msgstr "Prepayment 10%% of the contract amount"
 
 #: .\templates\base_app\index.html:555
 msgid "Поиск земли и определение срока проекта"

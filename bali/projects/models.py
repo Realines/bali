@@ -32,7 +32,7 @@ class Project(models.Model):
         verbose_name=_('Категории'),
         related_name='projects',
         related_query_name='project',
-        symmetrical=True,
+        # symmetrical=True,
     )
     invested = models.BooleanField(
         verbose_name=_('Проект подлежит инвестированию'),
