@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 20:50+0700\n"
+"POT-Creation-Date: 2021-11-30 01:06+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,68 +142,68 @@ msgstr "حقائق عن مواقع"
 
 #: .\projects\templates\projects\projects.html:10
 msgid "Назад"
-msgstr ""
+msgstr "خلف"
 
 #: .\projects\templates\projects\projects.html:51
 msgid "Купить"
-msgstr ""
+msgstr "إشتري"
 
 #: .\projects\templates\projects\projects.html:55
 msgid "Стоимость"
-msgstr ""
+msgstr "السعر"
 
 #: .\projects\templates\projects\projects.html:63
 msgid "Кол-во спален"
-msgstr ""
+msgstr "عدد غرف النوم"
 
 #: .\projects\templates\projects\projects.html:78
 msgid "Преимущества"
-msgstr ""
+msgstr "المميزات"
 
 #: .\projects\templates\projects\projects.html:115
 msgid "Консультация"
-msgstr ""
+msgstr "التشاور"
 
 #: .\projects\templates\projects\projects.html:118
 msgid "Оставтье номер телефона и мы свяжемся с Вами"
-msgstr ""
+msgstr "اترك رقم هاتفك وسنتصل بك في "
 
 #: .\projects\templates\projects\projects.html:118
 msgid "в течение часа"
-msgstr ""
+msgstr "غضون ساعة"
 
 #: .\projects\templates\projects\projects.html:124
 msgid "Отправить"
-msgstr ""
+msgstr "ارسل"
 
 #: .\projects\templates\projects\projects.html:127
 msgid "Если у вас остались вопросы - напишите нам."
-msgstr ""
+msgstr "إذا كان لديك أي أسئلة - راسلنا. نحن دائما."
 
 #: .\projects\templates\projects\projects.html:127
 msgid "Мы всегда открыты к диалогу."
-msgstr ""
+msgstr " منفتحون على الحوار"
 
 #: .\projects\templates\projects\projects.html:129
 #: .\projects\templates\projects\projects.html:135
 msgid "Написать в"
-msgstr ""
+msgstr "اتصل بنا في"
 
 #: .\projects\templates\projects\projects.html:151
 msgid "Рекомендуем"
-msgstr ""
+msgstr "موصى به :"
 
 #: .\projects\templates\projects\projects.html:151
 msgid "к просмотру:"
-msgstr ""
+msgstr "للعرض"
 
 #: .\projects\templates\projects\projects.html:157
 msgid "Подробнее"
-msgstr ""
+msgstr "المزيد من التفاصيل"
 
 #: .\projects\templates\projects\projects.html:163
 msgid "Показать больше"
-msgstr ""
+msgstr "أظهر المزيد"
 
 #~ msgid "Приоритет проекта"
 #~ msgstr "أولوية المشروع"

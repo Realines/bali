@@ -27,7 +27,7 @@
                         <nav class="nav">
                             <a href="#finishedProjects" class="nav__item">{% trans 'Проекты' %}</a>
                             <a href="#fact" class="nav__item">{% trans 'О компании' %}</a>
-                            <a href="" class="nav__item">{% trans 'Отзывы' %}</a>
+                            <a href="#contacts" class="nav__item">{% trans 'Отзывы' %}</a>
                         </nav>
                         <div class="language">
                             <div class="language-show">
@@ -58,7 +58,7 @@
 
     {% block content %}{% endblock %}
 
-    <section class='agency agency--bali'>
+    <section id="contacts" class='agency agency--bali'>
         <div class='container'>
             <div class='agency__inner'>
                 <div class="agency__left">
@@ -106,7 +106,7 @@
                             <div class="agency__contacts-item-right">+62 8214 457 92 09</div>
                         </div>
                     </div>
-                    <div class="agency__desc">“{% trans 'Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами, которые приносят инвесторам от 15% прибыли в год' %}”</div>
+                    <div class="agency__desc">“{% trans 'Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами,' %} {% trans 'которые приносят инвесторам от 15% прибыли в год' %}”</div>
                     <div class="agency__ceo">
                         <strong>{% trans 'Егор Егорович Егоров' %}</strong>
                         <span>CEO SWOI Group</span>
@@ -121,7 +121,7 @@
     </section>
 
     <section class='map'>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.126947873717!2d115.16171891478407!3d-8.679475993763775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd247653c70ea0f%3A0x74f56212c789f5f7!2sSwoi%20International%20Group!5e0!3m2!1sru!2sru!4v1637948091940!5m2!1sru!2sru"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126210.1115350364!2d115.14484630952346!3d-8.685275340284988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd247653c70ea0f%3A0x74f56212c789f5f7!2sSwoi%20International%20Group!5e0!3m2!1sru!2sru!4v1638206056083!5m2!1sru!2sru"
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <!-- <img src="{% static 'img/map.jpg' %}" alt=""> -->
     </section>
@@ -136,11 +136,10 @@
                     <p class="footer__save">Masterpiece 2021. {% trans 'Все права защищены.' %}</p>
                 </div>
                 <div class="footer__col">
-                    <nav class="footer__nav">
-                        <a href="" class="footer__nav-item">{% trans 'Проекты' %}</a>
-                        <a href="" class="footer__nav-item">{% trans 'О компании' %}</a>
-                        <a href="" class="footer__nav-item">{% trans 'Отзывы' %}</a>
-                        <a href="" class="footer__nav-item">{% trans 'Контакты' %}</a>
+                    <nav class="footer__nav"> 
+                        <a href="#finishedProjects" class="footer__nav-item">{% trans 'Проекты' %}</a>
+                        <a href="#fact" class="footer__nav-item">{% trans 'О компании' %}</a>
+                        <a href="#contacts" class="footer__nav-item">{% trans 'Отзывы' %}</a>
                     </nav>
                 </div>
                 <div class="footer__col">

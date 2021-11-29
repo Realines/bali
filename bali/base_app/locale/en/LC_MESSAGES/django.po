@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 20:50+0700\n"
+"POT-Creation-Date: 2021-11-30 01:06+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,28 +41,22 @@ msgid "Проекты"
 msgstr "projects"
 
 #: .\templates\layouts\base.html:29 .\templates\layouts\base.html:141
-#, fuzzy
-#| msgid "о компании"
 msgid "О компании"
-msgstr "about"
+msgstr "About"
 
 #: .\templates\layouts\base.html:30 .\templates\layouts\base.html:142
 msgid "Отзывы"
 msgstr "Contacts"
 
-#: .\templates\layouts\base.html:47 .\templates\layouts\base.html:191
+#: .\templates\layouts\base.html:47 .\templates\layouts\base.html:190
 msgid "Связаться с нами"
-msgstr ""
+msgstr "Contact us"
 
 #: .\templates\layouts\base.html:66
-#, fuzzy
-#| msgid "Фактический адрес на Бали"
 msgid "Фактический адрес на"
-msgstr "Actual address in Bali"
+msgstr "Actual address"
 
 #: .\templates\layouts\base.html:66
-#, fuzzy
-#| msgid "на Бали"
 msgid "Бали"
 msgstr "on Bali"
 
@@ -87,37 +81,28 @@ msgid "Стационарный:"
 msgstr "Landline number:"
 
 #: .\templates\layouts\base.html:109
-#, fuzzy, python-format
-#| msgid ""
-#| "Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 "
-#| "объектами, которые приносят инвесторам от 15% прибыли в год. Топ-"
-#| "менеджеры нашей команды — специалисты экстра класса, имеющие опыт работы "
-#| "в лучших местных и международных компаниях"
+#: .\base_app\templates\base_app\index.html:451
 msgid ""
-"Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами, "
-"которые приносят инвесторам от 15%% прибыли в год"
+"Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами,"
 msgstr ""
-"Now we have 22 employees who manage 20 properties that bring investors "
-"15% or more profit per year. Top managers of our team are top-class "
-"specialists with experience in the best local and international companies."
+"Now we have 22 employees who manage 20 properties that bring investors 15%"
+
+#: .\templates\layouts\base.html:109
+#, python-format
+msgid "которые приносят инвесторам от 15%% прибыли в год"
+msgstr "or more profit per year. Top managers of our team are top-class"
 
 #: .\templates\layouts\base.html:111
 msgid "Егор Егорович Егоров"
-msgstr ""
+msgstr "Egor Stynko"
 
 #: .\templates\layouts\base.html:136
 msgid "Все права защищены."
-msgstr ""
+msgstr "All rights reserved."
 
-#: .\templates\layouts\base.html:143
-#, fuzzy
-#| msgid "Факты"
-msgid "Контакты"
-msgstr "Facts"
-
-#: .\templates\layouts\base.html:161
+#: .\templates\layouts\base.html:160
 msgid "Политика конфиденциальности"
-msgstr ""
+msgstr "Privacy Policy"
 
 #: .\base_app\apps.py:9
 msgid "Базовое приложение"
@@ -133,6 +118,7 @@ msgid "Ограничение по символам: 32"
 msgstr "Character limit: 32"
 
 #: .\base_app\forms.py:29 .\base_app\forms.py:31
+#: .\base_app\templates\base_app\index.html:402
 msgid "Ваше имя"
 msgstr "Your name"
 
@@ -349,7 +335,7 @@ msgstr "Why"
 
 #: .\base_app\templates\base_app\index.html:22
 msgid "стоит инвестировать"
-msgstr "Why is it worth investing"
+msgstr "is it worth investing"
 
 #: .\base_app\templates\base_app\index.html:22
 msgid "в недвижимость на Бали?"
@@ -364,16 +350,10 @@ msgstr "Why?"
 msgid "Инвестиции"
 msgstr "Investments"
 
-#: .\templates\base_app\index.html:31 .\templates\base_app\index.html:479
-msgid "Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами, которые приносят инвесторам от 15% прибыли в год. Топ-менеджеры нашей команды — специалисты экстра класса, имеющие опыт работы в лучших местных и международных компаниях."
-msgstr "Now we have 22 employees who manage 20 properties that bring investors 15% or more profit per year. Top managers of our team are top-class specialists with experience in the best local and international companies."
+#: .\base_app\templates\base_app\index.html:32
 
-#: .\templates\base_app\index.html:31 .\templates\base_app\index.html:479
-msgid "Фактический адрес на Бали"
-msgstr "Actual address in Bali"
-
-#: .\templates\base_app\index.html:32
-msgid "Инвестируя в виллы под ключ вы получите доходность от 15%% А также будете "
+msgid ""
+"Инвестируя в виллы под ключ вы получите доходность от 15%% А также будете "
 "иметь собственное жилье на Бали"
 msgstr ""
 "By investing in turnkey villas, you will receive a yield of 15% and you will "
@@ -383,9 +363,9 @@ msgstr ""
 msgid "Выбор туристов"
 msgstr "Tourists' choice"
 
-#: .\templates\base_app\index.html:39
-#, python-format
-msgid "Рост туристов с каждым годом растет на 10%%. Следовательно, виллы здесь "
+
+msgid ""
+"Рост туристов с каждым годом растет на 10%%. Следовательно, виллы здесь "
 "очень актуальны"
 msgstr ""
 "The number of tourists is growing by 10% every year. Consequently, the "
@@ -418,10 +398,6 @@ msgstr ""
 "Long term rental of villas and daily rentals. Investments: from $ 60,000"
 
 #: .\base_app\templates\base_app\index.html:79
-#, fuzzy, python-format
-#| msgid ""
-#| "Инвестиции: от $200 000. Срок строит-ва: от 9 месяцев. Рентабельность "
-#| "инвестиций - от 30%"
 msgid ""
 "Инвестиции: от $200 000. Срок строит-ва: от 9 месяцев. Рентабельность "
 "инвестиций - от 30%%"
@@ -437,6 +413,15 @@ msgstr ""
 #: .\base_app\templates\base_app\index.html:385
 msgid "Хочу лично обсудить со специалистом"
 msgstr "I want to personally discuss everything with a specialist"
+
+#: .\base_app\templates\base_app\index.html:89
+#: .\base_app\templates\base_app\index.html:212
+#: .\base_app\templates\base_app\index.html:259
+#: .\base_app\templates\base_app\index.html:302
+#: .\base_app\templates\base_app\index.html:340
+#: .\base_app\templates\base_app\index.html:388
+msgid "Далее"
+msgstr "Next"
 
 #: .\base_app\templates\base_app\index.html:94
 msgid "Что для Вас важно?"
@@ -460,6 +445,8 @@ msgid ""
 "Участок земли: от 5 соток. Строительство от одной виллы на участке с "
 "продажей на этапе строительства или сдачей в аренду после строительства."
 msgstr ""
+"Plot of land: from 5 ares. Construction from one villa on a plot with sale "
+"under construction or rental after construction."
 
 #: .\base_app\templates\base_app\index.html:211
 #: .\base_app\templates\base_app\index.html:258
@@ -468,14 +455,6 @@ msgstr ""
 #: .\base_app\templates\base_app\index.html:387
 msgid "Назад"
 msgstr "Back"
-
-#: .\base_app\templates\base_app\index.html:212
-#: .\base_app\templates\base_app\index.html:259
-#: .\base_app\templates\base_app\index.html:302
-#: .\base_app\templates\base_app\index.html:340
-#: .\base_app\templates\base_app\index.html:388
-msgid "Далее"
-msgstr "Next"
 
 #: .\base_app\templates\base_app\index.html:220
 msgid "$100,000 - $250,000"
@@ -515,8 +494,6 @@ msgid ""
 msgstr "We keep financial records, pay taxes, and you receive passive income."
 
 #: .\base_app\templates\base_app\index.html:374
-#, fuzzy, python-format
-#| msgid "Рентабельность инвестиций - от 20%% годовых"
 msgid "Рентабельность инвестиций - от 20%% годовых"
 msgstr "Return on investment - from 20%% per annum"
 
@@ -540,6 +517,11 @@ msgstr "Our Bali real estate expert"
 msgid "с Вами в ближайшее время"
 msgstr "will contact you shortly"
 
+#: .\base_app\templates\base_app\index.html:409
+#: .\base_app\templates\base_app\index.html:597
+msgid "phone"
+msgstr "Your phone"
+
 #: .\base_app\templates\base_app\index.html:414
 #: .\base_app\templates\base_app\index.html:600
 msgid "Отправить"
@@ -551,28 +533,25 @@ msgstr "Facts"
 
 #: .\base_app\templates\base_app\index.html:446
 msgid "о компании"
-msgstr "about"
+msgstr "about our company"
 
 #: .\base_app\templates\base_app\index.html:450
 msgid "это современная компания, которая уже 5 лет на рынке!"
 msgstr "is a modern company that has been on the market for 5 years!"
 
 #: .\base_app\templates\base_app\index.html:451
-#, fuzzy, python-format
-#| msgid ""
-#| "Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 "
-#| "объектами, которые приносят инвесторам от 15% прибыли в год. Топ-"
-#| "менеджеры нашей команды — специалисты экстра класса, имеющие опыт работы "
-#| "в лучших местных и международных компаниях"
+#, python-format
+msgid "которые приносят инвесторам от 15%% прибыли в год. Топ-менеджеры нашей"
+msgstr ""
+"or more profit per year. Top managers of our team are top-class specialists "
+"with experience"
+
+#: .\base_app\templates\base_app\index.html:451
 msgid ""
-"Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами, "
-"которые приносят инвесторам от 15%% прибыли в год. Топ-менеджеры нашей "
 "команды — специалисты экстра класса, имеющие опыт работы в лучших местных и "
 "международных компаниях"
 msgstr ""
-"Now we have 22 employees who manage 20 properties that bring investors "
-"15% or more profit per year. Top managers of our team are top-class "
-"specialists with experience in the best local and international companies."
+"specialistswith experience in the best local and international companies."
 
 #: .\base_app\templates\base_app\index.html:456
 msgid "построенных объектов"
@@ -582,9 +561,16 @@ msgstr "built objects"
 msgid "успешной работы на рынке"
 msgstr "of successful work in the market"
 
+msgid "от 15%%"
+msgstr "from 15%"
+
 #: .\base_app\templates\base_app\index.html:464
 msgid "доходность в год"
 msgstr "income per year"
+
+#: .\base_app\templates\base_app\index.html:467
+msgid "2 года"
+msgstr "2 years"
 
 #: .\base_app\templates\base_app\index.html:468
 msgid "срок окупаемости"
@@ -619,6 +605,26 @@ msgstr "object"
 msgid "В стоимость входит:"
 msgstr "Price includes:"
 
+msgid "Кол-во спален"
+msgstr "Number of bedrooms"
+
+msgid "Стоимость"
+msgstr "Price"
+
+msgid "Купить"
+msgstr "Buy"
+
+
+
+msgid "к просмотру:"
+msgstr "for viewing:"
+
+msgid "Рекомендуем"
+msgstr "Recommended"
+
+msgid "Преимущества"
+msgstr "Advantages"
+
 #: .\base_app\templates\base_app\index.html:518
 msgid "Готовая вилла с отделкой, техникой и мебелью"
 msgstr "Finished villa with decoration, appliances and furniture"
@@ -636,9 +642,7 @@ msgid "Страховка объекта на 1 год"
 msgstr "Object insurance for 1 year"
 
 #: .\base_app\templates\base_app\index.html:522
-#, fuzzy, python-format
-#| msgid "Управление объектом с 80% заполняемостью"
-msgid "Управление объектом с 80%% заполняемостью"
+msgid "Управление объектом с 80 заполняемостью"
 msgstr "Property management with 80% occupancy"
 
 #: .\base_app\templates\base_app\index.html:525
@@ -695,10 +699,6 @@ msgstr "Leave your phone number and we will contact you"
 msgid "в течение часа"
 msgstr "within an hour"
 
-#: .\base_app\templates\base_app\index.html:597
-msgid "phone"
-msgstr "Your phone"
-
 #: .\base_app\templates\base_app\index.html:603
 msgid "Если у вас остались вопросы - напишите нам."
 msgstr "If you have any questions - contact us."
@@ -751,3 +751,20 @@ msgstr "The form has been successfully submitted"
 #: .\base_app\views.py:86
 msgid "Вы успешно записались на консультацию"
 msgstr "You have successfully signed up for a consultation"
+
+#~ msgid "Егор Стынко"
+#~ msgstr "Egor Stynko"
+
+#, fuzzy
+#~| msgid "Факты"
+#~ msgid "Контакты"
+#~ msgstr "Facts"
+
+#~ msgid "Фактический адрес на Бали"
+#~ msgstr "Actual address in Bali"
+
+#~ msgid "Рентабельность инвестиций - от 20% годовых"
+#~ msgstr "Return on investment - from 20% per annum"
+
+#~ msgid "Предоплата 10% от суммы контракта"
+#~ msgstr "Prepayment 10% of the contract amount"

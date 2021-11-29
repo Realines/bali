@@ -2191,6 +2191,7 @@ input::placeholder {
 }
 .project-detail .swiper-slide {
   width: 770px;
+  height: 490px;
   position: relative;
 }
 .project-detail .swiper-slide:before {
