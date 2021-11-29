@@ -185,6 +185,9 @@ msgstr "Мы всегда открыты к диалогу."
 msgid "Отправить"
 msgstr "Отправить"
 
+msgid "Отзывы"
+msgstr "Контакты"
+
 #: .\templates\projects\projects.html:130
 #: .\templates\projects\projects.html:136
 msgid "Написать в"

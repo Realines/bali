@@ -26,6 +26,20 @@ msgstr "Projects"
 msgid "Название проекта"
 msgstr "Project name"
 
+#: .\models.py:8
+msgid "Связаться с нами"
+msgstr "Contact us"
+
+
+
+#: .\models.py:8
+msgid "Управление объектом с 80% заполняемостью"
+msgstr "Property management with 80% occupancy"
+
+#: .\models.py:8
+msgid "О компании"
+msgstr "About"
+
 #: .\models.py:9
 msgid "Адрес"
 msgstr "Address"
