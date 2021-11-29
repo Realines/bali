@@ -448,7 +448,7 @@
             </div>
             <div class="fact__info">
                 <div class="fact__desc">Masterpiece Realty – {% trans 'это современная компания, которая уже 5 лет на рынке!' %} </div>
-                <div class="fact__info-desc">{% trans 'Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами, которые приносят инвесторам от 15% прибыли в год. Топ-менеджеры нашей команды — специалисты экстра класса, имеющие опыт работы в лучших местных и международных компаниях.' %}
+                <div class="fact__info-desc">{% trans 'Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами, которые приносят инвесторам от 15% прибыли в год. Топ-менеджеры нашей команды — специалисты экстра класса, имеющие опыт работы в лучших местных и международных компаниях' %}
                 </div>
                 <div class="fact__items">
                     <div class="fact__item">
@@ -594,7 +594,7 @@
                 <div class="consult__desc">{% trans 'Оставтье номер телефона и мы свяжемся с Вами' %} <br> {% trans 'в течение часа' %}</div> 
                 {% csrf_token %}
                 <div class="consult__form-group">
-                    <input type="tel" name="phone" placeholder="Ваш номер телефона">
+                    <input type="tel" name="phone" placeholder="{% trans 'phone' %}">
                     <img src="{% static 'img/carbon_phone-voice-filled.svg' %}" alt="">
                 </div>
                 <button type="submit" class="consult__form-btn">{% trans 'Отправить' %}</button>
