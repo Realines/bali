@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-X_FRAME_OPTIONS = 'ALLOW-FROM ^https?:\/\/([^\/]+\.)?(https://masterpice-realty\.ae|facebook\.com|webvisor\.com|metri[ck]a\.yandex\.(com|ru|com\.tr))\/'
+X_FRAME_OPTIONS = 'ALLOW-FROM ^https?:\/\/([^\/]+\.)?(https://bali.masterpice-realty\.ae|facebook\.com|webvisor\.com|metri[ck]a\.yandex\.(com|ru|com\.tr))\/'
 
 # Application definition
 
@@ -155,6 +155,7 @@ LANGUAGES = [
     ('en', _('English')),
     ('ar', _('Arabian')),
 ]
+
 
 # Для сохранения языка в куки и в сессии.
 LANGUAGE_SESSION_KEY = 'session_language_appname'
