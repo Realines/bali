@@ -1,6 +1,6 @@
 <!DOCTYPE html> {% load static %}{% load i18n %}
 
-<html>
+<html land="{{ request.LANGUAGE_CODE }}">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
     <header class='header'>
         <div class='container'>
             <div class='header__inner'>
-                <a href="" class="header__logo">
+                <a href="{% url 'base_app:index' %}" class="header__logo">
                     <img src="{% static 'img/logo.png' %}" alt="">
                 </a>
                 <div class="header__right">
