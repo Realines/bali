@@ -27,8 +27,9 @@ SECRET_KEY = 'django-insecure-)o+607l2r0$%rra+66j@dmt1!38=i09@9$@(+5c1gs#efz159f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+X_FRAME_OPTIONS = 'ALLOW-FROM ^https?:\/\/([^\/]+\.)?(https://bali.masterpice-realty\.ae|facebook\.com|webvisor\.com|metri[ck]a\.yandex\.(com|ru|com\.tr))\/'
 
 # Application definition
 
@@ -155,6 +156,7 @@ LANGUAGES = [
     ('ar', _('Arabian')),
 ]
 
+
 # Для сохранения языка в куки и в сессии.
 LANGUAGE_SESSION_KEY = 'session_language_appname'
 LANGUAGE_COOKIE_NAME = 'cookie_language_appname'
@@ -167,3 +169,12 @@ LOCALE_PATHS = [
 
 # Для поддержки перевода данных, хранящихся в БД (в моделях).
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+
+# почты для получения писем
+# почта отправителя по умолчанию, та что верифицирована
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'                                                                           
+EMAIL_HOST ='mail.masterpiece-realty.ae'                                   
+EMAIL_PORT = 587                                                         
+EMAIL_HOST_USER = 'info@masterpiece-realty.ae'                              
+EMAIL_HOST_PASSWORD = 'u1497048' #This is not your gmail password.
+EMAIL_USE_TLS = True

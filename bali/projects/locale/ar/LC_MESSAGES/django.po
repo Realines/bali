@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-27 00:11+0700\n"
+"POT-Creation-Date: 2021-11-30 01:06+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,191 +19,191 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\apps.py:9 .\models.py:54
+#: .\projects\apps.py:9 .\projects\models.py:54
 msgid "Проекты"
 msgstr "المشاريع"
 
-#: .\models.py:8
+#: .\projects\models.py:8
 msgid "Название проекта"
 msgstr "اسم المشروع"
 
-#: .\models.py:9
+#: .\projects\models.py:9
 msgid "Адрес"
 msgstr "العنوان"
 
-#: .\models.py:10
+#: .\projects\models.py:10
 msgid "Стоимость проекта"
 msgstr "تكلفة المشروع"
 
-#: .\models.py:11
+#: .\projects\models.py:11
 msgid "Описание проекта"
 msgstr "وصف المشروع"
 
-#: .\models.py:12 .\templates\projects\projects.html:59
+#: .\projects\models.py:12 .\projects\templates\projects\projects.html:59
 msgid "Площадь"
 msgstr "مربع"
 
-#: .\models.py:13
+#: .\projects\models.py:13
 msgid "Количество спален"
 msgstr "عدد غرف النوم"
 
-#: .\models.py:15 .\templates\projects\projects.html:67
+#: .\projects\models.py:15 .\projects\templates\projects\projects.html:67
 msgid "Вид"
 msgstr "عرض"
 
-#: .\models.py:16
+#: .\projects\models.py:16
 msgid "Открывающийся из виллы вид"
 msgstr "المنظر من الفيلا"
 
-#: .\models.py:20 .\models.py:129 .\models.py:144
-#: .\templates\projects\projects.html:90
+#: .\projects\models.py:20 .\projects\models.py:129 .\projects\models.py:144
+#: .\projects\templates\projects\projects.html:91
 msgid "Локация"
 msgstr "الموقع"
 
-#: .\models.py:27
+#: .\projects\models.py:27
 msgid "Дата добавления"
 msgstr "تاريخ الاضافة"
 
-#: .\models.py:32 .\models.py:92
+#: .\projects\models.py:32 .\projects\models.py:92
 msgid "Категории"
 msgstr "الفئات"
 
-#: .\models.py:38
+#: .\projects\models.py:38
 msgid "Проект подлежит инвестированию"
 msgstr "المشروع خاضع للاستثمار"
 
-#: .\models.py:42
+#: .\projects\models.py:42
 msgid "Опубликовать"
 msgstr "للنشر"
 
-#: .\models.py:46
+#: .\projects\models.py:46
 msgid "Главное изображение"
 msgstr "الصورة الرئيسية"
 
-#: .\models.py:53 .\models.py:105
+#: .\projects\models.py:53 .\projects\models.py:105
 msgid "Проект"
 msgstr "المشروع"
 
-#: .\models.py:65
+#: .\projects\models.py:65
 msgid "Изображение для проекта"
 msgstr "صورة للمشروع"
 
-#: .\models.py:76
+#: .\projects\models.py:76
 msgid "Галерея проекта"
 msgstr "معرض المشروع"
 
-#: .\models.py:77
+#: .\projects\models.py:77
 msgid "Галереи проектов"
 msgstr "معارض المشاريع"
 
-#: .\models.py:87
+#: .\projects\models.py:87
 msgid "Название категории"
 msgstr "اسم الفئة"
 
-#: .\models.py:91
+#: .\projects\models.py:91
 msgid "Категория"
 msgstr "الفئة"
 
-#: .\models.py:102
+#: .\projects\models.py:102
 msgid "Название преимущества"
 msgstr "اسم ميزة"
 
-#: .\models.py:114
+#: .\projects\models.py:114
 msgid "Преимущество проекта"
 msgstr "ميزة المشروع"
 
-#: .\models.py:115
+#: .\projects\models.py:115
 msgid "Преимущества проектов"
 msgstr "مزايا المشاريع"
 
-#: .\models.py:125
+#: .\projects\models.py:125
 msgid "Название локации"
 msgstr "اسم الموقع"
 
-#: .\models.py:130
+#: .\projects\models.py:130
 msgid "Локации"
 msgstr "المواقع"
 
-#: .\models.py:140
+#: .\projects\models.py:140
 msgid "Заголовок факта"
 msgstr "عنوان الحقيقة"
 
-#: .\models.py:141
+#: .\projects\models.py:141
 msgid "Описание факта"
 msgstr "وصف حقيقة"
 
-#: .\models.py:152
+#: .\projects\models.py:152
 msgid "Факт о локации"
 msgstr "حقيقة حول الموقع"
 
-#: .\models.py:153
+#: .\projects\models.py:153
 msgid "Факты о локациях"
 msgstr "حقائق عن مواقع"
 
-#: .\templates\projects\projects.html:10
+#: .\projects\templates\projects\projects.html:10
 msgid "Назад"
-msgstr ""
+msgstr "خلف"
 
-#: .\templates\projects\projects.html:51
+#: .\projects\templates\projects\projects.html:51
 msgid "Купить"
-msgstr ""
+msgstr "إشتري"
 
-#: .\templates\projects\projects.html:55
+#: .\projects\templates\projects\projects.html:55
 msgid "Стоимость"
-msgstr ""
+msgstr "السعر"
 
-#: .\templates\projects\projects.html:63
+#: .\projects\templates\projects\projects.html:63
 msgid "Кол-во спален"
-msgstr ""
+msgstr "عدد غرف النوم"
 
-#: .\templates\projects\projects.html:78
+#: .\projects\templates\projects\projects.html:78
 msgid "Преимущества"
-msgstr ""
+msgstr "المميزات"
 
-#: .\templates\projects\projects.html:114
+#: .\projects\templates\projects\projects.html:115
 msgid "Консультация"
-msgstr ""
+msgstr "التشاور"
 
-#: .\templates\projects\projects.html:116
+#: .\projects\templates\projects\projects.html:118
 msgid "Оставтье номер телефона и мы свяжемся с Вами"
-msgstr ""
+msgstr "اترك رقم هاتفك وسنتصل بك في "
 
-#: .\templates\projects\projects.html:116
+#: .\projects\templates\projects\projects.html:118
 msgid "в течение часа"
-msgstr ""
+msgstr "غضون ساعة"
 
-#: .\templates\projects\projects.html:117
-msgid "Если у вас остались вопросы - напишите нам."
-msgstr ""
-
-#: .\templates\projects\projects.html:117
-msgid "Мы всегда открыты к диалогу."
-msgstr ""
-
-#: .\templates\projects\projects.html:126
+#: .\projects\templates\projects\projects.html:124
 msgid "Отправить"
-msgstr ""
+msgstr "ارسل"
 
-#: .\templates\projects\projects.html:130
-#: .\templates\projects\projects.html:136
+#: .\projects\templates\projects\projects.html:127
+msgid "Если у вас остались вопросы - напишите нам."
+msgstr "إذا كان لديك أي أسئلة - راسلنا. نحن دائما."
+
+#: .\projects\templates\projects\projects.html:127
+msgid "Мы всегда открыты к диалогу."
+msgstr " منفتحون على الحوار"
+
+#: .\projects\templates\projects\projects.html:129
+#: .\projects\templates\projects\projects.html:135
 msgid "Написать в"
-msgstr ""
+msgstr "اتصل بنا في"
 
-#: .\templates\projects\projects.html:151
+#: .\projects\templates\projects\projects.html:151
 msgid "Рекомендуем"
-msgstr ""
+msgstr "موصى به :"
 
-#: .\templates\projects\projects.html:151
+#: .\projects\templates\projects\projects.html:151
 msgid "к просмотру:"
-msgstr ""
+msgstr "للعرض"
 
-#: .\templates\projects\projects.html:157
+#: .\projects\templates\projects\projects.html:157
 msgid "Подробнее"
-msgstr ""
+msgstr "المزيد من التفاصيل"
 
-#: .\templates\projects\projects.html:163
+#: .\projects\templates\projects\projects.html:163
 msgid "Показать больше"
-msgstr ""
+msgstr "أظهر المزيد"
 
 #~ msgid "Приоритет проекта"
 #~ msgstr "أولوية المشروع"
