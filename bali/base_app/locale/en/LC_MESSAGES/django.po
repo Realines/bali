@@ -323,7 +323,7 @@ msgstr "Become the owner of a luxury villa"
 
 #: .\base_app\templates\base_app\index.html:11
 msgid "получайте пассивный доход."
-msgstr "and get passive income."
+msgstr "and get passive income from 12% $"
 
 #: .\base_app\templates\base_app\index.html:12
 msgid "на Бали"
@@ -495,7 +495,7 @@ msgstr "We keep financial records, pay taxes, and you receive passive income."
 
 #: .\base_app\templates\base_app\index.html:374
 msgid "Рентабельность инвестиций - от 20%% годовых"
-msgstr "Return on investment - from 20%% per annum"
+msgstr "Return on investment - from 15%% per annum"
 
 #: .\base_app\templates\base_app\index.html:396
 msgid "Оставьте контакты"
@@ -763,8 +763,8 @@ msgstr "You have successfully signed up for a consultation"
 #~ msgid "Фактический адрес на Бали"
 #~ msgstr "Actual address in Bali"
 
-#~ msgid "Рентабельность инвестиций - от 20% годовых"
-#~ msgstr "Return on investment - from 20% per annum"
+#~ msgid "Рентабельность инвестиций - от 15% годовых"
+#~ msgstr "Return on investment - from 15% per annum"
 
 #~ msgid "Предоплата 10% от суммы контракта"
 #~ msgstr "Prepayment 10% of the contract amount"
