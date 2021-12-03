@@ -151,9 +151,11 @@ input:active {
 }
 .valid {
    color: #86A876;
+   margin-top: 6px;
 }
 .novalid {
   color: red;
+  margin-top: 6px;
 }
 ::-webkit-input-placeholder {
   color: #222;

@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'favicon.svg' %}" type="image/png">
-
+    <script type="text/javascript" >
+        let local = "{{ request.LANGUAGE_CODE }}"
+    </script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -289,9 +291,9 @@
                     data: $(this).serialize(),
                     success: function(data) {
                         if (local == 'ru')
-                            $("[id=valid-phone]").text('Ваш номер телефона слишком большой.')
+                            $("[id=valid-phone]").text('Заявка успешна отправлена!')
                         else
-                            $("[id=valid-phone]").text('Your phone number is too big.')
+                            $("[id=valid-phone]").text('The application was successfully sent!')
                         $("[id=valid-phone]").addClass( "valid" );
                         $("[id=valid-phone]").removeClass( "novalid" );
                     }

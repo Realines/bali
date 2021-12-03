@@ -45,11 +45,13 @@ $(document).ready(function() {
     $("input[name='phone']").keyup(function () {
         let inputValue = $(this).val()
         console.log(inputValue)
+        console.log(inputValue.length)
         phoneValidation = inputValue
         if (inputValue.length > 8) { 
             if (inputValue.length < 13) {
                 if (inputValue.charAt(0) == '+') {
                     isValidPhone = true;
+                    $("[id=valid-phone]").text('')
                     $("[id=valid-phone]").addClass( "valid" );
                     $("[id=valid-phone]").removeClass( "novalid" );
                     console.log('Valide number')
@@ -61,7 +63,7 @@ $(document).ready(function() {
                     if (local == 'ru')
                         $("[id=valid-phone]").text('Укажите номер в международном формате.')
                     else
-                        $("[id=valid-phone]").text('Your phone number is too big.')
+                        $("[id=valid-phone]").text('Please enter the number in international format.')
                 }
             }
             else {
