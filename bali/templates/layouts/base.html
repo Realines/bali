@@ -271,7 +271,12 @@
                     dataType: 'html',
                     data: $(this).serialize(),
                     success: function(data) {
-                        // alert(data);
+                        if (local == 'ru')
+                            $("[id=valid-phone]").text('Ваш номер телефона слишком большой.')
+                        else
+                            $("[id=valid-phone]").text('Your phone number is too big.')
+                        $("[id=valid-phone]").addClass( "valid" );
+                        $("[id=valid-phone]").removeClass( "novalid" );
                     }
                 });
                 return false;
@@ -284,7 +289,12 @@
                     dataType: 'html',
                     data: $(this).serialize(),
                     success: function(data) {
-                        // alert(data);
+                        if (local == 'ru')
+                            $("[id=valid-phone]").text('Ваш номер телефона слишком большой.')
+                        else
+                            $("[id=valid-phone]").text('Your phone number is too big.')
+                        $("[id=valid-phone]").addClass( "valid" );
+                        $("[id=valid-phone]").removeClass( "novalid" );
                     }
                 });
                 return false;

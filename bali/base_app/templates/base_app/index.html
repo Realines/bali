@@ -595,9 +595,10 @@
                 <div class="consult__desc">{% trans 'Оставтье номер телефона и мы свяжемся с Вами' %} <br> {% trans 'в течение часа' %}</div> 
                 {% csrf_token %}
                 <div class="consult__form-group">
-                    <input type="tel" name="phone" placeholder="{% trans 'phone' %}">
+                    <input type="tel"  name="phone" placeholder="{% trans 'phone' %}">
                     <img src="{% static 'img/carbon_phone-voice-filled.svg' %}" alt="">
                 </div>
+                <div id="valid-phone"></div>
                 <button type="submit" class="consult__form-btn">{% trans 'Отправить' %}</button>
             </form>
             <div class="consult__social">

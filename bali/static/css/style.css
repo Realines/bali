@@ -149,7 +149,12 @@ input[type=radio]:focus,
 input:active {
   outline: none !important;
 }
-
+.valid {
+   color: #86A876;
+}
+.novalid {
+  color: red;
+}
 ::-webkit-input-placeholder {
   color: #222;
 }
@@ -2186,6 +2191,7 @@ input::placeholder {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .project-detail__slider-nav .container {
   position: relative;
 }
