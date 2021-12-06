@@ -254,18 +254,6 @@
                 $('#budget').val(quizFormData.budget);
                 $('#villa_area').val(quizFormData.countBedrooms);
 
-                // alert($('#client_name').val);
-                // alert(quizFormData.orderType);
-                // alert(quizFormData.distanceToSea);
-                // alert(quizFormData.budget);
-                // alert(quizFormData.countBedrooms);
-                // alert(quizFormData.profitAssessment);
-                // alert(quizFormData.assessmentDistrict); 
-                // alert(quizFormData.assessmentDistanceToSea);
-                // alert(quizFormData.rentalPeriod);
-                // alert(quizFormData.name);
-                // alert(quizFormData.phone);
-
                 $.ajax({
                     url: "{% url 'base_app:quiz_handler' %}",
                     method: 'post',
