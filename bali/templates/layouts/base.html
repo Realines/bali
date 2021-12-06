@@ -1,6 +1,6 @@
 <!DOCTYPE html> {% load static %}{% load i18n %}
 
-<html land="{{ request.LANGUAGE_CODE }}">
+<html lang="{{ request.LANGUAGE_CODE }}">
 
 <head>
     <meta charset="UTF-8">
@@ -15,30 +15,46 @@
     <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'favicon.svg' %}" type="image/png">
-    <script type="text/javascript" >
+    <script type="text/javascript">
         let local = "{{ request.LANGUAGE_CODE }}"
     </script>
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    
+
         ym(86714485, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
         });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/86714485" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KG4VW8H');</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KG4VW8H');
+    </script>
     <!-- End Google Tag Manager -->
 </head>
 
@@ -176,7 +192,7 @@
                     <p class="footer__save">Masterpiece 2021. {% trans 'Все права защищены.' %}</p>
                 </div>
                 <div class="footer__col">
-                    <nav class="footer__nav"> 
+                    <nav class="footer__nav">
                         <a href="#finishedProjects" class="footer__nav-item">{% trans 'Проекты' %}</a>
                         <a href="#fact" class="footer__nav-item">{% trans 'О компании' %}</a>
                         <a href="#contacts" class="footer__nav-item">{% trans 'Отзывы' %}</a>
@@ -264,8 +280,8 @@
                             $("[id=valid-phone]").text('Ваш номер телефона слишком большой.')
                         else
                             $("[id=valid-phone]").text('Your phone number is too big.')
-                        $("[id=valid-phone]").addClass( "valid" );
-                        $("[id=valid-phone]").removeClass( "novalid" );
+                        $("[id=valid-phone]").addClass("valid");
+                        $("[id=valid-phone]").removeClass("novalid");
                     }
                 });
                 return false;
@@ -282,8 +298,8 @@
                             $("[id=valid-phone]").text('Заявка успешна отправлена!')
                         else
                             $("[id=valid-phone]").text('The application was successfully sent!')
-                        $("[id=valid-phone]").addClass( "valid" );
-                        $("[id=valid-phone]").removeClass( "novalid" );
+                        $("[id=valid-phone]").addClass("valid");
+                        $("[id=valid-phone]").removeClass("novalid");
                     }
                 });
                 return false;
