@@ -1,0 +1,92 @@
+html[lang="ar"] {
+    .main {
+        text-align: right;
+        &__left {
+            margin-left: auto;
+        }
+        &__bg {
+            left: unset;
+            right: 100%;
+            margin-right: 20px;
+            margin-left: unset;
+        }
+    }
+    .why {
+        &__item {
+            text-align: right;
+            &-icon {
+                margin-left: auto;
+            }
+        }
+    }
+    .quiz {
+        &__type {
+            &-item {
+                text-align: right;
+                &-top {
+                    justify-content: flex-end;
+                    span {
+                        order: -1;
+                    }
+                    img {
+                        margin-right: unset;
+                        margin-left: 30px;
+                    }
+                }
+            }
+        }
+        &__distance-hint,
+        &__important-hint-item {
+            text-align: right;
+        }
+        &__finish {
+            text-align: right;
+            &-left {
+                padding-right: 50px;
+            }
+        }
+    }
+    .fact {
+        &__items,
+        &__info-desc,
+        &__desc {
+            text-align: right;
+        }
+    }
+    .consult,
+    .agency {
+        &__desc {
+            text-align: right;
+        }
+    }
+    .project-detail {
+        &__bottom-title,
+        &__items {
+            text-align: right;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    html[lang="ar"] {
+        .quiz {
+            &__finish {
+                &-left {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html[lang="ar"] {
+        .quiz {
+            &__finish {
+                &-left {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+}

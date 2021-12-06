@@ -1,0 +1,28 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="center-box">
+    <div fxLayout="column" fxLayoutGap="20px">
+        <span class="banner-text">Welcome to Selective LIMS</span>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <form [formGroup]="loginForm" fxLayout="column" fxFlex=80%>
+                <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error *ngIf="hasError('email', 'email')">Invalid Email</mat-error>
+                    <mat-error *ngIf="hasError('email', 'required')">Email is Required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" formControlName="password">
+                    <mat-error *ngIf="hasError('password', 'required')">Password is Required</mat-error>
+                </mat-form-field>    
+                <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+                    <button mat-raised-button color="primary" type="button" (click)="login()" [disabled]="!loginForm.valid || isLoading">Login</button>
+                    <!-- <button mat-raised-button color="accent" type="button" [routerLink]="['/register']" [disabled]="isLoading">Sign Up</button> -->
+                </div>
+            </form>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" *ngIf="errorMessage.length > 0">
+            <span class="error-message">{{errorMessage}}</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+            <span >You don't have an account yet?</span><a [routerLink]="['/register']"> Sign up now</a>
+        </div>
+    </div>
+</div>

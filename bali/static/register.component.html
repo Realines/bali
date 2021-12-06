@@ -1,0 +1,60 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="center-box">
+    <div fxFlex="30%" fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="20px">
+        <mat-card fxFlex>
+            <mat-card-title class="title">Register</mat-card-title>
+            <mat-card-subtitle>Password Requirement</mat-card-subtitle>
+            <mat-card-content>
+                <div fxLayout="row" [ngClass]="{'error': hasUpperCase, 'valid': !hasUpperCase }">
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="hasUpperCase">close</mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="!hasUpperCase">done</mat-icon>
+                    <strong>Has Upper Case</strong>
+                </div>
+                <div fxLayout="row" [ngClass]="{'error': hasLowerCase, 'valid': !hasLowerCase }">
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="hasLowerCase">close</mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="!hasLowerCase">done</mat-icon>
+                    <strong>Has Lower Case</strong>
+                </div>
+                <div fxLayout="row" [ngClass]="{'error': hasNumeric, 'valid': !hasNumeric }">
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="hasNumeric">close</mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="!hasNumeric">done</mat-icon>
+                    <strong>Has Numeric</strong>
+                </div>
+                <div fxLayout="row" [ngClass]="{'error': hasNonAlphaNumeric, 'valid': !hasNonAlphaNumeric }">
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="hasNonAlphaNumeric">close</mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="!hasNonAlphaNumeric">done</mat-icon>
+                    <strong>Has Non Alpha Numeric</strong>
+                </div>
+                <div fxLayout="row" [ngClass]="{'error': hasMinLength, 'valid': !hasMinLength }">
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="hasMinLength">close</mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Error Icon" *ngIf="!hasMinLength">done</mat-icon>
+                    <strong>Has Minimum of 6 Characters</strong>
+                </div>
+                <form [formGroup]="registerForm" fxLayout="column" class="register-form">
+                    <mat-form-field>
+                        <input matInput placeholder="Email" formControlName="email">
+                        <mat-error *ngIf="hasError('email', 'email')">Invalid Email</mat-error>
+                        <mat-error *ngIf="hasError('email', 'required')">Email is Required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="password" placeholder="Password" formControlName="password">
+                        <mat-error *ngIf="hasError('password', 'required')">Email is Required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+                        <mat-error *ngIf="hasError('confirmPassword', 'required')">Email is Required</mat-error>
+                        <mat-error *ngIf="hasError('confirmPassword', 'mustMatch')">Passwords Must Match</mat-error>
+                    </mat-form-field>
+        
+                    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+                        <button mat-raised-button color="primary" type="button" [disabled]="!registerForm.valid || isLoading" (click)="register()">Sign Up</button>
+                        <!-- <button mat-raised-button color="accent" type="button" [routerLink]="['/login']" [disabled]="isLoading">Log In</button> -->
+                    </div>
+                </form>
+            </mat-card-content>
+            <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+                <span>Already have an account? <a [routerLink]="['/login']">Login here</a></span>
+            </div>
+        </mat-card>
+    </div>
+</div>
+    
