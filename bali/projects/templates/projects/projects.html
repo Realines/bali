@@ -23,8 +23,10 @@
                 {% for image in current_project.images.all %}
                 <div class='swiper-slide'>
                     {% if image.isVideo %}
-                    <iframe src="{{ image.videoYouTube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% else %}
-                    <img src="{{ image.image.url }}" alt=""> {% endif %}
+                    <iframe width="100%" height="100%" src="{{ image.videoYouTube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    {% else %}
+                    <img src="{{ image.image.url }}" alt=""> 
+                    {% endif %}
                     <!-- <img src="{% static 'img/logo.png' %}" alt=""> -->
                 </div>
                 {% endfor %}
