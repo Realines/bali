@@ -37,7 +37,7 @@ class CategoryAdmin(TabbedTranslationAdmin):
     list_display_links = ('name', )
 
 
-class LocationFactInline(admin.TabularInline):
+class LocationFactInline(admin.StackedInline):
     model = LocationFact
 
 
@@ -50,11 +50,11 @@ class LocationAdmin(TabbedTranslationAdmin):
     ]
 
 
-class AdvantagesProjectInline(admin.TabularInline):
+class AdvantagesProjectInline(admin.StackedInline):
     model = AdvantagesProject
 
 
-class GalleryInline(admin.TabularInline):
+class GalleryInline(admin.StackedInline):
     fk_name = 'project'
     model = ProjectGallery
 
