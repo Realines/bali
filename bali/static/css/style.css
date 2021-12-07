@@ -2191,7 +2191,7 @@ input::placeholder {
 }
 .project-detail .swiper-slide {
   width: 770px;
-  height: 490px;
+  height: 450px;
   position: relative;
 }
 .project-detail .swiper-slide:before {
@@ -2204,8 +2204,13 @@ input::placeholder {
   left: 0;
   top: 0;
   transition: all .3s;
+  pointer-events: none;
 }
 .project-detail .swiper-slide img {
+  width: 100%;
+}
+.project-detail .swiper-slide iframe {
+  height: 100%;
   width: 100%;
 }
 .project-detail .swiper-slide-active {
@@ -2331,6 +2336,7 @@ input::placeholder {
 @media screen and (max-width: 1200px) {
   .project-detail .swiper-slide {
     width: 600px;
+    height: 380px;
   }
 
   .advantages__inner {
@@ -2344,6 +2350,7 @@ input::placeholder {
   }
   .project-detail .swiper-slide {
     width: 400px;
+    height: 250px;
   }
   .project-detail__link {
     font-size: 10px;
@@ -2443,6 +2450,7 @@ input::placeholder {
 @media screen and (max-width: 768px) {
   .project-detail .swiper-slide {
     width: 300px;
+    height: 180px;
   }
   .project-detail__top {
     display: block;
@@ -2454,6 +2462,68 @@ input::placeholder {
 @media screen and (max-width: 576px) {
   .project-detail .swiper-slide {
     width: 260px;
+    height: 150px;
+  }
+}
+html[lang="ar"] .main {
+  text-align: right;
+}
+html[lang="ar"] .main__left {
+  margin-left: auto;
+}
+html[lang="ar"] .main__bg {
+  left: unset;
+  right: 100%;
+  margin-right: 20px;
+  margin-left: unset;
+}
+html[lang="ar"] .why__item {
+  text-align: right;
+}
+html[lang="ar"] .why__item-icon {
+  margin-left: auto;
+}
+html[lang="ar"] .quiz__type-item {
+  text-align: right;
+}
+html[lang="ar"] .quiz__type-item-top {
+  justify-content: flex-end;
+}
+html[lang="ar"] .quiz__type-item-top span {
+  order: -1;
+}
+html[lang="ar"] .quiz__type-item-top img {
+  margin-right: unset;
+  margin-left: 30px;
+}
+html[lang="ar"] .quiz__distance-hint, html[lang="ar"] .quiz__important-hint-item {
+  text-align: right;
+}
+html[lang="ar"] .quiz__finish {
+  text-align: right;
+}
+html[lang="ar"] .quiz__finish-left {
+  padding-right: 50px;
+}
+html[lang="ar"] .fact__items, html[lang="ar"] .fact__info-desc, html[lang="ar"] .fact__desc {
+  text-align: right;
+}
+html[lang="ar"] .consult__desc,
+html[lang="ar"] .agency__desc {
+  text-align: right;
+}
+html[lang="ar"] .project-detail__bottom-title, html[lang="ar"] .project-detail__items {
+  text-align: right;
+}
+
+@media screen and (max-width: 1200px) {
+  html[lang="ar"] .quiz__finish-left {
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  html[lang="ar"] .quiz__finish-left {
+    padding-right: 0px;
   }
 }
 .wrapper {

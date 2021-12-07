@@ -77,7 +77,7 @@ msgstr ": الجوال"
 #: .\templates\layouts\base.html:104
 #: .\base_app\templates\base_app\index.html:667
 msgid "Стационарный:"
-msgstr ": الارضي"
+msgstr ": Whatsapp"
 
 #: .\templates\layouts\base.html:109
 #: .\base_app\templates\base_app\index.html:451
@@ -321,7 +321,7 @@ msgstr "كن صاحب فيلا فاخرة و"
 
 #: .\base_app\templates\base_app\index.html:11
 msgid "получайте пассивный доход."
-msgstr "احصل على دخل جاهز."
+msgstr "احصل على دخل جاهز "
 
 #: .\base_app\templates\base_app\index.html:12
 msgid "на Бали"
@@ -483,8 +483,8 @@ msgstr "نحتفظ بسجلات مالية ، وندفع الضرائب ، وت�
 
 #: .\base_app\templates\base_app\index.html:374
 #, python-format
-msgid "Рентабельность инвестиций - от 20%% годовых"
-msgstr "العائدات على الاستثمار - من 20٪ سنويا"
+msgid "Рентабельность инвестиций - от 15%% годовых"
+msgstr "العائدات على الاستثمار - من 15٪ سنويا"
 
 #: .\base_app\templates\base_app\index.html:396
 msgid "Оставьте контакты"

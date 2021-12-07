@@ -82,7 +82,7 @@ msgstr "Мобильный:"
 #: .\templates\layouts\base.html:104
 #: .\base_app\templates\base_app\index.html:667
 msgid "Стационарный:"
-msgstr "Стационарный:"
+msgstr "Whatsapp:" 
 
 #: .\templates\layouts\base.html:109
 #: .\base_app\templates\base_app\index.html:451
@@ -327,13 +327,15 @@ msgstr "Cтроим"
 msgid "и продаем виллы"
 msgstr "и продаем виллы"
 
+
+
 #: .\base_app\templates\base_app\index.html:11
 msgid "Станьте владельцем роскошной виллы,"
 msgstr "Станьте владельцем роскошной виллы,"
 
 #: .\base_app\templates\base_app\index.html:11
 msgid "получайте пассивный доход."
-msgstr "получайте пассивный доход."
+msgstr "получайте пассивный доход от 12% $"
 
 #: .\base_app\templates\base_app\index.html:12
 msgid "на Бали"
@@ -510,7 +512,7 @@ msgstr ""
 #: .\base_app\templates\base_app\index.html:374
 #, python-format
 msgid "Рентабельность инвестиций - от 20%% годовых"
-msgstr "Рентабельность инвестиций - от 20%% годовых"
+msgstr "Рентабельность инвестиций - от 15%% годовых"
 
 #: .\base_app\templates\base_app\index.html:396
 msgid "Оставьте контакты"
@@ -551,7 +553,9 @@ msgstr "Факты"
 msgid "это современная компания, которая уже 5 лет на рынке!"
 msgstr "это современная компания, которая уже 5 лет на рынке!"
 
-
+#: .\base_app\templates\base_app\index.html:446
+msgid "о компании"
+msgstr "о компании"
 
 #: .\base_app\templates\base_app\index.html:456
 msgid "построенных объектов"
@@ -563,8 +567,8 @@ msgstr "успешной работы на рынке"
 
 #: .\base_app\templates\base_app\index.html:463
 #, python-format
-msgid "от 15%%"
-msgstr ""
+msgid "от 15%%" 
+msgstr "от 15%%"
 
 #: .\base_app\templates\base_app\index.html:464
 msgid "доходность в год"

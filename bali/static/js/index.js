@@ -40,7 +40,57 @@ let quizFormData = {
 
 
 $(document).ready(function() {
-
+    //Валидация поля телефона на разные страны
+    let isValidPhone = false
+    $("input[name='phone']").keyup(function () {
+        let inputValue = $(this).val()
+        console.log(inputValue)
+        console.log(inputValue.length)
+        phoneValidation = inputValue
+        if (inputValue.length > 8) { 
+            if (inputValue.length < 13) {
+                if (inputValue.charAt(0) == '+') {
+                    isValidPhone = true;
+                    $("[id=valid-phone]").text('')
+                    $("[id=valid-phone]").addClass( "valid" );
+                    $("[id=valid-phone]").removeClass( "novalid" );
+                    console.log('Valide number')
+                }
+                else {
+                    isValidPhone = false 
+                    $("[id=valid-phone]").addClass( "novalid" );
+                    $("[id=valid-phone]").removeClass( "valid" );
+                    if (local == 'ru')
+                        $("[id=valid-phone]").text('Укажите номер в международном формате.')
+                    else
+                        $("[id=valid-phone]").text('Please enter the number in international format.')
+                }
+            }
+            else {
+                isValidPhone = false
+                $("[id=valid-phone]").addClass( "novalid" );
+                $("[id=valid-phone]").removeClass( "valid" );
+                if (local == 'ru')
+                    $("[id=valid-phone]").text('Ваш номер телефона слишком большой.')
+                else
+                    $("[id=valid-phone]").text('Your phone number is too big.')
+            }
+        }
+        else {
+            isValidPhone = false
+            if (inputValue.length == 0)
+                $("[id=valid-phone]").text('')
+            else {
+                $("[id=valid-phone]").addClass( "novalid" );
+                $("[id=valid-phone]").removeClass( "valid" );
+                if (local == 'ru')
+                    $("[id=valid-phone]").text('Ваш номер телефона слишком маленький.')
+                else
+                    $("[id=valid-phone]").text('Your phone number is too small.')
+            }
+            
+        }
+    })
     sliderProject()
         // $('input[type="tel"]').mask('+7 (999) 999-9999', { placeholder: '+7 (       )         -' });
 

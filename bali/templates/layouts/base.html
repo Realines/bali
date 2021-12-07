@@ -1,6 +1,6 @@
 <!DOCTYPE html> {% load static %}{% load i18n %}
 
-<html land="{{ request.LANGUAGE_CODE }}">
+<html lang="{{ request.LANGUAGE_CODE }}">
 
 <head>
     <meta charset="UTF-8">
@@ -15,25 +15,54 @@
     <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'favicon.svg' %}" type="image/png">
-
+    <script type="text/javascript">
+        let local = "{{ request.LANGUAGE_CODE }}"
+    </script>
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    
+
         ym(86714485, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
         });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/86714485" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KG4VW8H');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG4VW8H"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class='header'>
         <div class='container'>
             <div class='header__inner'>
@@ -121,7 +150,16 @@
                                 </svg>
                                 <span>{% trans 'Стационарный:' %}</span>
                             </div>
-                            <div class="agency__contacts-item-right">+62 8214 457 92 09</div>
+                            <a class="agency__contacts-item-right" href="https://t.me/Sibastianbalmond" type="tel">+62 8214 457 92 09</a>
+                        </div>
+                        <div class="agency__contacts-item">
+                            <div class="agency__contacts-item-left">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.01363 7.9584C7.02993 8.79426 6.66944 10.3187 7.51884 11.5416C8.31369 12.686 9.31494 13.687 10.4591 14.4815C11.682 15.3307 13.2064 14.9701 14.0422 13.9864L14.0515 13.9907C15.119 14.4852 16.2529 14.8242 17.4167 14.9969V17.4167L17.4157 17.4166L17.4131 17.4167C10.1031 17.427 4.57552 11.8352 4.58334 4.58662V4.58333H7.00275L7.00291 4.58441C7.17566 5.7481 7.51447 6.88099 8.00904 7.94849L8.01363 7.9584ZM17.4157 19.25H18.3333C18.8396 19.25 19.25 18.8396 19.25 18.3333V14.2062C19.25 13.752 18.9173 13.3662 18.4679 13.2995L17.6849 13.1833C16.6946 13.0363 15.7305 12.748 14.822 12.3272L14.1319 12.0075C13.732 11.8223 13.2569 11.9478 13.0007 12.3065L12.6883 12.7439C12.4145 13.1272 11.8917 13.2443 11.5048 12.9756C10.5402 12.3058 9.69473 11.4606 9.0246 10.4957C8.75583 10.1088 8.87292 9.58593 9.25635 9.31211L9.69354 8.99989C10.0523 8.74373 10.1778 8.26853 9.99255 7.86858L9.67252 7.1778C9.25168 6.26945 8.96337 5.30543 8.81637 4.3152L8.70012 3.53206C8.63341 3.08271 8.24766 2.75 7.79339 2.75H3.66668C3.16042 2.75 2.75001 3.16041 2.75001 3.66667V4.58464C2.7411 12.8405 9.08438 19.2618 17.4157 19.25Z" fill="#86A876"/>
+                                </svg>
+                                <span>Telegram</span>
+                            </div>
+                            <a class="agency__contacts-item-right" href="https://t.me/Sibastianbalmond">@Sibastianbalmond</a>
                         </div>
                     </div>
                     <div class="agency__desc">“{% trans 'Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами,' %} {% trans 'которые приносят инвесторам от 15% прибыли в год' %}”</div>
@@ -154,7 +192,7 @@
                     <p class="footer__save">Masterpiece 2021. {% trans 'Все права защищены.' %}</p>
                 </div>
                 <div class="footer__col">
-                    <nav class="footer__nav"> 
+                    <nav class="footer__nav">
                         <a href="#finishedProjects" class="footer__nav-item">{% trans 'Проекты' %}</a>
                         <a href="#fact" class="footer__nav-item">{% trans 'О компании' %}</a>
                         <a href="#contacts" class="footer__nav-item">{% trans 'Отзывы' %}</a>
@@ -232,25 +270,18 @@
                 $('#budget').val(quizFormData.budget);
                 $('#villa_area').val(quizFormData.countBedrooms);
 
-                // alert($('#client_name').val);
-                // alert(quizFormData.orderType);
-                // alert(quizFormData.distanceToSea);
-                // alert(quizFormData.budget);
-                // alert(quizFormData.countBedrooms);
-                // alert(quizFormData.profitAssessment);
-                // alert(quizFormData.assessmentDistrict); 
-                // alert(quizFormData.assessmentDistanceToSea);
-                // alert(quizFormData.rentalPeriod);
-                // alert(quizFormData.name);
-                // alert(quizFormData.phone);
-
                 $.ajax({
                     url: "{% url 'base_app:quiz_handler' %}",
                     method: 'post',
                     dataType: 'html',
                     data: $(this).serialize(),
                     success: function(data) {
-                        // alert(data);
+                        if (local == 'ru')
+                            $("[id=valid-phone]").text('Ваш номер телефона слишком большой.')
+                        else
+                            $("[id=valid-phone]").text('Your phone number is too big.')
+                        $("[id=valid-phone]").addClass("valid");
+                        $("[id=valid-phone]").removeClass("novalid");
                     }
                 });
                 return false;
@@ -263,7 +294,12 @@
                     dataType: 'html',
                     data: $(this).serialize(),
                     success: function(data) {
-                        // alert(data);
+                        if (local == 'ru')
+                            $("[id=valid-phone]").text('Заявка успешна отправлена!')
+                        else
+                            $("[id=valid-phone]").text('The application was successfully sent!')
+                        $("[id=valid-phone]").addClass("valid");
+                        $("[id=valid-phone]").removeClass("novalid");
                     }
                 });
                 return false;
