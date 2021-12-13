@@ -9,7 +9,8 @@ class Project(models.Model):
     address = models.TextField(verbose_name=_('Адрес'))
     price = models.BigIntegerField(verbose_name=_('Стоимость проекта'))
     description = models.TextField(verbose_name=_('Описание проекта'))
-    area = models.SmallIntegerField(verbose_name=_('Площадь'))
+    area = models.SmallIntegerField(verbose_name=_('Площадь')) 
+    presentation = models.FileField(upload_to='uploads/',verbose_name=_('Презентация'))
     count_bedrooms = models.SmallIntegerField(verbose_name=_('Количество спален'))
     view = models.TextField(
         verbose_name=_('Вид'),

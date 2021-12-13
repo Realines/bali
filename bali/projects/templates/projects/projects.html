@@ -54,6 +54,9 @@
             <div class="project-detail__bottom-left">
                 <div class="project-detail__bottom-title">{{ current_project.description }}</div>
                 <a href="#consult" class="project-detail__btn">{% trans 'Купить' %}</a>
+                {% if current_project.presentation %}
+                <a href="{{ current_project.presentation.url }}" class="project-detail__btn">Презентация</a>
+                {% endif %}
             </div>
             <div class="project-detail__items">
                 <div class="project-detail__item">
