@@ -10,7 +10,7 @@ class Project(models.Model):
     price = models.BigIntegerField(verbose_name=_('Стоимость проекта'))
     description = models.TextField(verbose_name=_('Описание проекта'))
     area = models.SmallIntegerField(verbose_name=_('Площадь')) 
-    presentation = models.FileField(upload_to='uploads/',verbose_name=_('Презентация'))
+    presentation = models.FileField(upload_to='uploads/',verbose_name=_('Презентация'),blank=True,null=True)
     count_bedrooms = models.SmallIntegerField(verbose_name=_('Количество спален'))
     view = models.TextField(
         verbose_name=_('Вид'),
@@ -72,7 +72,7 @@ class ProjectGallery(models.Model):
     )
     videoYouTube = models.URLField(
         verbose_name=_('Видео для проекта'),
-        null=True
+        blank=True,null=True
     )
     project = models.ForeignKey(
         Project,
