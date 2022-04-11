@@ -65,14 +65,6 @@ class ProjectGallery(models.Model):
         verbose_name=_('Изображение для проекта'),
         upload_to='sys/projects/'
     )
-    isVideo = models.BooleanField(
-        verbose_name=_('Использовать видео?'),
-        default = False
-    )
-    videoYouTube = models.URLField(
-        verbose_name=_('Видео для проекта'),
-        null=True
-    )
     project = models.ForeignKey(
         Project,
         on_delete=models.CASCADE,

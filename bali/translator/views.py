@@ -1,14 +1,13 @@
 from django.shortcuts import render
 from django.http import (
     HttpRequest,
-    HttpResponse,
     HttpResponseRedirect,
 )
 
 from bali import settings
 
 
-def set_language(request: HttpRequest) -> HttpResponse:
+def set_language(request: HttpRequest) -> HttpResponseRedirect:
     """
     Функция-контроллер для переключения языка.
     Устанавливает клиенту куки с языком и язык в сессии.

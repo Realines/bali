@@ -39,6 +39,7 @@ class CategoryAdmin(TabbedTranslationAdmin):
 
 class LocationFactInline(admin.StackedInline):
     model = LocationFact
+    extra = 0
 
 
 @admin.register(Location)
@@ -52,11 +53,13 @@ class LocationAdmin(TabbedTranslationAdmin):
 
 class AdvantagesProjectInline(admin.StackedInline):
     model = AdvantagesProject
+    extra = 0
 
 
 class GalleryInline(admin.StackedInline):
     fk_name = 'project'
     model = ProjectGallery
+    extra = 0
 
 
 @admin.register(Project)
