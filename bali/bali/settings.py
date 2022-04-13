@@ -135,13 +135,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/staticfiles/'
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    BASE_DIR / 'static',
 ]
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -162,8 +164,8 @@ LANGUAGE_COOKIE_NAME = 'cookie_language_appname'
 
 # Куда сохранять файлы переводов.
 LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'base_app/locale/'),
-    os.path.join(BASE_DIR, 'projects/locale/'),
+    BASE_DIR / 'base_app/locale/',
+    BASE_DIR / 'projects/locale/',
 ]
 
 # Для поддержки перевода данных, хранящихся в БД (в моделях).

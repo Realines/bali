@@ -1,6 +1,10 @@
-{% extends 'layouts/base.html' %} {% load i18n %} {% load static %} {% block content %}
+{% extends 'layouts/base.html' %} 
+
+{% load i18n %} 
+{% load static %} 
 
 
+{% block content %}
 <section class='project-detail'>
     <div class='container'>
         <a href="{% url 'base_app:index' %}" class="project-detail__link">
@@ -62,11 +66,11 @@
                 </div>
                 <div class="project-detail__item">
                     <span>{% trans 'Площадь' %}</span>
-                    <strong>{{ current_project.area }} м2</strong>
+                    <strong>{{ current_project.area }} {% trans 'м2' %}</strong>
                 </div>
                 <div class="project-detail__item">
                     <span>{% trans 'Кол-во спален' %}</span>
-                    <strong>{{ current_project.count_bedrooms }} шт.</strong>
+                    <strong>{{ current_project.count_bedrooms }} {% trans 'шт.' %}</strong>
                 </div>
                 <div class="project-detail__item">
                     <span>{% trans 'Вид' %}</span>
@@ -123,7 +127,7 @@
                 <div class="consult__desc">{% trans 'Оставтье номер телефона и мы свяжемся с Вами' %} <br> {% trans 'в течение часа' %}</div>
                 {% csrf_token %}
                 <div class="consult__form-group">
-                    <input type="tel" name="phone" placeholder="{% trans 'phone' %}">
+                    <input type="tel" name="phone" placeholder="{% trans 'Телефон' %}">
                     <img src="{% static 'img/carbon_phone-voice-filled.svg' %}" alt="">
                 </div>
                 <button type="submit" class="consult__form-btn">{% trans 'Отправить' %}</button>
@@ -168,4 +172,5 @@
         <button class="projects__all">{% trans 'Показать больше' %}</button>
     </div>
 </section>
-{% endif %} {% endblock %}
+{% endif %} 
+{% endblock %}

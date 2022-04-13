@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-13 15:29+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\bali\settings.py:156
+msgid "Russian"
+msgstr "الروسية"
+
+#: .\bali\settings.py:157
+msgid "English"
+msgstr "العربية"
+
+#: .\bali\settings.py:158
+msgid "Arabian"
+msgstr "العربية"
+
+#: .\templates\layouts\base.html:12
+msgid "Главная"
+msgstr "الرئيسية"
+
+#: .\templates\layouts\base.html:77 .\templates\layouts\base.html:198
+msgid "Проекты"
+msgstr "المشاريع"
+
+#: .\templates\layouts\base.html:78 .\templates\layouts\base.html:199
+msgid "О компании"
+msgstr "عن الشركة"
+
+#: .\templates\layouts\base.html:79 .\templates\layouts\base.html:200
+msgid "Отзывы"
+msgstr "التعليقات"
+
+#: .\templates\layouts\base.html:96 .\templates\layouts\base.html:248
+msgid "Связаться с нами"
+msgstr "اتصل بنا"
+
+#: .\templates\layouts\base.html:115
+msgid "Фактический адрес на"
+msgstr "العنوان الفعلي على"
+
+#: .\templates\layouts\base.html:115
+msgid "Бали"
+msgstr "بالي"
+
+#: .\templates\layouts\base.html:124
+msgid "Адрес офиса:"
+msgstr "عنوان المكتب:"
+
+#: .\templates\layouts\base.html:134
+msgid "Почта:"
+msgstr "البريد:"
+
+#: .\templates\layouts\base.html:144
+msgid "Мобильный:"
+msgstr "موبايل:"
+
+#: .\templates\layouts\base.html:153
+msgid "Стационарный:"
+msgstr "خط أرضي:"
+
+#: .\templates\layouts\base.html:167
+msgid "Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами,"
+msgstr "الآن لدينا 22 موظفا يديرون 20 منشأة,"
+
+#: .\templates\layouts\base.html:167
+#, python-format
+msgid "которые приносят инвесторам от 15%% прибыли в год"
+msgstr "الآن لدينا 22 موظفا يديرون 20 كائنا"
+
+#: .\templates\layouts\base.html:169
+msgid "Егор Егорович Егоров"
+msgstr "التي تجلب المستثمرين من الربح 15 ٪ ٪ سنويا"
+
+#: .\templates\layouts\base.html:194
+msgid "Все права защищены."
+msgstr "إيجور إيغوروفيتش إيغوروف"
+
+#: .\templates\layouts\base.html:218
+msgid "Политика конфиденциальности"
+msgstr "جميع الحقوق محفوظة."

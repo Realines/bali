@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 01:06+0700\n"
+"POT-Creation-Date: 2022-04-13 15:29+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,17 +36,17 @@ msgstr "Project cost"
 
 #: .\projects\models.py:11
 msgid "Описание проекта"
-msgstr "Project description"
+msgstr "Project Description"
 
-#: .\projects\models.py:12 .\projects\templates\projects\projects.html:59
+#: .\projects\models.py:12 .\projects\templates\projects\projects.html:68
 msgid "Площадь"
-msgstr "Area"
+msgstr "Square"
 
 #: .\projects\models.py:13
 msgid "Количество спален"
 msgstr "Number of bedrooms"
 
-#: .\projects\models.py:15 .\projects\templates\projects\projects.html:67
+#: .\projects\models.py:15 .\projects\templates\projects\projects.html:76
 msgid "Вид"
 msgstr "View"
 
@@ -54,8 +54,8 @@ msgstr "View"
 msgid "Открывающийся из виллы вид"
 msgstr "The view from the villa"
 
-#: .\projects\models.py:20 .\projects\models.py:129 .\projects\models.py:144
-#: .\projects\templates\projects\projects.html:91
+#: .\projects\models.py:20 .\projects\models.py:137 .\projects\models.py:153
+#: .\projects\templates\projects\projects.html:100
 msgid "Локация"
 msgstr "Location"
 
@@ -63,152 +63,155 @@ msgstr "Location"
 msgid "Дата добавления"
 msgstr "Date added"
 
-#: .\projects\models.py:32 .\projects\models.py:92
+#: .\projects\models.py:32 .\projects\models.py:96
 msgid "Категории"
 msgstr "Categories"
 
-#: .\projects\models.py:38
+#: .\projects\models.py:37
 msgid "Проект подлежит инвестированию"
 msgstr "The project is subject to investment"
 
-#: .\projects\models.py:42
+#: .\projects\models.py:41
 msgid "Опубликовать"
 msgstr "To publish"
 
-#: .\projects\models.py:46
+#: .\projects\models.py:45
 msgid "Главное изображение"
-msgstr "Main image"
+msgstr "Main Image"
 
-#: .\projects\models.py:53 .\projects\models.py:105
+#: .\projects\models.py:53 .\projects\models.py:110
 msgid "Проект"
 msgstr "Project"
 
-#: .\projects\models.py:65
+#: .\projects\models.py:66
 msgid "Изображение для проекта"
 msgstr "Image for the project"
 
-#: .\projects\models.py:76
+#: .\projects\models.py:78
 msgid "Галерея проекта"
-msgstr "Project gallery"
+msgstr "Project Gallery"
 
-#: .\projects\models.py:77
+#: .\projects\models.py:79
 msgid "Галереи проектов"
-msgstr "Project galleries"
+msgstr "Project Galleries"
 
-#: .\projects\models.py:87
+#: .\projects\models.py:90
 msgid "Название категории"
 msgstr "Category name"
 
-#: .\projects\models.py:91
+#: .\projects\models.py:95
 msgid "Категория"
 msgstr "Category"
 
-#: .\projects\models.py:102
+#: .\projects\models.py:107
 msgid "Название преимущества"
 msgstr "Name of the advantage"
 
-#: .\projects\models.py:114
+#: .\projects\models.py:120
 msgid "Преимущество проекта"
 msgstr "The advantage of the project"
 
-#: .\projects\models.py:115
+#: .\projects\models.py:121
 msgid "Преимущества проектов"
 msgstr "Advantages of projects"
 
-#: .\projects\models.py:125
+#: .\projects\models.py:132
 msgid "Название локации"
 msgstr "Location name"
 
-#: .\projects\models.py:130
+#: .\projects\models.py:138
 msgid "Локации"
 msgstr "Locations"
 
-#: .\projects\models.py:140
+#: .\projects\models.py:149
 msgid "Заголовок факта"
 msgstr "Fact title"
 
-#: .\projects\models.py:141
+#: .\projects\models.py:150
 msgid "Описание факта"
 msgstr "Description of the fact"
 
-#: .\projects\models.py:152
+#: .\projects\models.py:162
 msgid "Факт о локации"
 msgstr "Fact about the location"
 
-#: .\projects\models.py:153
+#: .\projects\models.py:163
 msgid "Факты о локациях"
 msgstr "Facts about locations"
 
-#: .\projects\templates\projects\projects.html:10
+#: .\projects\templates\projects\projects.html:14
 msgid "Назад"
-msgstr ""
+msgstr "Back"
 
-#: .\projects\templates\projects\projects.html:51
+#: .\projects\templates\projects\projects.html:60
 msgid "Купить"
-msgstr ""
+msgstr "Buy"
 
-#: .\projects\templates\projects\projects.html:55
+#: .\projects\templates\projects\projects.html:64
 msgid "Стоимость"
-msgstr ""
+msgstr "Cost"
 
-#: .\projects\templates\projects\projects.html:63
+#: .\projects\templates\projects\projects.html:69
+msgid "м2"
+msgstr "m2"
+
+#: .\projects\templates\projects\projects.html:72
 msgid "Кол-во спален"
-msgstr ""
+msgstr "Number of bedrooms"
 
-#: .\projects\templates\projects\projects.html:78
+#: .\projects\templates\projects\projects.html:73
+msgid "шт."
+msgstr "pc."
+
+#: .\projects\templates\projects\projects.html:87
 msgid "Преимущества"
-msgstr ""
-
-#: .\projects\templates\projects\projects.html:115
-msgid "Консультация"
-msgstr ""
-
-#: .\projects\templates\projects\projects.html:118
-msgid "Оставтье номер телефона и мы свяжемся с Вами"
-msgstr ""
-
-#: .\projects\templates\projects\projects.html:118
-msgid "в течение часа"
-msgstr ""
+msgstr "Advantages"
 
 #: .\projects\templates\projects\projects.html:124
+msgid "Консультация"
+msgstr "Consultation"
+
+#: .\projects\templates\projects\projects.html:127
+msgid "Оставтье номер телефона и мы свяжемся с Вами"
+msgstr "Leave your phone number and we will contact you"
+
+#: .\projects\templates\projects\projects.html:127
+msgid "в течение часа"
+msgstr "within an hour"
+
+#: .\projects\templates\projects\projects.html:130
+msgid "Телефон"
+msgstr "Phone"
+
+#: .\projects\templates\projects\projects.html:133
 msgid "Отправить"
-msgstr ""
+msgstr "Send"
 
-#: .\projects\templates\projects\projects.html:127
+#: .\projects\templates\projects\projects.html:136
 msgid "Если у вас остались вопросы - напишите нам."
-msgstr ""
+msgstr "If you have any more questions, write to us."
 
-#: .\projects\templates\projects\projects.html:127
+#: .\projects\templates\projects\projects.html:136
 msgid "Мы всегда открыты к диалогу."
-msgstr ""
+msgstr "We are always open to dialogue."
 
-#: .\projects\templates\projects\projects.html:129
-#: .\projects\templates\projects\projects.html:135
+#: .\projects\templates\projects\projects.html:138
+#: .\projects\templates\projects\projects.html:144
 msgid "Написать в"
-msgstr ""
+msgstr "Write to"
 
-#: .\projects\templates\projects\projects.html:151
+#: .\projects\templates\projects\projects.html:160
 msgid "Рекомендуем"
-msgstr ""
+msgstr "We recommend"
 
-#: .\projects\templates\projects\projects.html:151
+#: .\projects\templates\projects\projects.html:160
 msgid "к просмотру:"
-msgstr ""
+msgstr "to view:"
 
-#: .\projects\templates\projects\projects.html:157
+#: .\projects\templates\projects\projects.html:166
 msgid "Подробнее"
-msgstr ""
+msgstr "More detailed"
 
-#: .\projects\templates\projects\projects.html:163
+#: .\projects\templates\projects\projects.html:172
 msgid "Показать больше"
-msgstr ""
-
-#~ msgid "Связаться с нами"
-#~ msgstr "Contact us"
-
-#~ msgid "Управление объектом с 80% заполняемостью"
-#~ msgstr "Property management with 80% occupancy"
-
-#~ msgid "О компании"
-#~ msgstr "About"
+msgstr "Show more"

@@ -32,7 +32,6 @@ class Project(models.Model):
         verbose_name=_('Категории'),
         related_name='projects',
         related_query_name='project',
-        # symmetrical=True,
     )
     invested = models.BooleanField(
         verbose_name=_('Проект подлежит инвестированию'),
@@ -50,20 +49,22 @@ class Project(models.Model):
 
     class Meta:
         """Класс настроек поведения модели"""
+
         verbose_name = _('Проект')
         verbose_name_plural = _('Проекты')
 
     def __str__(self) -> str:
         """Метод для строкового представления объекта"""
+
         return str(self.name)
 
 
 class ProjectGallery(models.Model):
-    """Модель галереии для проекта"""
+    """Модель галереи для проекта"""
 
     image = models.ImageField(
         verbose_name=_('Изображение для проекта'),
-        upload_to='sys/projects/'
+        upload_to='sys/projects/',
     )
     project = models.ForeignKey(
         Project,
@@ -73,11 +74,13 @@ class ProjectGallery(models.Model):
 
     class Meta:
         """Класс настроек поведения модели"""
+
         verbose_name = _('Галерея проекта')
         verbose_name_plural = _('Галереи проектов')
 
     def __str__(self) -> str:
         """Метод для строкового представления объекта"""
+
         return str(self.project)
 
 
@@ -88,11 +91,13 @@ class Category(models.Model):
 
     class Meta:
         """Класс настроек поведения модели"""
+
         verbose_name = _('Категория')
         verbose_name_plural = _('Категории')
 
     def __str__(self) -> str:
         """Метод для строкового представления объекта"""
+
         return str(self.name)
 
 
@@ -111,11 +116,13 @@ class AdvantagesProject(models.Model):
 
     class Meta:
         """Класс настроек поведения модели"""
+
         verbose_name = _('Преимущество проекта')
         verbose_name_plural = _('Преимущества проектов')
 
     def __str__(self) -> str:
         """Метод для строкового представления объекта"""
+
         return str(self.name)
 
 
@@ -126,11 +133,13 @@ class Location(models.Model):
 
     class Meta:
         """Класс настроек поведения модели"""
+
         verbose_name = _('Локация')
         verbose_name_plural = _('Локации')
 
     def __str__(self) -> str:
         """Метод для строкового представления объекта"""
+
         return str(self.name)
 
 
@@ -149,9 +158,11 @@ class LocationFact(models.Model):
 
     class Meta:
         """Класс настроек поведения модели"""
+
         verbose_name = _('Факт о локации')
         verbose_name_plural = _('Факты о локациях')
 
     def __str__(self) -> str:
         """Метод для строкового представления объекта"""
+
         return f'{self.location}#{self.pk}'

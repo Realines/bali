@@ -60,13 +60,15 @@ def quiz_handler(request: HttpRequest) -> JsonResponse:
                             status=403,
                             json_dumps_params={'ensure_ascii': False})
 
-    return JsonResponse({'msg': _('Форма успешно отправлена')}, status=201,
+    return JsonResponse({'msg': _('Форма успешно отправлена')},
+                        status=201,
                         json_dumps_params={'ensure_ascii': False})
 
 
 def consult_handler(request: HttpRequest) -> JsonResponse:
     """
     Функция-контроллер для обработки формы консультации.
+
     :param request: Объект запроса.
     :return: JSON-объект с кодом успеха либо словарем ошибок.
     """
@@ -83,5 +85,6 @@ def consult_handler(request: HttpRequest) -> JsonResponse:
                             status=403,
                             json_dumps_params={'ensure_ascii': False})
 
-    return JsonResponse({'msg': _('Вы успешно записались на консультацию')}, status=201,
+    return JsonResponse({'msg': _('Вы успешно записались на консультацию')},
+                        status=201,
                         json_dumps_params={'ensure_ascii': False})
