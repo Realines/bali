@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-13 15:29+0700\n"
+"POT-Creation-Date: 2022-04-13 16:19+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,200 +18,262 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\projects\apps.py:9 .\projects\models.py:54
+#: .\apps.py:9 .\models.py:54 .\templates\projects\projects.html:77
+#: .\templates\projects\projects.html:367
 msgid "Проекты"
 msgstr "Projects"
 
-#: .\projects\models.py:8
+#: .\models.py:8
 msgid "Название проекта"
 msgstr "Project name"
 
-#: .\projects\models.py:9
+#: .\models.py:9
 msgid "Адрес"
 msgstr "Address"
 
-#: .\projects\models.py:10
+#: .\models.py:10
 msgid "Стоимость проекта"
 msgstr "Project cost"
 
-#: .\projects\models.py:11
+#: .\models.py:11
 msgid "Описание проекта"
 msgstr "Project Description"
 
-#: .\projects\models.py:12 .\projects\templates\projects\projects.html:68
+#: .\models.py:12 .\templates\projects\projects.html:169
 msgid "Площадь"
 msgstr "Square"
 
-#: .\projects\models.py:13
+#: .\models.py:13
 msgid "Количество спален"
 msgstr "Number of bedrooms"
 
-#: .\projects\models.py:15 .\projects\templates\projects\projects.html:76
+#: .\models.py:15 .\templates\projects\projects.html:177
 msgid "Вид"
 msgstr "View"
 
-#: .\projects\models.py:16
+#: .\models.py:16
 msgid "Открывающийся из виллы вид"
 msgstr "The view from the villa"
 
-#: .\projects\models.py:20 .\projects\models.py:137 .\projects\models.py:153
-#: .\projects\templates\projects\projects.html:100
+#: .\models.py:20 .\models.py:137 .\models.py:153
+#: .\templates\projects\projects.html:201
 msgid "Локация"
 msgstr "Location"
 
-#: .\projects\models.py:27
+#: .\models.py:27
 msgid "Дата добавления"
 msgstr "Date added"
 
-#: .\projects\models.py:32 .\projects\models.py:96
+#: .\models.py:32 .\models.py:96
 msgid "Категории"
 msgstr "Categories"
 
-#: .\projects\models.py:37
+#: .\models.py:37
 msgid "Проект подлежит инвестированию"
 msgstr "The project is subject to investment"
 
-#: .\projects\models.py:41
+#: .\models.py:41
 msgid "Опубликовать"
 msgstr "To publish"
 
-#: .\projects\models.py:45
+#: .\models.py:45
 msgid "Главное изображение"
 msgstr "Main Image"
 
-#: .\projects\models.py:53 .\projects\models.py:110
+#: .\models.py:53 .\models.py:110
 msgid "Проект"
 msgstr "Project"
 
-#: .\projects\models.py:66
+#: .\models.py:66
 msgid "Изображение для проекта"
 msgstr "Image for the project"
 
-#: .\projects\models.py:78
+#: .\models.py:78
 msgid "Галерея проекта"
 msgstr "Project Gallery"
 
-#: .\projects\models.py:79
+#: .\models.py:79
 msgid "Галереи проектов"
 msgstr "Project Galleries"
 
-#: .\projects\models.py:90
+#: .\models.py:90
 msgid "Название категории"
 msgstr "Category name"
 
-#: .\projects\models.py:95
+#: .\models.py:95
 msgid "Категория"
 msgstr "Category"
 
-#: .\projects\models.py:107
+#: .\models.py:107
 msgid "Название преимущества"
 msgstr "Name of the advantage"
 
-#: .\projects\models.py:120
+#: .\models.py:120
 msgid "Преимущество проекта"
 msgstr "The advantage of the project"
 
-#: .\projects\models.py:121
+#: .\models.py:121
 msgid "Преимущества проектов"
 msgstr "Advantages of projects"
 
-#: .\projects\models.py:132
+#: .\models.py:132
 msgid "Название локации"
 msgstr "Location name"
 
-#: .\projects\models.py:138
+#: .\models.py:138
 msgid "Локации"
 msgstr "Locations"
 
-#: .\projects\models.py:149
+#: .\models.py:149
 msgid "Заголовок факта"
 msgstr "Fact title"
 
-#: .\projects\models.py:150
+#: .\models.py:150
 msgid "Описание факта"
 msgstr "Description of the fact"
 
-#: .\projects\models.py:162
+#: .\models.py:162
 msgid "Факт о локации"
 msgstr "Fact about the location"
 
-#: .\projects\models.py:163
+#: .\models.py:163
 msgid "Факты о локациях"
 msgstr "Facts about locations"
 
-#: .\projects\templates\projects\projects.html:14
+#: .\templates\projects\projects.html:12
+msgid "Главная"
+msgstr "Main"
+
+#: .\templates\projects\projects.html:78 .\templates\projects\projects.html:368
+msgid "О компании"
+msgstr "About the company"
+
+#: .\templates\projects\projects.html:79 .\templates\projects\projects.html:369
+msgid "Отзывы"
+msgstr "Reviews"
+
+#: .\templates\projects\projects.html:96 .\templates\projects\projects.html:417
+msgid "Связаться с нами"
+msgstr "Contact us"
+
+#: .\templates\projects\projects.html:115
 msgid "Назад"
 msgstr "Back"
 
-#: .\projects\templates\projects\projects.html:60
+#: .\templates\projects\projects.html:161
 msgid "Купить"
 msgstr "Buy"
 
-#: .\projects\templates\projects\projects.html:64
+#: .\templates\projects\projects.html:165
 msgid "Стоимость"
 msgstr "Cost"
 
-#: .\projects\templates\projects\projects.html:69
+#: .\templates\projects\projects.html:170
 msgid "м2"
 msgstr "m2"
 
-#: .\projects\templates\projects\projects.html:72
+#: .\templates\projects\projects.html:173
 msgid "Кол-во спален"
 msgstr "Number of bedrooms"
 
-#: .\projects\templates\projects\projects.html:73
+#: .\templates\projects\projects.html:174
 msgid "шт."
-msgstr "pc."
+msgstr "pcs."
 
-#: .\projects\templates\projects\projects.html:87
+#: .\templates\projects\projects.html:188
 msgid "Преимущества"
 msgstr "Advantages"
 
-#: .\projects\templates\projects\projects.html:124
+#: .\templates\projects\projects.html:225
 msgid "Консультация"
 msgstr "Consultation"
 
-#: .\projects\templates\projects\projects.html:127
+#: .\templates\projects\projects.html:228
 msgid "Оставтье номер телефона и мы свяжемся с Вами"
 msgstr "Leave your phone number and we will contact you"
 
-#: .\projects\templates\projects\projects.html:127
+#: .\templates\projects\projects.html:228
 msgid "в течение часа"
 msgstr "within an hour"
 
-#: .\projects\templates\projects\projects.html:130
+#: .\templates\projects\projects.html:231
 msgid "Телефон"
-msgstr "Phone"
+msgstr "Telephone"
 
-#: .\projects\templates\projects\projects.html:133
+#: .\templates\projects\projects.html:234
 msgid "Отправить"
 msgstr "Send"
 
-#: .\projects\templates\projects\projects.html:136
+#: .\templates\projects\projects.html:237
 msgid "Если у вас остались вопросы - напишите нам."
 msgstr "If you have any more questions, write to us."
 
-#: .\projects\templates\projects\projects.html:136
+#: .\templates\projects\projects.html:237
 msgid "Мы всегда открыты к диалогу."
 msgstr "We are always open to dialogue."
 
-#: .\projects\templates\projects\projects.html:138
-#: .\projects\templates\projects\projects.html:144
+#: .\templates\projects\projects.html:239
+#: .\templates\projects\projects.html:245
 msgid "Написать в"
 msgstr "Write to"
 
-#: .\projects\templates\projects\projects.html:160
+#: .\templates\projects\projects.html:261
 msgid "Рекомендуем"
 msgstr "We recommend"
 
-#: .\projects\templates\projects\projects.html:160
+#: .\templates\projects\projects.html:261
 msgid "к просмотру:"
-msgstr "to view:"
+msgstr "it for viewing:"
 
-#: .\projects\templates\projects\projects.html:166
+#: .\templates\projects\projects.html:267
 msgid "Подробнее"
 msgstr "More detailed"
 
-#: .\projects\templates\projects\projects.html:172
+#: .\templates\projects\projects.html:273
 msgid "Показать больше"
 msgstr "Show more"
+
+#: .\templates\projects\projects.html:284
+msgid "Фактический адрес на"
+msgstr "Actual address on"
+
+#: .\templates\projects\projects.html:284
+msgid "Бали"
+msgstr "Bali"
+
+#: .\templates\projects\projects.html:293
+msgid "Адрес офиса:"
+msgstr "Office address:"
+
+#: .\templates\projects\projects.html:303
+msgid "Почта:"
+msgstr "Mail:"
+
+#: .\templates\projects\projects.html:313
+msgid "Мобильный:"
+msgstr "Mobile:"
+
+#: .\templates\projects\projects.html:322
+msgid "Стационарный:"
+msgstr "Landline:"
+
+#: .\templates\projects\projects.html:336
+msgid "Сейчас в нашем штате 22 сотрудника, осуществляющих управление 20 объектами,"
+msgstr "Now we have 22 employees who manage 20 objects"
+
+#: .\templates\projects\projects.html:336
+#, python-format
+msgid "которые приносят инвесторам от 15%% прибыли в год"
+msgstr "that bring investors from 15%% profit per year"
+
+#: .\templates\projects\projects.html:338
+msgid "Егор Егорович Егоров"
+msgstr "Egor Egorovich Egorov"
+
+#: .\templates\projects\projects.html:363
+msgid "Все права защищены."
+msgstr "All rights reserved."
+
+#: .\templates\projects\projects.html:387
+msgid "Политика конфиденциальности"
+msgstr "Privacy Policy"
