@@ -28,10 +28,6 @@ def index(request: HttpRequest) -> HttpResponse:
     invested_projects = all_project.filter(invested=True)
     not_invested_projects = all_project.difference(invested_projects)
 
-    # Формы консультации и квиза.
-    # consult_form = ConsultationForm()
-    # quiz_form = QuizForm()
-
     context = {'faq': faq,
                'invested_projects': invested_projects,
                'not_invested_projects': not_invested_projects}
@@ -88,3 +84,5 @@ def consult_handler(request: HttpRequest) -> JsonResponse:
     return JsonResponse({'msg': _('Вы успешно записались на консультацию')},
                         status=201,
                         json_dumps_params={'ensure_ascii': False})
+
+

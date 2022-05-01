@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 
@@ -52,6 +53,9 @@ class Project(models.Model):
 
         verbose_name = _('Проект')
         verbose_name_plural = _('Проекты')
+
+    def get_absolute_url(self) -> str:
+        return reverse('projects:projects', args=(self.pk, ))
 
     def __str__(self) -> str:
         """Метод для строкового представления объекта"""
