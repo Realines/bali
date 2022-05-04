@@ -597,7 +597,7 @@
     <div class='container'>
         <h2 class="projects__title title"><span>{% trans 'Реализованные' %}</span> {% trans 'проекты' %}</h2>
         <div class='projects__items' id="projects__items">
-            <!-- {% for project in not_invested_projects %}
+            {% for project in not_invested_projects %}
             <a href="{% url 'projects:projects' project.pk %}" class="projects__item">
                 <div class="projects__item-img">
                     <img src="{{ project.main_image.url }}" alt="">
@@ -605,10 +605,9 @@
                 </div>
                 <div class="projects__item-title">{{ project.name }}</div>
             </a>
-            {% endfor %} -->
+            {% endfor %}
         </div>
-        <input id="url_for_paginate" type="hidden" value="{{ request.build_absolute_uri }}{% url 'projects:project_paginator' %}">
-        <button class="projects__all" onclick="sendRequestToGetProjects()">{% trans 'Показать больше' %}</button>
+        <!-- <button class="projects__all" onclick="sendRequestToGetProjects()">{% trans 'Показать больше' %}</button> -->
     </div>
 </section>
 

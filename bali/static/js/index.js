@@ -276,45 +276,46 @@ function onOut() {
 }
 
 
-let page_num = 1;
+// let page_num = 1;
 
-// Фунция подгрузки реализованных проектов по 3 за раз.
-function sendRequestToGetProjects() {
-    let url = document.getElementById('url_for_paginate').value;
-    alert(url);
-    $.ajax({
-        url: url,
-        method: 'get',
-        dataType: 'html',
-        data: {'page_num': page_num},
-        success: function(data) {
-            parsed_data = JSON.parse(data);
+// // Фунция подгрузки реализованных проектов по 3 за раз.
+// function sendRequestToGetProjects() {
+//     let url_pattern = document.getElementById('url_pattern_for_paginate').value;
+//     $.ajax({
+//         url: url_pattern,
+//         method: 'get',
+//         dataType: 'html',
+//         data: {'page_num': page_num},
+//         success: function(data) {
+//             parsed_data = JSON.parse(data);
             
-            let a = document.createElement('a');
-            a.setAttribute('href', parsed_data.url);
-            a.setAttribute('class', 'projects__item');
+//             for (let i = 0; i < parsed_data.length; i++) {
+//                 let a = document.createElement('a');
+//                 a.setAttribute('href', parsed_data[i].url);
+//                 a.setAttribute('class', 'projects__item');
 
-            let div_img = document.createElement('div');
-            div_img.setAttribute('class', 'projects__item-img');
-            let img = document.createElement('img');
-            img.setAttribute('img', parsed_data.img_src);
-            let more_info = document.createElement('div');
-            more_info.setAttribute('class', 'projects__item-link');
-            div_img.append(img);
-            div_img.append(more_info);
-            a.append(div_img);
+//                 let div_img = document.createElement('div');
+//                 div_img.setAttribute('class', 'projects__item-img');
+//                 let img = document.createElement('img');
+//                 img.setAttribute('img', parsed_data[i].img_src);
+//                 let more_info = document.createElement('div');
+//                 more_info.setAttribute('class', 'projects__item-link');
+//                 div_img.append(img);
+//                 div_img.append(more_info);
+//                 a.append(div_img);
 
-            let proj_name = document.createElement('div');
-            proj_name.setAttribute('class', 'projects__item-title');
-            proj_name.innerHTML = parsed_data.name
+//                 let proj_name = document.createElement('div');
+//                 proj_name.setAttribute('class', 'projects__item-title');
+//                 proj_name.innerHTML = parsed_data[i].name
 
-            a.append(proj_name);
+//                 a.append(proj_name);
 
-            document.getElementById('projects__items').append(a);
-            page_num++;
-        },
-        beforeSend: function() {
+//                 document.getElementById('projects__items').append(a);
+//             }
+//             page_num++;
+//         },
+//         beforeSend: function() {
 
-        }
-    });
-}
+//         }
+//     });
+// }

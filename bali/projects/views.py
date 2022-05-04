@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import (
     render,
     get_object_or_404,
@@ -49,28 +50,27 @@ def projects(request: HttpRequest, project_id: int) -> HttpResponse:
                   context=context)
 
 
-def projects_paginator(request: HttpRequest) -> JsonResponse:
-    """
-    Контроллер для пагинации по списку проектов на главной.
-
-    :param request: Объект запроса.
-    :return: Список данных о проекта в JSON.
-    """
-
-    current_page_num = request.GET.get('page_num', 1)
-
-    count_projects_in_part = 3
-    queryset = Project.objects.all()
-    paginator = Paginator(queryset, count_projects_in_part,
-                          allow_empty_first_page=False)
-
-    page = paginator.get_page(current_page_num)
-    projects_set = page.object_list
-    json_projects = [{
-        'img_src': project.main_image.url,
-        'name': project.name,
-        'url': project.get_absolute_url(),
-    } for project in projects_set]
-
-    return JsonResponse(data=json_projects)
-
+# def projects_paginator(request: HttpRequest) -> JsonResponse:
+#     """
+#     Контроллер для пагинации по списку проектов на главной.
+#
+#     :param request: Объект запроса.
+#     :return: Список данных о проекта в JSON.
+#     """
+#
+#     current_page_num = request.GET.get('page_num', 1)
+#
+#     count_projects_in_part = 3
+#     queryset = Project.objects.all()
+#     paginator = Paginator(queryset, count_projects_in_part,
+#                           allow_empty_first_page=False)
+#
+#     page = paginator.get_page(current_page_num)
+#     projects_set = page.object_list
+#     json_projects = [{
+#         'img_src': project.main_image.url,
+#         'name': project.name,
+#         'url': project.get_absolute_url(),
+#     } for project in projects_set]
+#
+#     return JsonResponse(data=json_projects, safe=False)
