@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import django_heroku
+from decouple import config
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
 
@@ -22,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)o+607l2r0$%rra+66j@dmt1!38=i09@9$@(+5c1gs#efz159f'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 X_FRAME_OPTIONS = 'ALLOW-FROM ^https?:\/\/([^\/]+\.)?(https://bali.masterpice-realty\.ae|facebook\.com|webvisor\.com|metri[ck]a\.yandex\.(com|ru|com\.tr))\/'
 
@@ -172,11 +174,4 @@ LOCALE_PATHS = [
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
 
 
-# Почты для получения писем.
-# Почта отправителя по умолчанию та, что верифицирована.
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'                                                                           
-EMAIL_HOST = 'mail.masterpiece-realty.ae'
-EMAIL_PORT = 587                                                         
-EMAIL_HOST_USER = 'info@masterpiece-realty.ae'                              
-EMAIL_HOST_PASSWORD = 'u1497048'  # This is not your gmail password.
-EMAIL_USE_TLS = True
+django_heroku.settings(locals())
