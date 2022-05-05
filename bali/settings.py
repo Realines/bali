@@ -29,7 +29,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '0.0.0.0',
+    'abobrov-bali.herokuapp.com',
+]
 
 X_FRAME_OPTIONS = 'ALLOW-FROM ^https?:\/\/([^\/]+\.)?(https://bali.masterpice-realty\.ae|facebook\.com|webvisor\.com|metri[ck]a\.yandex\.(com|ru|com\.tr))\/'
 
