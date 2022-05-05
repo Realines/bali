@@ -660,3 +660,7 @@ msgstr "The form has been successfully submitted"
 #: .\views.py:88
 msgid "Вы успешно записались на консультацию"
 msgstr "You have successfully signed up for a consultation"
+
+#: .\templates\base_app\index.html:524
+msgid "Спасибо за заявку!"
+msgstr "Thank you for the application!"

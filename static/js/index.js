@@ -220,6 +220,11 @@ function nextStep(num, line) {
             quizFormData.countBedrooms = $("input[name='area']:checked").val()
         }
     }
+    if (num == 101) {
+        $(`.quiz__step`).removeClass("quiz__step--active")
+        $(`#thanks`).addClass("quiz__step--active")
+        $('#thanks').css('display', 'block');
+    }
 }
 
 function prevStep(num, line) {

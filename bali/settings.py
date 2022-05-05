@@ -174,4 +174,4 @@ LOCALE_PATHS = [
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
 
 
-django_heroku.settings(locals(), databases=)
+django_heroku.settings(locals())
