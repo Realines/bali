@@ -149,8 +149,8 @@ msgid "О компании"
 msgstr "About the company"
 
 #: .\templates\projects\projects.html:79 .\templates\projects\projects.html:369
-msgid "Отзывы"
-msgstr "Reviews"
+msgid "Контакты"
+msgstr "Contacts"
 
 #: .\templates\projects\projects.html:96 .\templates\projects\projects.html:417
 msgid "Связаться с нами"
