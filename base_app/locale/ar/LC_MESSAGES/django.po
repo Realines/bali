@@ -232,8 +232,8 @@ msgid "О компании"
 msgstr "عن الشركة"
 
 #: .\templates\base_app\index.html:79 .\templates\base_app\index.html:911
-msgid "Отзывы"
-msgstr "التعليقات"
+msgid "Контакты"
+msgstr "جهات الاتصال"
 
 #: .\templates\base_app\index.html:96 .\templates\base_app\index.html:959
 msgid "Связаться с нами"
